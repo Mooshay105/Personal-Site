@@ -37,18 +37,6 @@ footer {
   display: block;
 }
 
-/*App Styles*/
-.iframeapp {
-  position: absolute;
-  top: 30px;
-  left: 0;
-  background-color: #f9f9f9;
-  padding: 10px;
-  border: 1px solid #ddd;
-  z-index: 1;
-  align-content: center;
-}
-
 /*Project Styles*/
 
 .project-item {
