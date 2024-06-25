@@ -117,12 +117,13 @@ footer {
 .bottom {
   position: fixed;
   bottom: 0;
-  width: 100%;
+  background: #363636cc;
   height: 60px;
-  background: #4e565a;
-  color: #fff;
-  opacity: .9;
-  border-radius: 15px;
+  width: 100%;
+  border: 0px;
+  padding:0px;
+  margin:0px; 
+  left:0;
 }
 
 .h2balck {
