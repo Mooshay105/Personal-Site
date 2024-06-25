@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Navigator Object Info</title>
+<script>
+    window.onload = function() {
+        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+        function isiPhone() {
+            return /iphone/i.test(userAgent.toLowerCase());
+        }
+        function isiPad() {
+            return /ipad/i.test(userAgent.toLowerCase());
+        }
+        function isAndroid() {
+            return /android|webos|blackberry|iemobile|opera mini/i.test(userAgent.toLowerCase());
+        }
+        function isMac() {
+            return /mac/i.test(userAgent.toLowerCase());
+        }
+        function isWindows() {
+            return /windows/i.test(userAgent.toLowerCase());
+        }
+        function isLinux() {
+            return /linux/i.test(userAgent.toLowerCase());
+        }
+
+        if (isWindows()) {
+            location.replace("windows/index.html");
+        } else if (isiPhone()) {
+            location.replace("iphone/index.html");
+        } else if (isiPad()) {
+            location.replace("ipad/index.html");
+        } else if (isAndroid()) {
+            location.replace("android/index.html");
+        } else if (isMac()) {
+            location.replace("mac/index.html");
+        } else if (isLinux()) {
+            location.replace("linux/index.html");
+        } else {
+            console.log("Unknown device detected.");
+            location.replace("windows/index.html");
+        }
+    };
+</script>
+</head>
+</html>
