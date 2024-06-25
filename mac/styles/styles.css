@@ -1,7 +1,14 @@
 /*Main Styles*/
 
 header {
-  background-color: #d0d0d0e0;
+  position: fixed;
+  top: 0;
+  background: #98989870;
+  width: 100%;
+  border: 0px;
+  padding: 5px;
+  margin: 0px; 
+  left: 0;
 }
 
 body {
@@ -10,7 +17,7 @@ body {
 }
 
 footer {
-  background-color: #4e565a;
+  background-color: #d0d0d0;
 }
 
 /*Menu Styles*/
@@ -102,15 +109,20 @@ footer {
   background-size: cover;
 }
 
-.bottom {
+.taskbar {
   position: fixed;
   bottom: 0;
-  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
   height: 60px;
-  background: #4e565a;
+  background: #b6b9bb3c;
   color: #fff;
   opacity: .9;
   border-radius: 15px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
 }
 
 .h2balck {
