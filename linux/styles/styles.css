@@ -37,18 +37,6 @@ footer {
   display: block;
 }
 
-/*App Styles*/
-.iframeapp {
-  position: absolute;
-  top: 30px;
-  left: 0;
-  background-color: #f9f9f9;
-  padding: 10px;
-  border: 1px solid #ddd;
-  z-index: 1;
-  align-content: center;
-}
-
 /*Project Styles*/
 
 .project-item {
@@ -117,12 +105,13 @@ footer {
 .bottom {
   position: fixed;
   bottom: 0;
-  width: 100%;
-  height: 60px;
-  background: #4e565a;
-  color: #fff;
-  opacity: .9;
-  border-radius: 15px;
+  background: #191919cc;
+  height: 100%;
+  width: 65px;
+  border: 0px;
+  padding:0px;
+  margin:0px; 
+  left:0;
 }
 
 .h2balck {
