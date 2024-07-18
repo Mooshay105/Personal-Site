@@ -1,5 +1,5 @@
-# Source Code For <a href="http://blog.malcolmjh.com">`malcolmjh.com`</a>
-The source code for <a href="http://malcolmjh.com">`malcolmjh.com`</a> (includes blog posts)
+# Source Code For <a href="https://malcolmjh.com">`malcolmjh.com`</a>
+The source code for <a href="https://malcolmjh.com">`malcolmjh.com`</a> (includes blog posts)
 ## Server Hardware
 - Linode 1G (Nanode)
 
