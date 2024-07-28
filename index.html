@@ -1,48 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Navigator Object Info</title>
-<script>
-    window.onload = function() {
-        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-
-        function isiPhone() {
-            return /iphone/i.test(userAgent.toLowerCase());
-        }
-        function isiPad() {
-            return /ipad/i.test(userAgent.toLowerCase());
-        }
-        function isAndroid() {
-            return /android|webos|blackberry|iemobile|opera mini/i.test(userAgent.toLowerCase());
-        }
-        function isMac() {
-            return /mac/i.test(userAgent.toLowerCase());
-        }
-        function isWindows() {
-            return /windows/i.test(userAgent.toLowerCase());
-        }
-        function isLinux() {
-            return /linux/i.test(userAgent.toLowerCase());
-        }
-
-        if (isWindows()) {
-            location.replace("windows/index.html");
-        } else if (isiPhone()) {
-            location.replace("iphone/index.html");
-        } else if (isiPad()) {
-            location.replace("ipad/index.html");
-        } else if (isAndroid()) {
-            location.replace("android/index.html");
-        } else if (isMac()) {
-            location.replace("mac/index.html");
-        } else if (isLinux()) {
-            location.replace("linux/index.html");
-        } else {
-            console.log("Unknown device detected.");
-            location.replace("windows/index.html");
-        }
-    };
-</script>
-</head>
+<html>
+  <head>
+    <meta name="title" content="Malcolm Hauser">
+    <meta name="description" content="Hi i am Malcolm and I do HTML and CSS for websites and also basic API's">
+    <meta name="keywords" content="Malcolm, HTML, CSS, HTML and CSS, API">
+    <meta name="robots" content="index, nofollow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="author" content="Malcolm">     
+    <title>Malcolm Hauser</title>
+    <link rel="icon" type="image/png" href="img/logo/logo.png">
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+  </head>
+  <header class="group">
+    <div class="headerMenuAc">
+      Activities
+    </div>
+    <div class="headerMenuTime">
+      Jun 26  7:59 AM
+    </div>
+  </header>
+  <body class="mal11-background">
+    <br><br>
+    <div id="about" style="display: none;">
+      <div class="about-div-red">
+        <h1 class="h1">About Me</h1>
+        <div class="about-div-wite">
+          <p class="textblack">
+            My name is Malcolm, I feel everyone has the right to be safe online, and I want to help them achieve that. I believe in a community built on trust and knowledge. I value respect for myself and others and that knowledge is power. Through my passions for technology and programming, I found cyber security, web development, and API’s, and they are fastly becoming one of my great strengths.
+          </p>
+        </div>
+      </div>
+    </div>
+    <p align="center" class="iframeapp" id="accomplishments" style="display: none;">
+      <iframe width="637" height="319" src="accomplishments.html"></iframe>
+    </p>
+    <p align="center" class="iframeapp" id="skills" style="display: none;">
+      <iframe width="637" height="319" src="skills.html"></iframe>
+    </p>
+  </body>
+  <footer class="left">
+    <div align="center">
+      <br><br><br>
+      <img src="img/logo/logo.png" width="50" height="50" onclick="about()" id="aboutshowButton">
+      <img src="img/apps/appicons/baricons/accomplishments.png" width="50" height="50" onclick="accomplishments()" id="accomplishmentsshowButton">
+      <img src="img/apps/appicons/baricons/skills.png" width="50" height="50" onclick="skills()" id="skillsshowButton">
+      <img src="img/apps/appicons/baricons/github.png" width="50" height="50" onclick="location.href='https://github.com/Mooshay105';">
+      <div class="activitiesDiv">
+        <img src="img/icons/activities.png" width="30" height="30" class="activities">
+      <script src="scripts/script.js"></script>
+    </div>
+  </footer>
 </html>
