@@ -121,6 +121,7 @@ footer {
 }
 
 .galleryDescription {
+	text-align: left;
 	max-width: 300px;
 }
 
