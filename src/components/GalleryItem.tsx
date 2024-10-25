@@ -30,7 +30,7 @@ function GalleryItem({ headerText, description, buttonText, buttonDestination, i
 	}, []);
 	return (
 		<div className="gallery">
-			{isLeftOrRight === "left" && <img src={imageURL} className="galleryImage" alt={headerText} />}
+			{isLeftOrRight === "left" && <img src={imageURL} className="galleryImage" alt={headerText} draggable={false} />}
 			<div className={leftOrRight === "right" ? "galleryInfoLeft" : "galleryInfo"}>
 				<h2>{headerText}</h2>
 				<p className="galleryDescription">{description}</p>
@@ -38,7 +38,7 @@ function GalleryItem({ headerText, description, buttonText, buttonDestination, i
 					{buttonText}
 				</a>
 			</div>
-			{isLeftOrRight === "right" && <img src={imageURL} className="galleryImage" alt={headerText} />}
+			{isLeftOrRight === "right" && <img src={imageURL} className="galleryImage" alt={headerText} draggable={false} />}
 		</div>
 	);
 }

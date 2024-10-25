@@ -30,7 +30,7 @@ function Index() {
 				</section>
 				<CustomBreak height={1} />
 				<div className="aboutMe">
-					<img src={malcolm} />
+					<img src={malcolm} draggable={false} />
 					<div className="column">
 						<h1>Hi, I'm Malcolm.</h1>
 						<p>I am a passionate Programer with a love for Networking and Tinkering with my homelab (mainly a collection of Raspberry Pi's). I enjoy working on projects that challenge me and help me learn new concepts and techniques.</p>
