@@ -37,17 +37,17 @@ function Index() {
 					</div>
 				</div>
 				<div id="gallery">
-					<CustomBreak height={2} />
+					<CustomBreak height={1} />
 					<h1 className="centeredHeader">Code Gallery</h1>
-					<CustomBreak height={1} hasHR={true} paddBothSides={true} />
+					<CustomBreak height={1} hasHR={true} paddBottomOnly={true} />
 					<GalleryItem headerText="Airport Database" description="Airport Database is a database of most of the IATA registered airports in the world." buttonText="Visit" buttonDestination="https://airportdatabase.malcolmjh.com" imageURL={airportDatabase} leftOrRight="left" />
-					<CustomBreak height={1} hasHR={true} paddBothSides={true} />
+					<CustomBreak height={1} />
 					<GalleryItem headerText="Linux Clone" description="Linux Clone is a clone of Linux I made for some fun." buttonText="Visit" buttonDestination="https://linux.malcolmjh.com" imageURL={linuxClone} leftOrRight="right" />
 					<CustomBreak height={1} />
 					<h1 className="centeredHeader">Certificates</h1>
-					<CustomBreak height={1} hasHR={true} paddBothSides={true} />
+					<CustomBreak height={1} hasHR={true} paddBottomOnly={true} />
 					<GalleryItem headerText="Google Cybersecurity" description="Those who earn the Google Cybersecurity Certificate have completed eight courses, developed by Google, that include hands-on, practice-based assessments and are designed to prepare them for entry-level roles in cybersecurity. They are competent in beginner-level Python, Linux, SQL, Security Information and Event Management (SIEM) tools, and Intrusion Detection Systems (IDS). They know how to identify common cybersecurity risks, threats, and vulnerabilities, as well as the techniques to mitigate." buttonText="View" buttonDestination="https://coursera.org/share/3d7eb85ea356a12056e6651702ea5e6e" imageURL={googleCybersecurityCert} leftOrRight="left" />
-					<CustomBreak height={2} />
+					<CustomBreak height={1} />
 					<GlobalFooter />
 				</div>
 			</div>
