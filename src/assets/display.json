@@ -6,7 +6,7 @@
 			"title": "Hexagon TV",
 			"linkURL": "https://hexagon.kiwi-micro.com/",
 			"githubURL": "https://github.com/Mooshay105/hexagon-tv",
-			"imageURL": "https://github.com/Mooshay105/Personal-Site/blob/main/src/assets/img/kiwiMicro.png?raw=true",
+			"imageURL": "https://github.com/Mooshay105/Hexagon-TV/blob/main/src/assets/img/metaImage.png?raw=true",
 			"description": "Hexagon TV is a streaming service that I made from scratch it uses TypeScript for the backend and React frontend, and Turso for the SQL database."
 		},
 		{
