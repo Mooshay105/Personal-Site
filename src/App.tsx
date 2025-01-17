@@ -1,6 +1,7 @@
 import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Index from "./pages/Index";
+import "./assets/main.css";
 
 function App() {
 	return (
@@ -16,4 +17,6 @@ function App() {
 	);
 }
 
-ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(<App />);
+ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
+	<App />,
+);

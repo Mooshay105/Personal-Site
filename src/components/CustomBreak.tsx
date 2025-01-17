@@ -5,7 +5,12 @@ interface CustomBreakProps {
 	paddBothSides?: boolean;
 }
 
-function CustomBreak({ height, hasHR = false, paddBottomOnly = false, paddBothSides = false }: CustomBreakProps) {
+function CustomBreak({
+	height,
+	hasHR = false,
+	paddBottomOnly = false,
+	paddBothSides = false,
+}: CustomBreakProps) {
 	let br = "";
 	if (!paddBottomOnly) {
 		for (let i = 0; i < height; i++) {

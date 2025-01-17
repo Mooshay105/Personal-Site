@@ -1,0 +1,56 @@
+{
+	"description": "I am a 14 year-old living in Australia! I like to programme in <span style=\"color: #e34c26;\">HTML</span>, <span style=\"color: #264de4;\">CSS</span>, <span style=\"color: #3178c6;\">TypeScript</span>, <span style=\"color: #f7e018;\">JavaScript</span>, <span style=\"color: #fa7343;\">Swift</span>, and even a bit of <span style=\"color: #034FFF;\">C</span>",
+	"about": "Hi, I’m a 14-year-old tech enthusiast from Australia! I love programming and have experience with <span style=\"color: #e34c26;\">HTML</span>, <span style=\"color: #264de4;\">CSS</span>, <span style=\"color: #3178c6;\">TypeScript</span>, <span style=\"color: #f7e018;\">JavaScript</span>, <span style=\"color: #fa7343;\">Swift</span>, and even a bit of <span style=\"color: #034FFF;\">C</span>. I’m especially fascinated by Networking and enjoy experimenting with my homelab, which is mostly powered by a collection of <span style=\"color: #d02b5a;\">Raspberry Pi's</span> (<span style=\"color: #d02b5a;\">5 and 3B+</span>). I am always looking for exciting projects that push my limits, challenge me, and teach me something new. When I’m not programming or tinkering, I’m likely brainstorming my next big idea.",
+	"projects": [
+		{
+			"title": "Hexagon TV",
+			"linkURL": "https://hexagon.kiwi-micro.com/",
+			"githubURL": "https://github.com/Mooshay105/hexagon-tv",
+			"imageURL": "https://github.com/Mooshay105/Personal-Site/blob/main/src/assets/img/kiwiMicro.png?raw=true",
+			"description": "Hexagon TV is a streaming service that I made from scratch it uses TypeScript for the backend and React frontend, and Turso for the SQL database."
+		},
+		{
+			"title": "Airport Database",
+			"linkURL": "https://airportdatabase.malcolmjh.com/",
+			"githubURL": "https://github.com/Mooshay105/Airport-Database",
+			"imageURL": "https://github.com/Mooshay105/Personal-Site/blob/main/src/assets/img/airportDatabase.png?raw=true",
+			"description": "Airport Database is a website that uses React to dynamicly display all (IATA) airports and their information, From a JSON file."
+		},
+		{
+			"title": "Linux Clone",
+			"linkURL": "https://linux.malcolmjh.com/",
+			"githubURL": "https://github.com/Mooshay105/Linux-Clone",
+			"imageURL": "https://github.com/Mooshay105/Personal-Site/blob/main/src/assets/img/linuxClone.png?raw=true",
+			"description": "Linux Clone is website that uses React to display ubuntu like interface."
+		}
+	],
+	"certificates": [
+		{
+			"title": "Google Cybersecurity Certificate",
+			"linkURL": "https://coursera.org/share/600da5e80384c31316c03531b6800b9b",
+			"imageURL": "https://github.com/Mooshay105/Personal-Site/blob/main/src/assets/img/googleCybersecurityCert.png?raw=true",
+			"description": "Those who earn the Google Cybersecurity Certificate have completed eight courses, developed by Google, that include hands-on, practice-based assessments and are designed to prepare them for entry-level roles in cybersecurity. They are competent in beginner-level Python, Linux, SQL, Security Information and Event Management (SIEM) tools, and Intrusion Detection Systems (IDS). They know how to identify common cybersecurity risks, threats, and vulnerabilities, as well as the techniques to mitigate.",
+			"date": "2023",
+			"status": "Completed",
+			"statusColor": "#00FF00"
+		},
+		{
+			"title": "Google UX Design Certificate",
+			"linkURL": "https://www.coursera.org/professional-certificates/google-ux-design",
+			"imageURL": "https://github.com/Mooshay105/Personal-Site/blob/main/src/assets/img/googleUXDesignCert.png?raw=true",
+			"description": "Those who earn the Google UX Design Professional Certificate have completed seven courses, developed by Google, that include hands-on, practice-based assessments and are designed to prepare them for introductory-level roles in UX design. They can complete the design process from beginning to end: empathizing with users, defining their pain points, coming up with ideas for design solutions, creating wireframes and prototypes, and testing designs to get feedback.",
+			"date": "2024 - 2025",
+			"status": "In-Progress",
+			"statusColor": "#FFFF00"
+		},
+		{
+			"title": "Google Data Analytics Certificate",
+			"linkURL": "https://www.coursera.org/professional-certificates/google-data-analytics",
+			"imageURL": "https://github.com/Mooshay105/Personal-Site/blob/main/src/assets/img/googleDataAnalyticsCert.png?raw=true",
+			"description": "Those who earn the Google Data Analytics Professional Certificate have completed eight courses, developed by Google, that include hands-on, practice-based assessments and are designed to prepare them for introductory-level roles in Data Analytics. They are competent in tools and platforms including spreadsheets, SQL, Tableau, and R. They know how to prepare, process, analyze, and share data for thoughtful action.",
+			"date": "20XX",
+			"status": "Not Started",
+			"statusColor": "#FF0000"
+		}
+	]
+}

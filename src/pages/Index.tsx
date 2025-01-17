@@ -1,57 +1,103 @@
+import { useEffect, useState } from "react";
+import Logo from "../assets/img/logo.png";
 import CustomBreak from "../components/CustomBreak";
-import GlobalFooter from "../components/GlobalFooter";
-import React from "react";
-import hero from "../assets/img/hero.png";
-import malcolm from "../assets/img/logo.png";
-import GalleryItem from "../components/GalleryItem";
-import airportDatabase from "../assets/img/airportDatabase.png";
-import linuxClone from "../assets/img/linuxClone.png";
-import googleCybersecurityCert from "../assets/img/googleCybersecurityCert.png";
-import "../assets/main.css";
+import FloatingNoticeBox from "../components/FloatingNoticeBox";
+import DisplayItems from "../components/DisplayItems";
+import display from "../assets/display.json";
 
 function Index() {
+	const [scrollPercent, setScrollPercent] = useState(0);
+	const [showHelloWorld, setShowHelloWorld] = useState(false);
+
+	// get how far down the page the user has scrolled
+	function handleScroll() {
+		const winScroll =
+			document.body.scrollTop || document.documentElement.scrollTop;
+		const height =
+			document.documentElement.scrollHeight -
+			document.documentElement.clientHeight;
+		const scrolled = (winScroll / height) * 100;
+		setScrollPercent(scrolled);
+	}
+
+	useEffect(() => {
+		window.addEventListener("scroll", handleScroll);
+		return () => {
+			window.removeEventListener("scroll", handleScroll);
+		};
+	}, []);
+
 	return (
-		<React.StrictMode>
-			<div className="main">
-				<section className="hero">
-					<img src={hero} alt="hero" className="heroVideo" />
-					<div className="heroOverlay">
-						<div className="heroContent">
-							<h1>Malcolm</h1>
-							<p>I am a 14 year-old living in Australia! I like to code in HTML, CSS, TypeScript, JavaScript, Java, a little C, and I am learning Swift.</p>
-							<a href="#gallery" className="btn">
-								See My Projects
-							</a>
-							<a href="https://github.com/Mooshay105" className="btn">
-								GitHub
-							</a>
-						</div>
-					</div>
-				</section>
-				<CustomBreak height={1} />
-				<div className="aboutMe">
-					<img src={malcolm} draggable={false} />
-					<div className="column">
-						<h1>Hi, I'm Malcolm.</h1>
-						<p>I am a passionate Programer with a love for Networking and Tinkering with my homelab (mainly a collection of Raspberry Pi's). I enjoy working on projects that challenge me and help me learn new concepts and techniques.</p>
+		<div>
+			<nav
+				style={
+					scrollPercent > 0.25
+						? {
+								borderBottom: `1px solid #ffffff1a`,
+						  }
+						: {}
+				}
+			>
+				<div className="navLogo">
+					<img src={Logo} alt="Logo" draggable={false} className="logo" />
+					<h2>Malcolm Hauser</h2>
+				</div>
+				<div className="buttons">
+					<a
+						href="/resume"
+						className="callToActionButton"
+						draggable={false}
+						style={{
+							marginLeft: "calc(100vw - 350px)",
+						}}
+					>
+						Resume
+					</a>
+				</div>
+			</nav>
+			<CustomBreak height={4} />
+			<FloatingNoticeBox
+				text="Supermaven wanted and still wants it to say 'Hello, world!'"
+				show={showHelloWorld}
+				setShow={setShowHelloWorld}
+			/>
+			<main>
+				<div className="hero">
+					<CustomBreak height={11} />
+					<h1 onClick={() => setShowHelloWorld(true)}>
+						Hey, I Am Malcolm Hauser!
+					</h1>
+					<p dangerouslySetInnerHTML={{ __html: display.description }}></p>
+					<div className="buttons">
+						<a
+							href="https://github.com/Mooshay105"
+							className="callToActionButton"
+							draggable={false}
+						>
+							Git Hub
+						</a>
+						<a href="#projects" className="actionButton" draggable={false}>
+							Projects
+						</a>
 					</div>
 				</div>
-				<div id="gallery">
-					<CustomBreak height={1} />
-					<h1 className="centeredHeader">Code Gallery</h1>
-					<CustomBreak height={1} hasHR={true} paddBottomOnly={true} />
-					<GalleryItem headerText="Airport Database" description="Airport Database is a database of most of the IATA registered airports in the world." buttonText="Visit" buttonDestination="https://airportdatabase.malcolmjh.com" imageURL={airportDatabase} leftOrRight="left" />
-					<CustomBreak height={1} />
-					<GalleryItem headerText="Linux Clone" description="Linux Clone is a clone of Linux I made for some fun." buttonText="Visit" buttonDestination="https://linux.malcolmjh.com" imageURL={linuxClone} leftOrRight="right" />
-					<CustomBreak height={1} />
-					<h1 className="centeredHeader">Certificates</h1>
-					<CustomBreak height={1} hasHR={true} paddBottomOnly={true} />
-					<GalleryItem headerText="Google Cybersecurity" description="Those who earn the Google Cybersecurity Certificate have completed eight courses, developed by Google, that include hands-on, practice-based assessments and are designed to prepare them for entry-level roles in cybersecurity. They are competent in beginner-level Python, Linux, SQL, Security Information and Event Management (SIEM) tools, and Intrusion Detection Systems (IDS). They know how to identify common cybersecurity risks, threats, and vulnerabilities, as well as the techniques to mitigate." buttonText="View" buttonDestination="https://coursera.org/share/3d7eb85ea356a12056e6651702ea5e6e" imageURL={googleCybersecurityCert} leftOrRight="left" />
-					<CustomBreak height={1} />
-					<GlobalFooter />
+				<div className="about">
+					<h1>About Me</h1>
+					<p
+						dangerouslySetInnerHTML={{ __html: display.about }}
+						style={{ color: "#a7a7a7" }}
+					/>
 				</div>
-			</div>
-		</React.StrictMode>
+				<div className="displayItems">
+					<h1>Projects</h1>
+					<DisplayItems items={display.projects} isProjects={true} />
+				</div>
+				<div className="displayItems">
+					<h1>Certificates</h1>
+					<DisplayItems items={display.certificates} isProjects={false} />
+				</div>
+			</main>
+		</div>
 	);
 }
 
