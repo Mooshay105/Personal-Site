@@ -88,7 +88,7 @@ function Index() {
 						style={{ color: "#a7a7a7" }}
 					/>
 				</div>
-				<div className="displayItems">
+				<div id="projects" className="displayItems">
 					<h1>Projects</h1>
 					<DisplayItems items={display.projects} isProjects={true} />
 				</div>
