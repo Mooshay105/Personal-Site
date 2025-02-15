@@ -30,7 +30,7 @@ function Index() {
 			/>
 			<div className="headingTextBox">
 				<h1 className="headingText">Malcolm Hauser</h1>
-				<h2 className="subHeadingText">Spagetti Coding Since ¯\_(ツ)_/¯.</h2>
+				<h2 className="subHeadingText">Spaghetti Coding Since ¯\_(ツ)_/¯.</h2>
 				<p className="headingAboutText">
 					I am a 14 year-old living in{" "}
 					<span onClick={() => handleAusClick()} className="primaryColorUnderline">
