@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import Button from "../components/Button";
 import GlobalNavbar from "../components/GlobalNavBar";
 import NotificationBox from "../components/NotificationBox";
+import DisplayItem from "../components/DisplayItem";
+import information from "../assets/display.json";
 
 function Index() {
 	const [isMobile, setIsMobile] = useState(false);
@@ -75,6 +77,34 @@ function Index() {
 					teach me something new. When I’m not programming or tinkering, I’m likely
 					brainstorming my next big idea.
 				</p>
+			</div>
+			<div className="projects" id="projects">
+				<h2>
+					My <span className="primaryColor">Projects.</span>
+				</h2>
+				{information.projects.map((project: any) => (
+					<DisplayItem
+						title={project.title}
+						description={project.description}
+						link={project.linkURL}
+						githubLink={project.githubURL}
+						image={project.imageURL}
+					/>
+				))}
+			</div>
+			<div className="certificates" id="certificates">
+				<h2>
+					My <span className="primaryColor">Certificates.</span>
+				</h2>
+				{information.certificates.map((project: any) => (
+					<DisplayItem
+						title={project.title}
+						description={project.description}
+						link={project.linkURL}
+						githubLink={project.githubURL}
+						image={project.imageURL}
+					/>
+				))}
 			</div>
 		</div>
 	);

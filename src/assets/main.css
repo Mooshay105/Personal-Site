@@ -73,14 +73,17 @@ body {
 
 /* Navigation Styles */
 
-nav {
+.navBarContainer {
 	position: sticky;
-	top: 0;
+	top: 10px; /* Adds the 10px gap above the navbar */
+	z-index: 1000;
+}
+
+nav {
 	display: flex;
 	align-items: center;
-	margin-top: 10px;
 	margin-inline: auto;
-	width: calc(100% - 125px);
+	width: calc(100% - 60px);
 	height: fit-content;
 	border-radius: 15px;
 	padding: 0 20px;
@@ -202,6 +205,87 @@ nav {
 	color: #ffffff;
 	margin-bottom: 0;
 	max-width: calc(100% - 20ch);
+}
+
+/* Projects Styles */
+
+.projects {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.projects h2 {
+	font-size: 2rem;
+	margin-bottom: 0;
+}
+
+/* Certificates Styles */
+
+.certificates {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.certificates h2 {
+	font-size: 2rem;
+	margin-bottom: 0;
+}
+
+/*  Display Item Styles */
+
+.displayItem {
+	display: flex;
+	flex-direction: row;
+	justify-content: left;
+	align-items: center;
+	margin-bottom: 20px;
+	padding: 20px;
+	border-bottom: var(--border);
+	width: calc(100% - 40px);
+}
+
+.displayItem img {
+	width: 300px;
+	height: 200px;
+	margin: 20px;
+	object-fit: cover;
+	border-radius: 15px;
+}
+
+.displayItemText {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-left: 20px;
+}
+
+.displayItemText h2 {
+	font-size: x-large;
+	color: #ffffff;
+	margin-bottom: 0;
+}
+
+.displayItemText p {
+	font-size: large;
+	color: #ffffff;
+	margin-bottom: 0;
+}
+
+.displayItemButtons {
+	display: flex;
+	margin-left: auto;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.displayItemButton {
+	width: 50px;
+	text-align: center;
 }
 
 /* Notification Box Styles */

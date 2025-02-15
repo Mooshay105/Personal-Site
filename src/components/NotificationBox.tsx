@@ -1,3 +1,5 @@
+import { useEffect, useRef } from "react";
+
 interface notificationBoxProps {
 	text: string;
 	isOpen: boolean;
@@ -5,9 +7,29 @@ interface notificationBoxProps {
 }
 
 function NotificationBox({ text, isOpen, handleClose }: notificationBoxProps) {
+	const divRef = useRef<HTMLDivElement>(null);
+
+	useEffect(() => {
+		const handleClickOutside = (event: MouseEvent) => {
+			if (divRef.current && !divRef.current.contains(event.target as Node)) {
+				handleClose();
+			}
+		};
+
+		document.addEventListener("mousedown", handleClickOutside);
+
+		return () => {
+			document.removeEventListener("mousedown", handleClickOutside);
+		};
+	}, []);
+
 	return (
 		<>
-			<div className="notificationBox" style={{ display: isOpen ? "block" : "none" }}>
+			<div
+				className="notificationBox"
+				style={{ display: isOpen ? "block" : "none" }}
+				ref={divRef}
+			>
 				<p>{text}</p>
 				<button onClick={handleClose}>
 					<svg

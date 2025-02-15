@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import logo from "../assets/img/logo.png";
 import Button from "./Button";
 import { Link } from "react-router-dom";
@@ -7,83 +7,84 @@ interface GlobalNavBarProps {
 	isMobile: boolean;
 }
 
-function GlobalNavBarMobileMenu() {
-	return (
-		<div className="navBarDropdown">
-			<Link className="navBarDropdownItem" to="#aboutMe">
-				<p>About Me</p>
-			</Link>
-			<Link className="navBarDropdownItem" to="#projects">
-				<p>Projects</p>
-			</Link>
-			<Link className="navBarDropdownItem" to="#certificates">
-				<p>Certificates</p>
-			</Link>
-			<Button
-				text="Resume"
-				isCallToAction={true}
-				link="/resume"
-				extraClass="navBarDropdownButton"
-			/>
-		</div>
-	);
-}
-
 function GlobalNavBar({ isMobile }: GlobalNavBarProps) {
-	const [isActive, setIsActive] = useState("");
 	const [menuOpen, setMenuOpen] = useState(false);
 
+	const divRef = useRef<HTMLDivElement>(null);
+
+	useEffect(() => {
+		const handleClickOutside = (event: MouseEvent) => {
+			if (divRef.current && !divRef.current.contains(event.target as Node)) {
+				setMenuOpen(false);
+			}
+		};
+
+		document.addEventListener("mousedown", handleClickOutside);
+
+		return () => {
+			document.removeEventListener("mousedown", handleClickOutside);
+		};
+	}, []);
+
 	return (
-		<nav>
-			<Link className="logo navBarItem" to="/">
-				<img src={logo} alt="Logo" />
-				<p>Malcolm Hauser</p>
-			</Link>
-			{!isMobile ? (
-				<>
-					<Link
-						to="#aboutMe"
-						className={isActive === "about" ? "navBarItem active" : "navBarItem"}
-						onClick={() => setIsActive("about")}
-					>
-						<p>About Me</p>
-					</Link>
-					<Link
-						to="#projects"
-						className={isActive === "projects" ? "navBarItem active" : "navBarItem"}
-						onClick={() => setIsActive("projects")}
-					>
-						<p>Projects</p>
-					</Link>
-					<Link
-						to="#certificates"
-						className={isActive === "certificates" ? "navBarItem active" : "navBarItem"}
-						onClick={() => setIsActive("certificates")}
-					>
-						<p>Certificates</p>
-					</Link>
-					<Button
-						text="Resume"
-						isCallToAction={true}
-						link="https://malcolmjh.com/resume"
-					/>
-				</>
-			) : (
-				<>
-					<svg
-						width="25px"
-						height="25px"
-						viewBox="0 0 25 25"
-						onClick={() => setMenuOpen(!menuOpen)}
-					>
-						<path d="M0 4h25v2H0z" fill="var(--primary-color)" />
-						<path d="M0 11h25v2H0z" fill="var(--primary-color)" />
-						<path d="M0 18h25v2H0z" fill="var(--primary-color)" />
-					</svg>
-					{menuOpen ? <GlobalNavBarMobileMenu /> : null}
-				</>
-			)}
-		</nav>
+		<div className="navBarContainer">
+			<nav>
+				<Link className="logo navBarItem" to="/">
+					<img src={logo} alt="Logo" />
+					<p>Malcolm Hauser</p>
+				</Link>
+				{!isMobile ? (
+					<>
+						<a href="#aboutMe" className="navBarItem">
+							<p>About Me</p>
+						</a>
+						<a href="#projects" className="navBarItem">
+							<p>Projects</p>
+						</a>
+						<a href="#certificates" className="navBarItem">
+							<p>Certificates</p>
+						</a>
+						<Button
+							text="Resume"
+							isCallToAction={true}
+							link="https://malcolmjh.com/resume"
+						/>
+					</>
+				) : (
+					<>
+						<svg
+							width="25px"
+							height="25px"
+							viewBox="0 0 25 25"
+							onClick={() => setMenuOpen(!menuOpen)}
+						>
+							<path d="M0 4h25v2H0z" fill="var(--primary-color)" />
+							<path d="M0 11h25v2H0z" fill="var(--primary-color)" />
+							<path d="M0 18h25v2H0z" fill="var(--primary-color)" />
+						</svg>
+						{menuOpen ? (
+							<div className="navBarDropdown" ref={divRef}>
+								<a className="navBarDropdownItem" href="#aboutMe">
+									<p>About Me</p>
+								</a>
+								<a className="navBarDropdownItem" href="#projects">
+									<p>Projects</p>
+								</a>
+								<a className="navBarDropdownItem" href="#certificates">
+									<p>Certificates</p>
+								</a>
+								<Button
+									text="Resume"
+									isCallToAction={true}
+									link="/resume"
+									extraClass="navBarDropdownButton"
+								/>
+							</div>
+						) : null}
+					</>
+				)}
+			</nav>
+		</div>
 	);
 }
 
