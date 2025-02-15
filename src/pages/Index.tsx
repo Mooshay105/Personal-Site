@@ -1,102 +1,83 @@
 import { useEffect, useState } from "react";
-import Logo from "../assets/img/logo.png";
-import CustomBreak from "../components/CustomBreak";
-import FloatingNoticeBox from "../components/FloatingNoticeBox";
-import DisplayItems from "../components/DisplayItems";
-import display from "../assets/display.json";
+import Button from "../components/Button";
+import GlobalNavbar from "../components/GlobalNavBar";
 
 function Index() {
-	const [scrollPercent, setScrollPercent] = useState(0);
-	const [showHelloWorld, setShowHelloWorld] = useState(false);
+	const [isMobile, setIsMobile] = useState(false);
 
-	// get how far down the page the user has scrolled
-	function handleScroll() {
-		const winScroll =
-			document.body.scrollTop || document.documentElement.scrollTop;
-		const height =
-			document.documentElement.scrollHeight -
-			document.documentElement.clientHeight;
-		const scrolled = (winScroll / height) * 100;
-		setScrollPercent(scrolled);
-	}
-
+	// Check if mobile on window resize
 	useEffect(() => {
-		window.addEventListener("scroll", handleScroll);
-		return () => {
-			window.removeEventListener("scroll", handleScroll);
+		const handleResize = () => {
+			setIsMobile(window.innerWidth <= 1000);
 		};
+		window.addEventListener("resize", handleResize);
+		handleResize();
+		return () => window.removeEventListener("resize", handleResize);
 	}, []);
+
+	function handleAusClick() {
+		// To Do: Add a proper popup, not just a `alert()`
+		alert("I Really Dislike Australia, it is too hot! (New Zealand for the win!)");
+	}
 
 	return (
 		<div>
-			<nav
-				style={
-					scrollPercent > 0.25
-						? {
-								borderBottom: `1px solid #ffffff1a`,
-						  }
-						: {}
-				}
-			>
-				<div className="navLogo">
-					<img src={Logo} alt="Logo" draggable={false} className="logo" />
-					<h2>Malcolm Hauser</h2>
-				</div>
-				<div className="buttons">
-					<a
-						href="/resume"
-						className="callToActionButton"
-						draggable={false}
-						style={{
-							marginLeft: "calc(100vw - 350px)",
-						}}
+			<GlobalNavbar isMobile={isMobile} />
+			<div className="headingTextBox">
+				<h1 className="headingText">Malcolm Hauser</h1>
+				<h2 className="subHeadingText">Spagetti Coding Since ¯\_(ツ)_/¯.</h2>
+				<p className="headingAboutText">
+					I am a 14 year-old living in{" "}
+					<span
+						onClick={() => handleAusClick()}
+						style={{ textDecoration: "underline var(--primary-color)" }}
 					>
-						Resume
-					</a>
-				</div>
-			</nav>
-			<CustomBreak height={4} />
-			<FloatingNoticeBox
-				text="Supermaven wanted and still wants it to say 'Hello, world!'"
-				show={showHelloWorld}
-				setShow={setShowHelloWorld}
-			/>
-			<main>
-				<div className="hero">
-					<CustomBreak height={11} />
-					<h1 onClick={() => setShowHelloWorld(true)}>
-						Hey, I Am Malcolm Hauser!
-					</h1>
-					<p dangerouslySetInnerHTML={{ __html: display.description }}></p>
-					<div className="buttons">
-						<a
-							href="https://github.com/Mooshay105"
-							className="callToActionButton"
-							draggable={false}
-						>
-							Git Hub
-						</a>
-						<a href="#projects" className="actionButton" draggable={false}>
-							Projects
-						</a>
-					</div>
-				</div>
-				<div className="about">
-					<h1>About Me</h1>
-					<p
-						dangerouslySetInnerHTML={{ __html: display.about }}
-						style={{ color: "#a7a7a7" }}
+						Australia
+					</span>
+					! I like to program in
+					<span style={{ color: "#e34c26" }}> HTML</span>,
+					<span style={{ color: "#264de4" }}> CSS</span>,
+					<span style={{ color: "#3178c6" }}> TypeScript</span>,
+					<span style={{ color: "#fa7343" }}> Swift</span>, and a bit of
+					<span style={{ color: "#034FFF" }}> C</span>
+				</p>
+				<div className="headingButtons">
+					<Button text="Projects" isCallToAction={true} link="#projects" />
+					<Button
+						text="GitHub"
+						isCallToAction={false}
+						link="https://github.com/Mooshay105"
+						externalLink={true}
 					/>
 				</div>
-				<div id="projects" className="displayItems">
-					<h1>Projects</h1>
-					<DisplayItems items={display.projects} isProjects={true} />
-				</div>
-				<div className="displayItems">
-					<h1>Certificates</h1>
-					<DisplayItems items={display.certificates} isProjects={false} />
-				</div>
-			</main>
+			</div>
+			<div className="aboutMe">
+				<h2>
+					About <span style={{ color: "var(--primary-color)" }}>Me.</span>
+				</h2>
+				<p>
+					Hi, I’m a 14-year-old tech enthusiast from{" "}
+					<span
+						onClick={() => handleAusClick()}
+						style={{ textDecoration: "underline var(--primary-color)" }}
+					>
+						Australia
+					</span>
+					! I love programming and have experience with{" "}
+					<span style={{ color: "#e34c26" }}>HTML</span>,{" "}
+					<span style={{ color: "#264de4" }}>CSS</span>,{" "}
+					<span style={{ color: "#3178c6" }}>TypeScript</span>,{" "}
+					<span style={{ color: "#f7e018" }}>JavaScript</span>,{" "}
+					<span style={{ color: "#fa7343" }}>Swift</span>, and even a bit of{" "}
+					<span style={{ color: "#034FFF" }}>C</span>. I’m especially fascinated by
+					Networking and enjoy experimenting with my homelab, which is mostly powered by a
+					collection of <span style={{ color: "#d02b5a" }}>Raspberry Pi's</span> (
+					<span style={{ color: "#d02b5a" }}>5 and 3B+</span>). I am always looking for
+					exciting projects that push my limits, challenge me, and teach me something new.
+					When I’m not programming or tinkering, I’m likely brainstorming my next big
+					idea.
+				</p>
+			</div>
 		</div>
 	);
 }
