@@ -10,22 +10,21 @@ interface GlobalNavBarProps {
 function GlobalNavBarMobileMenu() {
 	return (
 		<div className="navBarDropdown">
-			<Link className="navBarDropdownItem" to="/">
+			<Link className="navBarDropdownItem" to="#aboutMe">
 				<p>About Me</p>
 			</Link>
-			<Link className="navBarDropdownItem" to="/">
+			<Link className="navBarDropdownItem" to="#projects">
 				<p>Projects</p>
 			</Link>
-			<Link className="navBarDropdownItem" to="/">
+			<Link className="navBarDropdownItem" to="#certificates">
 				<p>Certificates</p>
 			</Link>
-			<Link className="navBarDropdownItem" to="/">
-				<p>Contact Me</p>
-			</Link>
-			<Link className="navBarDropdownItem" to="/">
-				<p>Has My Code Crashed Yet?</p>
-			</Link>
-			<Button text="CV" isCallToAction={true} link="https://malcolmjh.com/404" />
+			<Button
+				text="Resume"
+				isCallToAction={true}
+				link="/resume"
+				extraClass="navBarDropdownButton"
+			/>
 		</div>
 	);
 }
@@ -36,45 +35,38 @@ function GlobalNavBar({ isMobile }: GlobalNavBarProps) {
 
 	return (
 		<nav>
-			<a className="logo navBarItem">
+			<Link className="logo navBarItem" to="/">
 				<img src={logo} alt="Logo" />
 				<p>Malcolm Hauser</p>
-			</a>
+			</Link>
 			{!isMobile ? (
 				<>
-					<a
+					<Link
+						to="#aboutMe"
 						className={isActive === "about" ? "navBarItem active" : "navBarItem"}
 						onClick={() => setIsActive("about")}
 					>
 						<p>About Me</p>
-					</a>
-					<a
+					</Link>
+					<Link
+						to="#projects"
 						className={isActive === "projects" ? "navBarItem active" : "navBarItem"}
 						onClick={() => setIsActive("projects")}
 					>
 						<p>Projects</p>
-					</a>
-					<a
+					</Link>
+					<Link
+						to="#certificates"
 						className={isActive === "certificates" ? "navBarItem active" : "navBarItem"}
 						onClick={() => setIsActive("certificates")}
 					>
 						<p>Certificates</p>
-					</a>
-					<a
-						className={isActive === "contact" ? "navBarItem active" : "navBarItem"}
-						onClick={() => setIsActive("contact")}
-					>
-						<p>Contact Me</p>
-					</a>
-					<a
-						className={
-							isActive === "hasMyCodeCrashedYet" ? "navBarItem active" : "navBarItem"
-						}
-						onClick={() => setIsActive("hasMyCodeCrashedYet")}
-					>
-						<p>Has My Code Crashed Yet?</p>
-					</a>
-					<Button text="CV" isCallToAction={true} link="https://malcolmjh.com/404" />
+					</Link>
+					<Button
+						text="Resume"
+						isCallToAction={true}
+						link="https://malcolmjh.com/resume"
+					/>
 				</>
 			) : (
 				<>

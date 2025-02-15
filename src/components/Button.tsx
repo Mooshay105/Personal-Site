@@ -5,13 +5,24 @@ interface ButtonProps {
 	isCallToAction: boolean;
 	link: string;
 	externalLink?: boolean;
+	extraClass?: string;
 }
 
-function Button({ text, isCallToAction, link, externalLink = false }: ButtonProps) {
+function Button({
+	text,
+	isCallToAction,
+	link,
+	externalLink = false,
+	extraClass = "",
+}: ButtonProps) {
 	if (externalLink) {
 		return (
 			<a
-				className={isCallToAction ? "callToActionButton" : "actionButton"}
+				className={
+					isCallToAction
+						? "callToActionButton " + extraClass
+						: "actionButton " + extraClass
+				}
 				href={link}
 				target="_blank"
 			>
@@ -20,7 +31,12 @@ function Button({ text, isCallToAction, link, externalLink = false }: ButtonProp
 		);
 	}
 	return (
-		<Link className={isCallToAction ? "callToActionButton" : "actionButton"} to={link}>
+		<Link
+			className={
+				isCallToAction ? "callToActionButton " + extraClass : "actionButton " + extraClass
+			}
+			to={link}
+		>
 			{text}
 		</Link>
 	);

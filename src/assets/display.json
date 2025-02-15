@@ -1,6 +1,4 @@
 {
-	"description": "I am a 14 year-old living in Australia! I like to program in <span style=\"color: #e34c26;\">HTML</span>, <span style=\"color: #264de4;\">CSS</span>, <span style=\"color: #3178c6;\">TypeScript</span>, <span style=\"color: #f7e018;\">JavaScript</span>, <span style=\"color: #fa7343;\">Swift</span>, and even a bit of <span style=\"color: #034FFF;\">C</span>",
-	"about": "Hi, I’m a 14-year-old tech enthusiast from Australia! I love programming and have experience with <span style=\"color: #e34c26;\">HTML</span>, <span style=\"color: #264de4;\">CSS</span>, <span style=\"color: #3178c6;\">TypeScript</span>, <span style=\"color: #f7e018;\">JavaScript</span>, <span style=\"color: #fa7343;\">Swift</span>, and even a bit of <span style=\"color: #034FFF;\">C</span>. I’m especially fascinated by Networking and enjoy experimenting with my homelab, which is mostly powered by a collection of <span style=\"color: #d02b5a;\">Raspberry Pi's</span> (<span style=\"color: #d02b5a;\">5 and 3B+</span>). I am always looking for exciting projects that push my limits, challenge me, and teach me something new. When I’m not programming or tinkering, I’m likely brainstorming my next big idea.",
 	"projects": [
 		{
 			"title": "Hexagon TV",
