@@ -108,6 +108,7 @@ nav {
 	position: absolute;
 	top: 100%;
 	right: 0;
+	width: calc(100% - 20px);
 	background-color: #1a1a1a8e;
 	backdrop-filter: blur(10px) saturate(180%);
 	border-radius: 15px;
