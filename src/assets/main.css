@@ -86,7 +86,8 @@ nav {
 	width: calc(100% - 60px);
 	height: fit-content;
 	border-radius: 15px;
-	padding: 0 20px;
+	padding: 0;
+	padding-right: 10px;
 	border: #7a7a7a 1px solid;
 	background-color: #1a1a1a8e;
 	backdrop-filter: blur(10px) saturate(180%);
@@ -143,8 +144,8 @@ nav {
 }
 
 .logo img {
-	width: 40px;
-	height: 40px;
+	width: 60px;
+	height: 60px;
 	border-radius: 50%;
 	margin-right: 10px;
 }
