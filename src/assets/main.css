@@ -167,12 +167,14 @@ nav {
 	font-size: 3rem;
 	color: #ffffff;
 	margin-bottom: 0;
+	width: 100%;
 }
 
 .subHeadingText {
 	font-size: 2rem;
 	color: var(--primary-color);
 	margin: 0;
+	width: 100%;
 }
 
 .headingAboutText {
@@ -200,6 +202,7 @@ nav {
 	font-size: 2rem;
 	margin-bottom: 0;
 	text-align: center;
+	width: 100%;
 }
 
 .aboutMe p {
@@ -223,6 +226,7 @@ nav {
 .projects h2 {
 	font-size: 2rem;
 	margin-bottom: 0;
+	width: 100%;
 }
 
 /* Certificates Styles */
@@ -232,6 +236,7 @@ nav {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	width: 100%;
 }
 
 .certificates h2 {
