@@ -257,6 +257,16 @@ nav {
 	border-radius: 15px;
 }
 
+@media (max-width: 990px) {
+	.displayItem {
+		flex-direction: column;
+	}
+	.displayItem img {
+		width: 80%;
+		height: 80%;
+	}
+}
+
 .displayItemText {
 	display: flex;
 	flex-direction: column;
