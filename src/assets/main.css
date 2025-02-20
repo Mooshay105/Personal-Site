@@ -271,7 +271,8 @@ nav {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	margin-left: 20px;
+	margin-inline: auto;
+	width: 90%;
 }
 
 .displayItemText h2 {
@@ -297,6 +298,16 @@ nav {
 .displayItemButton {
 	width: 50px;
 	text-align: center;
+}
+
+@media (max-width: 990px) {
+	.displayItemButtons {
+		width: 100%;
+	}
+	.displayItemButton {
+		width: 85%;
+		margin-top: 10px;
+	}
 }
 
 /* Notification Box Styles */
