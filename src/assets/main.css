@@ -204,7 +204,8 @@ nav {
 	font-size: large;
 	color: #ffffff;
 	margin-bottom: 0;
-	max-width: calc(100% - 20ch);
+	margin-inline: 20px;
+	max-width: 80ch;
 }
 
 /* Projects Styles */
