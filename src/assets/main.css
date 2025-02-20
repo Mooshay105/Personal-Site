@@ -190,6 +190,13 @@ nav {
 	display: flex;
 	flex-direction: row;
 }
+@media (max-width: 990px) {
+	.headingButton {
+		transform: scale(1.5);
+		margin-top: 25px;
+		margin-inline: 35px;
+	}
+}
 
 /* About Me Styles */
 

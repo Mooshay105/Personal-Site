@@ -46,12 +46,18 @@ function Index() {
 					<span style={{ color: "#034FFF" }}> C</span>
 				</p>
 				<div className="headingButtons">
-					<Button text="Projects" isCallToAction={true} link="#projects" />
+					<Button
+						text="Projects"
+						isCallToAction={true}
+						link="#projects"
+						extraClass="headingButton"
+					/>
 					<Button
 						text="GitHub"
 						isCallToAction={false}
 						link="https://github.com/Mooshay105"
 						externalLink={true}
+						extraClass="headingButton"
 					/>
 				</div>
 			</div>
