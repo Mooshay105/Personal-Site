@@ -6,9 +6,17 @@ interface DisplayItemProps {
 	link: string;
 	githubLink: string;
 	image: string;
+	shouldHaveGithubLink: boolean;
 }
 
-function DisplayItem({ title, description, link, githubLink, image }: DisplayItemProps) {
+function DisplayItem({
+	title,
+	description,
+	link,
+	githubLink,
+	image,
+	shouldHaveGithubLink,
+}: DisplayItemProps) {
 	return (
 		<div className="displayItem">
 			<img src={image} alt={title} />
@@ -24,13 +32,15 @@ function DisplayItem({ title, description, link, githubLink, image }: DisplayIte
 					isCallToAction={true}
 					extraClass="displayItemButton"
 				/>
-				<Button
-					text="GitHub"
-					link={githubLink}
-					externalLink={true}
-					isCallToAction={false}
-					extraClass="displayItemButton"
-				/>
+				{shouldHaveGithubLink ? (
+					<Button
+						text="GitHub"
+						link={githubLink}
+						externalLink={true}
+						isCallToAction={false}
+						extraClass="displayItemButton"
+					/>
+				) : null}
 			</div>
 		</div>
 	);

@@ -89,6 +89,7 @@ function Index() {
 						link={project.linkURL}
 						githubLink={project.githubURL}
 						image={project.imageURL}
+						shouldHaveGithubLink={true}
 					/>
 				))}
 			</div>
@@ -103,6 +104,7 @@ function Index() {
 						link={project.linkURL}
 						githubLink={project.githubURL}
 						image={project.imageURL}
+						shouldHaveGithubLink={false}
 					/>
 				))}
 			</div>
