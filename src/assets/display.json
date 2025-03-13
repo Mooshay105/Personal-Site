@@ -40,15 +40,6 @@
 			"date": "2024 - 2025",
 			"status": "In-Progress",
 			"statusColor": "#FFFF00"
-		},
-		{
-			"title": "Google Data Analytics Certificate",
-			"linkURL": "https://www.coursera.org/professional-certificates/google-data-analytics",
-			"imageURL": "https://github.com/Mooshay105/Personal-Site/blob/main/src/assets/img/googleDataAnalyticsCert.png?raw=true",
-			"description": "Those who earn the Google Data Analytics Professional Certificate have completed eight courses, developed by Google, that include hands-on, practice-based assessments and are designed to prepare them for introductory-level roles in Data Analytics. They are competent in tools and platforms including spreadsheets, SQL, Tableau, and R. They know how to prepare, process, analyze, and share data for thoughtful action.",
-			"date": "20XX",
-			"status": "Not Started",
-			"statusColor": "#FF0000"
 		}
 	]
 }
