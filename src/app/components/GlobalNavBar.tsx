@@ -1,7 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import logo from "../assets/img/logo.png";
 import Button from "./Button";
-import { Link } from "react-router-dom";
 
 interface GlobalNavBarProps {
 	isMobile: boolean;
@@ -29,10 +27,10 @@ function GlobalNavBar({ isMobile }: GlobalNavBarProps) {
 	return (
 		<div className="navBarContainer">
 			<nav>
-				<Link className="logo navBarItem" to="/">
-					<img src={logo} alt="Logo" />
+				<a className="logo navBarItem" href="/">
+					<img src="/logo.png" alt="Logo" />
 					<p>Malcolm Hauser</p>
-				</Link>
+				</a>
 				{!isMobile ? (
 					<>
 						<a href="#aboutMe" className="navBarItem">

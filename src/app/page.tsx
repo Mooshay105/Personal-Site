@@ -1,9 +1,11 @@
+"use client";
+
 import { useEffect, useState } from "react";
-import Button from "../components/Button";
-import GlobalNavbar from "../components/GlobalNavBar";
-import NotificationBox from "../components/NotificationBox";
-import DisplayItem from "../components/DisplayItem";
-import information from "../assets/display.json";
+import Button from "./components/Button";
+import GlobalNavbar from "./components/GlobalNavBar";
+import NotificationBox from "./components/NotificationBox";
+import DisplayItem from "./components/DisplayItem";
+import information from "../../public/display.json";
 
 function Index() {
 	const [isMobile, setIsMobile] = useState(false);

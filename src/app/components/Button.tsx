@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 interface ButtonProps {
 	text: string;
 	isCallToAction: boolean;
@@ -31,14 +29,14 @@ function Button({
 		);
 	}
 	return (
-		<Link
+		<a
 			className={
 				isCallToAction ? "callToActionButton " + extraClass : "actionButton " + extraClass
 			}
-			to={link}
+			href={link}
 		>
 			{text}
-		</Link>
+		</a>
 	);
 }
 
