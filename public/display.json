@@ -1,6 +1,7 @@
 {
 	"projects": [
 		{
+			"id": 1,
 			"title": "Hexagon TV",
 			"linkURL": "https://hexagon.kiwi-micro.com/",
 			"githubURL": "https://github.com/Mooshay105/hexagon-tv",
@@ -8,6 +9,7 @@
 			"description": "Hexagon TV is a streaming service that I made from scratch it uses TypeScript for the backend and React frontend, and Turso for the SQL database."
 		},
 		{
+			"id": 2,
 			"title": "Airport Database",
 			"linkURL": "https://airportdatabase.malcolmjh.com/",
 			"githubURL": "https://github.com/Mooshay105/Airport-Database",
@@ -15,6 +17,7 @@
 			"description": "Airport Database is a website that uses React to dynamicly display all (IATA) airports and their information, From a JSON file."
 		},
 		{
+			"id": 3,
 			"title": "Linux Clone",
 			"linkURL": "https://linux.malcolmjh.com/",
 			"githubURL": "https://github.com/Mooshay105/Linux-Clone",
@@ -24,6 +27,7 @@
 	],
 	"certificates": [
 		{
+			"id": 1,
 			"title": "Google Cybersecurity Certificate",
 			"linkURL": "https://coursera.org/share/600da5e80384c31316c03531b6800b9b",
 			"imageURL": "https://github.com/Mooshay105/Personal-Site/blob/main/public/img/googleCybersecurityCert.png?raw=true",
@@ -33,6 +37,7 @@
 			"statusColor": "#00FF00"
 		},
 		{
+			"id": 2,
 			"title": "Google UX Design Certificate",
 			"linkURL": "https://www.coursera.org/professional-certificates/google-ux-design",
 			"imageURL": "https://github.com/Mooshay105/Personal-Site/blob/main/public/img/googleUXDesignCert.png?raw=true",

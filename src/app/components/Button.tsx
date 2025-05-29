@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 interface ButtonProps {
 	text: string;
 	isCallToAction: boolean;
@@ -15,7 +17,7 @@ function Button({
 }: ButtonProps) {
 	if (externalLink) {
 		return (
-			<a
+			<Link
 				className={
 					isCallToAction
 						? "callToActionButton " + extraClass
@@ -25,18 +27,18 @@ function Button({
 				target="_blank"
 			>
 				{text}
-			</a>
+			</Link>
 		);
 	}
 	return (
-		<a
+		<Link
 			className={
 				isCallToAction ? "callToActionButton " + extraClass : "actionButton " + extraClass
 			}
 			href={link}
 		>
 			{text}
-		</a>
+		</Link>
 	);
 }
 

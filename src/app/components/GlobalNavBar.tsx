@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import Button from "./Button";
+import Link from "next/link";
+import Image from "next/image";
 
 interface GlobalNavBarProps {
 	isMobile: boolean;
@@ -27,21 +29,21 @@ function GlobalNavBar({ isMobile }: GlobalNavBarProps) {
 	return (
 		<div className="navBarContainer">
 			<nav>
-				<a className="logo navBarItem" href="/">
-					<img src="/logo.png" alt="Logo" />
+				<Link className="logo navBarItem" href="/">
+					<Image src="/logo.png" alt="Logo" width={60} height={60} />
 					<p>Malcolm Hauser</p>
-				</a>
+				</Link>
 				{!isMobile ? (
 					<>
-						<a href="#aboutMe" className="navBarItem">
+						<Link href="#aboutMe" className="navBarItem">
 							<p>About Me</p>
-						</a>
-						<a href="#projects" className="navBarItem">
+						</Link>
+						<Link href="#projects" className="navBarItem">
 							<p>Projects</p>
-						</a>
-						<a href="#certificates" className="navBarItem">
+						</Link>
+						<Link href="#certificates" className="navBarItem">
 							<p>Certificates</p>
-						</a>
+						</Link>
 						<Button
 							text="Resume"
 							isCallToAction={true}
@@ -62,15 +64,15 @@ function GlobalNavBar({ isMobile }: GlobalNavBarProps) {
 						</svg>
 						{menuOpen ? (
 							<div className="navBarDropdown" ref={divRef}>
-								<a className="navBarDropdownItem" href="#aboutMe">
+								<Link className="navBarDropdownItem" href="#aboutMe">
 									<p>About Me</p>
-								</a>
-								<a className="navBarDropdownItem" href="#projects">
+								</Link>
+								<Link className="navBarDropdownItem" href="#projects">
 									<p>Projects</p>
-								</a>
-								<a className="navBarDropdownItem" href="#certificates">
+								</Link>
+								<Link className="navBarDropdownItem" href="#certificates">
 									<p>Certificates</p>
-								</a>
+								</Link>
 								<Button
 									text="Resume"
 									isCallToAction={true}

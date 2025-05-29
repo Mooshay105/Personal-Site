@@ -80,8 +80,8 @@ function Index() {
 					<span style={{ color: "#fa7343" }}>Swift</span>, and even a bit of{" "}
 					<span style={{ color: "#034FFF" }}>C</span>. I’m especially fascinated by
 					Networking and enjoy experimenting with my homelab, which is mostly powered by a
-					collection of <span style={{ color: "#d02b5a" }}>Raspberry Pi's</span>. I am
-					always looking for exciting projects that push my limits, challenge me, and
+					collection of <span style={{ color: "#d02b5a" }}>Raspberry Pi&apos;s</span>. I
+					am always looking for exciting projects that push my limits, challenge me, and
 					teach me something new. When I’m not programming or tinkering, I’m likely
 					brainstorming my next big idea.
 				</p>
@@ -90,8 +90,10 @@ function Index() {
 				<h2>
 					My <span className="primaryColor">Projects.</span>
 				</h2>
+				{/** eslint-disable-next-line @typescript-eslint/no-explicit-any */}
 				{information.projects.map((project: any) => (
 					<DisplayItem
+						key={project.id}
 						title={project.title}
 						description={project.description}
 						link={project.linkURL}
@@ -105,8 +107,10 @@ function Index() {
 				<h2>
 					My <span className="primaryColor">Certificates.</span>
 				</h2>
+				{/** eslint-disable-next-line @typescript-eslint/no-explicit-any */}
 				{information.certificates.map((project: any) => (
 					<DisplayItem
+						key={project.id}
 						title={project.title}
 						description={project.description}
 						link={project.linkURL}

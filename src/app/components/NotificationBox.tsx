@@ -44,7 +44,7 @@ function NotificationBox({ text, isOpen, handleClose }: notificationBoxProps) {
 							x2="90"
 							y2="90"
 							stroke="white"
-							stroke-width="15"
+							strokeWidth="15"
 							strokeLinecap="round"
 						/>
 						<line
@@ -53,7 +53,7 @@ function NotificationBox({ text, isOpen, handleClose }: notificationBoxProps) {
 							x2="10"
 							y2="90"
 							stroke="white"
-							stroke-width="15"
+							strokeWidth="15"
 							strokeLinecap="round"
 						/>
 					</svg>
