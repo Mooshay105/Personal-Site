@@ -1,26 +1,14 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import Button from "./components/Button";
 import GlobalNavbar from "./components/GlobalNavBar";
 import DisplayItem from "./components/DisplayItem";
 import information from "../../public/display.json";
 
 function Index() {
-	const [isMobile, setIsMobile] = useState(false);
-
-	useEffect(() => {
-		const handleResize = () => {
-			setIsMobile(window.innerWidth <= 990);
-		};
-		window.addEventListener("resize", handleResize);
-		handleResize();
-		return () => window.removeEventListener("resize", handleResize);
-	}, []);
-
 	return (
 		<div>
-			<GlobalNavbar isMobile={isMobile} />
+			<GlobalNavbar />
 			<div className="mt-[100px] flex flex-col items-center justify-center text-center">
 				<h1 className="m-[0px] w-full text-5xl font-bold text-white">Malcolm Hauser</h1>
 				<h2 className="m-[0px] w-full text-3xl text-(--primary-color)">
