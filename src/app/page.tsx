@@ -3,13 +3,11 @@
 import { useEffect, useState } from "react";
 import Button from "./components/Button";
 import GlobalNavbar from "./components/GlobalNavBar";
-import NotificationBox from "./components/NotificationBox";
 import DisplayItem from "./components/DisplayItem";
 import information from "../../public/display.json";
 
 function Index() {
 	const [isMobile, setIsMobile] = useState(false);
-	const [isNotificationOpen, setIsNotificationOpen] = useState(false);
 
 	useEffect(() => {
 		const handleResize = () => {
@@ -20,60 +18,39 @@ function Index() {
 		return () => window.removeEventListener("resize", handleResize);
 	}, []);
 
-	function handleAusClick() {
-		setIsNotificationOpen(true);
-	}
-
 	return (
 		<div>
 			<GlobalNavbar isMobile={isMobile} />
-			<NotificationBox
-				text={"I Really Dislike Australia, it is too hot! (New Zealand for the win!)"}
-				isOpen={isNotificationOpen}
-				handleClose={() => setIsNotificationOpen(false)}
-			/>
-			<div className="headingTextBox">
-				<h1 className="headingText">Malcolm Hauser</h1>
-				<h2 className="subHeadingText">Spaghetti Coding Since ¯\_(ツ)_/¯.</h2>
-				<p className="headingAboutText">
-					I am a 14 year-old living in{" "}
-					<span onClick={() => handleAusClick()} className="primaryColorUnderline">
-						Australia
-					</span>
-					! I like to program in
+			<div className="mt-[100px] flex flex-col items-center justify-center text-center">
+				<h1 className="m-[0px] w-full text-5xl font-bold text-white">Malcolm Hauser</h1>
+				<h2 className="m-[0px] w-full text-3xl text-(--primary-color)">
+					Spaghetti Coding Since ¯\_(ツ)_/¯.
+				</h2>
+				<p className="mx-[20px] mt-[10px] max-w-[80ch] text-center text-[large] text-white">
+					I am a 14 year-old living in Australia ! I like to program in
 					<span style={{ color: "#e34c26" }}> HTML</span>,
 					<span style={{ color: "#264de4" }}> CSS</span>,
 					<span style={{ color: "#3178c6" }}> TypeScript</span>,
 					<span style={{ color: "#fa7343" }}> Swift</span>, and a bit of
 					<span style={{ color: "#034FFF" }}> C</span>
 				</p>
-				<div className="headingButtons">
-					<Button
-						text="Projects"
-						isCallToAction={true}
-						link="#projects"
-						extraClass="headingButton"
-					/>
+				<div className="flex flex-row">
+					<Button text="Projects" isCallToAction={true} link="#projects" />
 					<Button
 						text="GitHub"
 						isCallToAction={false}
 						link="https://github.com/Mooshay105"
 						externalLink={true}
-						extraClass="headingButton"
 					/>
 				</div>
 			</div>
-			<div className="aboutMe" id="aboutMe">
-				<h2>
-					About <span className="primaryColor">Me.</span>
+			<div className="flex w-full flex-col items-center justify-center" id="aboutMe">
+				<h2 className="mt-[20px] mb-[0] text-center text-3xl">
+					About <span className="text-(--primary-color)">Me.</span>
 				</h2>
-				<p>
-					Hi, I’m a 14-year-old tech enthusiast from{" "}
-					<span onClick={() => handleAusClick()} className="primaryColorUnderline">
-						Australia
-					</span>
-					! I love programming and have experience with{" "}
-					<span style={{ color: "#e34c26" }}>HTML</span>,{" "}
+				<p className="mx-[100px] mb-[0px] text-[large] text-white">
+					Hi, I’m a 14-year-old tech enthusiast from Australia! I love programming and
+					have experience with <span style={{ color: "#e34c26" }}>HTML</span>,{" "}
 					<span style={{ color: "#264de4" }}>CSS</span>,{" "}
 					<span style={{ color: "#3178c6" }}>TypeScript</span>,{" "}
 					<span style={{ color: "#f7e018" }}>JavaScript</span>,{" "}
@@ -86,30 +63,33 @@ function Index() {
 					brainstorming my next big idea.
 				</p>
 			</div>
-			<div className="projects" id="projects">
-				<h2>
-					My <span className="primaryColor">Projects.</span>
+			<div className="flex w-full flex-col items-center justify-center" id="projects">
+				<h2 className="mt-[20px] mb-[0] text-center text-3xl">
+					My <span className="text-(--primary-color)">Projects.</span>
 				</h2>
 				{/** eslint-disable-next-line @typescript-eslint/no-explicit-any */}
 				{information.projects.map((project: any) => (
 					<DisplayItem
 						key={project.id}
+						id={project.id}
 						title={project.title}
 						description={project.description}
 						link={project.linkURL}
 						githubLink={project.githubURL}
 						image={project.imageURL}
 						shouldHaveGithubLink={true}
+						arrayLength={information.projects.length}
 					/>
 				))}
 			</div>
-			<div className="certificates" id="certificates">
-				<h2>
-					My <span className="primaryColor">Certificates.</span>
+			<div className="flex w-full flex-col items-center justify-center" id="certificates">
+				<h2 className="mt-[20px] mb-[0] text-center text-3xl">
+					My <span className="text-(--primary-color)">Certificates.</span>
 				</h2>
 				{/** eslint-disable-next-line @typescript-eslint/no-explicit-any */}
 				{information.certificates.map((project: any) => (
 					<DisplayItem
+						id={project.id}
 						key={project.id}
 						title={project.title}
 						description={project.description}
@@ -117,6 +97,7 @@ function Index() {
 						githubLink={project.githubURL}
 						image={project.imageURL}
 						shouldHaveGithubLink={false}
+						arrayLength={information.certificates.length}
 					/>
 				))}
 			</div>

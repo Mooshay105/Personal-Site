@@ -1,0 +1,9 @@
+{
+	"plugins": ["prettier-plugin-tailwindcss"],
+	"trailingComma": "all",
+	"useTabs": true,
+	"quoteProps": "consistent",
+	"bracketSameLine": false,
+	"bracketSpacing": true,
+	"printWidth": 90
+}
