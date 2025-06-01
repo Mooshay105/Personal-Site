@@ -21,8 +21,6 @@ function DisplayItem({
 	shouldHaveGithubLink,
 	arrayLength,
 }: DisplayItemProps) {
-	console.log("a: ", arrayLength);
-	console.log("b: ", id);
 	return (
 		<div className={arrayLength === id ? "displayItemNoBorder" : "displayItem"}>
 			<img src={image} alt={title} />
