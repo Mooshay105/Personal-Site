@@ -18,9 +18,8 @@ function Index() {
 					I am a 14 year-old living in Australia ! I like to program in
 					<span style={{ color: "#e34c26" }}> HTML</span>,
 					<span style={{ color: "#264de4" }}> CSS</span>,
-					<span style={{ color: "#3178c6" }}> TypeScript</span>,
-					<span style={{ color: "#fa7343" }}> Swift</span>, and a bit of
-					<span style={{ color: "#034FFF" }}> C</span>
+					<span style={{ color: "#3178c6" }}> TypeScript</span>, and a bit of
+					<span style={{ color: "#fa7343" }}> Swift</span>
 				</p>
 				<div className="flex flex-row">
 					<Button text="Projects" isCallToAction={true} link="#projects" />
@@ -41,9 +40,8 @@ function Index() {
 					have experience with <span style={{ color: "#e34c26" }}>HTML</span>,{" "}
 					<span style={{ color: "#264de4" }}>CSS</span>,{" "}
 					<span style={{ color: "#3178c6" }}>TypeScript</span>,{" "}
-					<span style={{ color: "#f7e018" }}>JavaScript</span>,{" "}
-					<span style={{ color: "#fa7343" }}>Swift</span>, and even a bit of{" "}
-					<span style={{ color: "#034FFF" }}>C</span>. I’m especially fascinated by
+					<span style={{ color: "#f7e018" }}>JavaScript</span>, and a bit of{" "}
+					<span style={{ color: "#fa7343" }}>Swift</span>. I’m especially fascinated by
 					Networking and enjoy experimenting with my homelab, which is mostly powered by a
 					collection of <span style={{ color: "#d02b5a" }}>Raspberry Pi&apos;s</span>. I
 					am always looking for exciting projects that push my limits, challenge me, and

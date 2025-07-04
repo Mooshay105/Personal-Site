@@ -5,7 +5,7 @@
 			"title": "Hexagon TV",
 			"linkURL": "https://hexagon.kiwi-micro.com/",
 			"githubURL": "https://github.com/Mooshay105/hexagon-tv",
-			"imageURL": "https://github.com/Mooshay105/Hexagon-TV/blob/main/src/assets/img/metaImage.png?raw=true",
+			"imageURL": "https://github.com/Mooshay105/cdn/blob/main/hexagonTV.png?raw=true",
 			"description": "Hexagon TV is a streaming service that I made from scratch it uses TypeScript for the backend and React frontend, and Turso for the SQL database."
 		},
 		{
@@ -13,7 +13,7 @@
 			"title": "Airport Database",
 			"linkURL": "https://airportdatabase.malcolmjh.com/",
 			"githubURL": "https://github.com/Mooshay105/Airport-Database",
-			"imageURL": "https://github.com/Mooshay105/Personal-Site/blob/main/public/img/airportDatabase.png?raw=true",
+			"imageURL": "https://github.com/Mooshay105/cdn/blob/main/airportDatabase.png?raw=true",
 			"description": "Airport Database is a website that uses React to dynamicly display all (IATA) airports and their information, From a JSON file."
 		},
 		{
@@ -21,7 +21,7 @@
 			"title": "Linux Clone",
 			"linkURL": "https://linux.malcolmjh.com/",
 			"githubURL": "https://github.com/Mooshay105/Linux-Clone",
-			"imageURL": "https://github.com/Mooshay105/Personal-Site/blob/main/public/img/linuxClone.png?raw=true",
+			"imageURL": "https://github.com/Mooshay105/cdn/blob/main/linuxClone.png?raw=true",
 			"description": "Linux Clone is a dynamic website designed to replicate the look and feel of the Ubuntu operating system."
 		}
 	],
@@ -30,7 +30,7 @@
 			"id": 1,
 			"title": "Google Cybersecurity Certificate",
 			"linkURL": "https://coursera.org/share/600da5e80384c31316c03531b6800b9b",
-			"imageURL": "https://github.com/Mooshay105/Personal-Site/blob/main/public/img/googleCybersecurityCert.png?raw=true",
+			"imageURL": "https://github.com/Mooshay105/cdn/blob/main/googleCybersecurityCert.png?raw=true",
 			"description": "Those who earn the Google Cybersecurity Certificate have completed eight courses, developed by Google, that include hands-on, practice-based assessments and are designed to prepare them for entry-level roles in cybersecurity. They are competent in beginner-level Python, Linux, SQL, Security Information and Event Management (SIEM) tools, and Intrusion Detection Systems (IDS). They know how to identify common cybersecurity risks, threats, and vulnerabilities, as well as the techniques to mitigate.",
 			"date": "2023",
 			"status": "Completed",
@@ -40,7 +40,7 @@
 			"id": 2,
 			"title": "Google UX Design Certificate",
 			"linkURL": "https://www.coursera.org/professional-certificates/google-ux-design",
-			"imageURL": "https://github.com/Mooshay105/Personal-Site/blob/main/public/img/googleUXDesignCert.png?raw=true",
+			"imageURL": "https://github.com/Mooshay105/cdn/blob/main/googleUXDesignCert.png?raw=true",
 			"description": "Those who earn the Google UX Design Professional Certificate have completed seven courses, developed by Google, that include hands-on, practice-based assessments and are designed to prepare them for introductory-level roles in UX design. They can complete the design process from beginning to end: empathizing with users, defining their pain points, coming up with ideas for design solutions, creating wireframes and prototypes, and testing designs to get feedback.",
 			"date": "2024 - 2025",
 			"status": "In-Progress",
