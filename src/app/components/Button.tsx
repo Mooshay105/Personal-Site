@@ -19,9 +19,7 @@ function Button({
 		return (
 			<Link
 				className={
-					isCallToAction
-						? "callToActionButton " + extraClass
-						: "actionButton " + extraClass
+					(isCallToAction ? "callToActionButton " : "actionButton ") + extraClass
 				}
 				href={link}
 				target="_blank"
@@ -32,9 +30,7 @@ function Button({
 	}
 	return (
 		<Link
-			className={
-				isCallToAction ? "callToActionButton " + extraClass : "actionButton " + extraClass
-			}
+			className={(isCallToAction ? "callToActionButton " : "actionButton ") + extraClass}
 			href={link}
 		>
 			{text}

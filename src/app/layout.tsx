@@ -5,7 +5,7 @@ import Head from "next/head";
 export const metadata: Metadata = {
 	title: "Malcolm Hauser",
 	description:
-		"I am a 14 year-old living in Australia! I like to programe in HTML, CSS, TypeScript, JavaScript, Swift, and even a bit of C.",
+		"I am a 14 year-old living in Australia! I like to program in HTML, CSS, TypeScript, and a bit of Swift",
 	icons: {
 		icon: "/logo.png",
 	},
