@@ -9,13 +9,13 @@ function Index() {
 	return (
 		<div>
 			<GlobalNavbar />
-			<div className="mt-[100px] flex flex-col items-center justify-center text-center">
+			<div className="mt-[50px] flex flex-col items-center justify-center text-center">
 				<h1 className="m-[0px] w-full text-5xl font-bold text-white">Malcolm Hauser</h1>
 				<h2 className="m-[0px] w-full text-3xl text-(--primary-color)">
 					Spaghetti Coding Since ¯\_(ツ)_/¯.
 				</h2>
 				<p className="mx-[20px] mt-[10px] max-w-[80ch] text-center text-[large] text-white">
-					I am a 14 year-old living in Australia ! I like to program in
+					I am a 14 year-old living in Australia! I like to program in
 					<span style={{ color: "#e34c26" }}> HTML</span>,
 					<span style={{ color: "#264de4" }}> CSS</span>,
 					<span style={{ color: "#3178c6" }}> TypeScript</span>, and a bit of
@@ -35,7 +35,7 @@ function Index() {
 				<h2 className="mt-[20px] mb-[0] text-center text-3xl">
 					About <span className="text-(--primary-color)">Me.</span>
 				</h2>
-				<p className="mx-[100px] mb-[0px] text-[large] text-white">
+				<p className="max-w-[80ch] text-center text-[large] text-white">
 					Hi, I’m a 14-year-old tech enthusiast from Australia! I love programming and
 					have experience with <span style={{ color: "#e34c26" }}>HTML</span>,{" "}
 					<span style={{ color: "#264de4" }}>CSS</span>,{" "}

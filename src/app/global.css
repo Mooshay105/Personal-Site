@@ -140,14 +140,6 @@ body {
 	margin-bottom: 0;
 }
 
-.displayItemButtons {
-	display: flex;
-	margin-left: auto;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-
 .displayItemButton {
 	width: 100px;
 	text-align: center;

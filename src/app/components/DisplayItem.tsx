@@ -28,7 +28,7 @@ function DisplayItem({
 				<h2>{title}</h2>
 				<p>{description}</p>
 			</div>
-			<div className="displayItemButtons">
+			<div className="displayItemButtons flex flex-col items-center justify-center">
 				<Button
 					text="View"
 					link={link}
