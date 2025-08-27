@@ -15,7 +15,7 @@ html {
 	--primary-color: #f05138;
 	--secondary-color: #737373;
 	--border: var(--secondary-color) 1px solid;
-	/** Bio Colors */
+	/* Bio Colors */
 	--react-color: #61dbfb;
 	--vite-color: #8e14ca;
 	--nextjs-color: #0070f3;
@@ -23,66 +23,16 @@ html {
 	--swift-color: #fa7343;
 	--raspberry-pi-color: #d02b5a;
 	--bio-highlight-color: #f05138;
+	/* Box Shadows */
+	--box-shadow-primary-rest: 3px 3px 0 -1px var(--black), 3px 3px var(--primary-color);
+	--box-shadow-primary-hover: 2px 2px 0 -1px var(--black), 2px 2px var(--primary-color);
+	--box-shadow-secondary-rest:
+		3px 3px 0 -1px var(--black), 3px 3px var(--secondary-color);
+	--box-shadow-secondary-hover:
+		2px 2px 0 -1px var(--black), 2px 2px var(--secondary-color);
 }
 
 body {
 	margin: auto;
 	max-width: 1610px;
-}
-
-/* To Move*/
-
-.callToActionButton {
-	background-color: var(--black);
-	margin: 10px;
-	color: #ffffff;
-	padding: 10px 20px;
-	border-radius: 10px;
-	cursor: pointer;
-	background-image: radial-gradient(
-		circle at 0 0,
-		var(--primary-color),
-		var(--black) 42%
-	);
-	box-shadow:
-		3px 3px 0 -1px var(--black),
-		3px 3px var(--primary-color);
-	border: 1px solid var(--primary-color);
-	transition: all 0.2s ease-in-out;
-	text-decoration: none;
-}
-
-.actionButton {
-	background-color: var(--black);
-	margin: 10px;
-	color: #ffffff;
-	padding: 10px 20px;
-	border-radius: 10px;
-	cursor: pointer;
-	box-shadow:
-		3px 3px 0 -1px var(--black),
-		3px 3px var(--secondary-color);
-	border: 1px solid var(--secondary-color);
-	transition: all 0.2s ease-in-out;
-	text-decoration: none;
-}
-
-.actionButton:hover {
-	box-shadow:
-		2px 2px 0 -1px var(--black),
-		2px 2px var(--secondary-color);
-	transform: translate(1px, 1px);
-}
-
-.callToActionButton:hover {
-	box-shadow:
-		2px 2px 0 -1px var(--black),
-		2px 2px var(--primary-color);
-	transform: translate(1px, 1px);
-}
-
-.callToActionButton:active,
-.actionButton:active {
-	box-shadow: none;
-	transform: translate(3px, 3px);
 }
