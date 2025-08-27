@@ -78,6 +78,9 @@ body {
 
 /*  Display Item Styles */
 
+/*flex flex-row items-center justify-center mb-[20px] p-[20px] border-b-[var(--border)] w-[calc(100%-40px)] md:flex-col*/
+/*flex flex-row items-center justify-center mb-[20px] p-[20px] w-[calc(100%-40px)] md:flex-col*/
+
 .displayItem {
 	display: flex;
 	flex-direction: row;
@@ -99,24 +102,10 @@ body {
 	width: calc(100% - 40px);
 }
 
-.displayItem img,
-.displayItemNoBorder img {
-	width: 300px;
-	height: 200px;
-	margin: 20px;
-	object-fit: cover;
-	border-radius: 15px;
-}
-
 @media (max-width: 990px) {
 	.displayItem,
 	.displayItemNoBorder {
 		flex-direction: column;
-	}
-	.displayItem img,
-	.displayItemNoBorder img {
-		width: 80%;
-		height: 80%;
 	}
 }
 

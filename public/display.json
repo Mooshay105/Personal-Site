@@ -1,4 +1,5 @@
 {
+	"resumeURL": "https://github.com/Mooshay105/Mooshay105/blob/main/Resume.md",
 	"projects": [
 		{
 			"id": 1,
@@ -14,7 +15,7 @@
 			"linkURL": "https://airportdatabase.malcolmjh.com/",
 			"githubURL": "https://github.com/Mooshay105/Airport-Database",
 			"imageURL": "https://github.com/Mooshay105/cdn/blob/main/airportDatabase.png?raw=true",
-			"description": "Airport Database is a website that uses React to dynamicly display all (IATA) airports and their information, From a JSON file."
+			"description": "Airport Database is a website that uses React to dynamicly display all (IATA) airports and their information, all from a JSON file."
 		},
 		{
 			"id": 3,
@@ -22,7 +23,7 @@
 			"linkURL": "https://linux.malcolmjh.com/",
 			"githubURL": "https://github.com/Mooshay105/Linux-Clone",
 			"imageURL": "https://github.com/Mooshay105/cdn/blob/main/linuxClone.png?raw=true",
-			"description": "Linux Clone is a dynamic website designed to replicate the look and feel of the Ubuntu operating system."
+			"description": "Linux Clone is a dynamic website designed to replicate (to the best of my ability at the time) the look and feel of Ubuntu."
 		}
 	],
 	"certificates": [
@@ -32,9 +33,7 @@
 			"linkURL": "https://coursera.org/share/600da5e80384c31316c03531b6800b9b",
 			"imageURL": "https://github.com/Mooshay105/cdn/blob/main/googleCybersecurityCert.png?raw=true",
 			"description": "Those who earn the Google Cybersecurity Certificate have completed eight courses, developed by Google, that include hands-on, practice-based assessments and are designed to prepare them for entry-level roles in cybersecurity. They are competent in beginner-level Python, Linux, SQL, Security Information and Event Management (SIEM) tools, and Intrusion Detection Systems (IDS). They know how to identify common cybersecurity risks, threats, and vulnerabilities, as well as the techniques to mitigate.",
-			"date": "2023",
-			"status": "Completed",
-			"statusColor": "#00FF00"
+			"date": "2023"
 		},
 		{
 			"id": 2,
@@ -42,9 +41,7 @@
 			"linkURL": "https://www.coursera.org/professional-certificates/google-ux-design",
 			"imageURL": "https://github.com/Mooshay105/cdn/blob/main/googleUXDesignCert.png?raw=true",
 			"description": "Those who earn the Google UX Design Professional Certificate have completed seven courses, developed by Google, that include hands-on, practice-based assessments and are designed to prepare them for introductory-level roles in UX design. They can complete the design process from beginning to end: empathizing with users, defining their pain points, coming up with ideas for design solutions, creating wireframes and prototypes, and testing designs to get feedback.",
-			"date": "2024 - 2025",
-			"status": "In-Progress",
-			"statusColor": "#FFFF00"
+			"date": "2024 - 2025"
 		}
 	]
 }

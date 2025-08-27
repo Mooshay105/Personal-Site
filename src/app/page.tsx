@@ -8,8 +8,8 @@ import information from "../../public/display.json";
 function Index() {
 	return (
 		<div>
-			<GlobalNavbar />
-			<div className="mt-[50px] flex flex-col items-center justify-center text-center">
+			<GlobalNavbar resumeURL={information.resumeURL} />
+			<div className="mt-[50px] flex flex-col items-center text-center">
 				<h1 className="m-[0px] w-full text-5xl font-bold text-white">Malcolm Hauser</h1>
 				<h2 className="m-[0px] w-full text-3xl text-(--primary-color)">
 					Spaghetti Coding Since ¯\_(ツ)_/¯.
@@ -53,18 +53,16 @@ function Index() {
 				<h2 className="mt-[20px] mb-[0] text-center text-3xl">
 					My <span className="text-(--primary-color)">Projects.</span>
 				</h2>
-				{/** eslint-disable-next-line @typescript-eslint/no-explicit-any */}
 				{information.projects.map((project: any) => (
 					<DisplayItem
 						key={project.id}
-						id={project.id}
 						title={project.title}
 						description={project.description}
 						link={project.linkURL}
 						githubLink={project.githubURL}
 						image={project.imageURL}
 						shouldHaveGithubLink={true}
-						arrayLength={information.projects.length}
+						shouldHaveDate={false}
 					/>
 				))}
 			</div>
@@ -75,7 +73,6 @@ function Index() {
 				{/** eslint-disable-next-line @typescript-eslint/no-explicit-any */}
 				{information.certificates.map((project: any) => (
 					<DisplayItem
-						id={project.id}
 						key={project.id}
 						title={project.title}
 						description={project.description}
@@ -83,7 +80,8 @@ function Index() {
 						githubLink={project.githubURL}
 						image={project.imageURL}
 						shouldHaveGithubLink={false}
-						arrayLength={information.certificates.length}
+						shouldHaveDate={true}
+						date={project.date}
 					/>
 				))}
 			</div>

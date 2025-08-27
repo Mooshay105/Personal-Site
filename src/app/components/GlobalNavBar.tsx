@@ -5,7 +5,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-function GlobalNavBar() {
+interface GlobalNavBarProps {
+	resumeURL: string;
+}
+
+function GlobalNavBar({ resumeURL }: GlobalNavBarProps) {
 	const [isMobile, setIsMobile] = useState(false);
 	const [isOpen, setIsOpen] = useState(false);
 
@@ -94,7 +98,8 @@ function GlobalNavBar() {
 								<Button
 									text="Resume"
 									isCallToAction={true}
-									link="https://malcolmjh.com/resume"
+									link={resumeURL}
+									externalLink={true}
 									extraClass="w-[96%] font-bold text-xl"
 								/>
 							</div>
@@ -123,7 +128,8 @@ function GlobalNavBar() {
 						<Button
 							text="Resume"
 							isCallToAction={true}
-							link="https://malcolmjh.com/resume"
+							link={resumeURL}
+							externalLink={true}
 						/>
 					</div>
 				)}
