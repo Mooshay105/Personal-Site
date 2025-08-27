@@ -3,17 +3,26 @@
 /* Main Styles */
 
 html {
-	font-family: "Ubuntu Sans", sans-serif;
+	font-family: var(--font-sans);
 	background-color: var(--black);
-	color: #ffffff;
+	color: var(--white);
 	scroll-behavior: smooth;
-	--font-sans: "Ubuntu Sans", sans-serif;
-	--font-serif: "Roboto", serif;
+	--font-sans: "Ubuntu Sans", "Roboto", sans-serif;
+	--font-serif: serif;
 	--font-mono: "Ubuntu Mono", monospace;
 	--black: #0c0c0c;
+	--white: #ffffff;
 	--primary-color: #f05138;
 	--secondary-color: #737373;
 	--border: var(--secondary-color) 1px solid;
+	/** Bio Colors */
+	--react-color: #61dbfb;
+	--vite-color: #8e14ca;
+	--nextjs-color: #0070f3;
+	--typescript-color: #0a88d3;
+	--swift-color: #fa7343;
+	--raspberry-pi-color: #d02b5a;
+	--bio-highlight-color: #f05138;
 }
 
 body {
