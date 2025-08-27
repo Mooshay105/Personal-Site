@@ -31,20 +31,22 @@ function DisplayItem({
 				height={200}
 				className="m-[20px] rounded-[15px] object-cover"
 			/>
-			<div className="displayItemText">
+			<div className="flex flex-col justify-center mx-auto w-[90%]">
 				<div className="flex flex-row">
-					<h2>{title}</h2>
-					{shouldHaveDate ? <p className="ml-[10px] mt-[7px]">{date}</p> : null}
+					<h2 className="text-3xl text-white mb-[0]">{title}</h2>
+					{shouldHaveDate ? (
+						<p className="ml-[10px] mt-[7px] text-[large] text-white mb-[0]">{date}</p>
+					) : null}
 				</div>
-				<p>{description}</p>
+				<p className="text-[large] text-white mb-[0]">{description}</p>
 			</div>
-			<div className="displayItemButtons flex flex-col items-center justify-center">
+			<div className="flex flex-col items-center justify-center [@media(max-width:990px)]:w-[100%]">
 				<Button
 					text="View"
 					link={link}
 					externalLink={true}
 					isCallToAction={true}
-					extraClass="displayItemButton"
+					extraClass="w-[100px] text-center [@media(max-width:990px)]:w-[85%] [@media(max-width:990px)]:mt-[10px] [@media(max-width:990px)]:text-3xl"
 				/>
 				{shouldHaveGithubLink ? (
 					<Button
@@ -52,7 +54,7 @@ function DisplayItem({
 						link={githubLink}
 						externalLink={true}
 						isCallToAction={false}
-						extraClass="displayItemButton"
+						extraClass="w-[100px] text-center [@media(max-width:990px)]:w-[85%] [@media(max-width:990px)]:mt-[10px] [@media(max-width:990px)]:text-3xl"
 					/>
 				) : null}
 			</div>

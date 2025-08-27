@@ -21,6 +21,8 @@ body {
 	max-width: 1610px;
 }
 
+/* To Move*/
+
 .callToActionButton {
 	background-color: var(--black);
 	margin: 10px;
@@ -74,73 +76,4 @@ body {
 .actionButton:active {
 	box-shadow: none;
 	transform: translate(3px, 3px);
-}
-
-/*  Display Item Styles */
-
-/*flex flex-row items-center justify-center mb-[20px] p-[20px] border-b-[var(--border)] w-[calc(100%-40px)] md:flex-col*/
-/*flex flex-row items-center justify-center mb-[20px] p-[20px] w-[calc(100%-40px)] md:flex-col*/
-
-.displayItem {
-	display: flex;
-	flex-direction: row;
-	justify-content: left;
-	align-items: center;
-	margin-bottom: 20px;
-	padding: 20px;
-	border-bottom: var(--border);
-	width: calc(100% - 40px);
-}
-
-.displayItemNoBorder {
-	display: flex;
-	flex-direction: row;
-	justify-content: left;
-	align-items: center;
-	margin-bottom: 20px;
-	padding: 20px;
-	width: calc(100% - 40px);
-}
-
-@media (max-width: 990px) {
-	.displayItem,
-	.displayItemNoBorder {
-		flex-direction: column;
-	}
-}
-
-.displayItemText {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	margin-inline: auto;
-	width: 90%;
-}
-
-.displayItemText h2 {
-	font-size: x-large;
-	color: #ffffff;
-	margin-bottom: 0;
-}
-
-.displayItemText p {
-	font-size: large;
-	color: #ffffff;
-	margin-bottom: 0;
-}
-
-.displayItemButton {
-	width: 100px;
-	text-align: center;
-}
-
-@media (max-width: 990px) {
-	.displayItemButtons {
-		width: 100%;
-	}
-	.displayItemButton {
-		width: 85%;
-		margin-top: 10px;
-		font-size: x-large;
-	}
 }
