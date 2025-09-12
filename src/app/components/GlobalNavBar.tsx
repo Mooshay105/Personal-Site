@@ -78,22 +78,28 @@ function GlobalNavBar({ resumeURL }: GlobalNavBarProps) {
 						{isOpen ? (
 							<div className="fixed top-[87px] left-[-30px] right-[-30px] flex flex-col mx-[30] h-fit rounded-[15px] p-[0px] pr-[10px] border-[#7a7a7a] border border-solid bg-[#1a1a1a8e] backdrop-blur-md backdrop-saturate-180">
 								<Link
-									href="#aboutMe"
+									href="/#aboutMe"
 									className="m-[10px] no-underline text-white transition-all duration-[0.2s] ease-in-out"
 								>
-									<p className="font-bold text-xl">About Me</p>
+									<p>About Me</p>
 								</Link>
 								<Link
-									href="#projects"
+									href="/contactMe"
 									className="m-[10px] no-underline text-white transition-all duration-[0.2s] ease-in-out"
 								>
-									<p className="font-bold text-xl">Projects</p>
+									<p>Contact Me</p>
 								</Link>
 								<Link
-									href="#certificates"
+									href="/#projects"
 									className="m-[10px] no-underline text-white transition-all duration-[0.2s] ease-in-out"
 								>
-									<p className="font-bold text-xl">Certificates</p>
+									<p>Projects</p>
+								</Link>
+								<Link
+									href="/#certificates"
+									className="m-[10px] no-underline text-white transition-all duration-[0.2s] ease-in-out"
+								>
+									<p>Certificates</p>
 								</Link>
 								<Button
 									text="Resume"
@@ -108,19 +114,25 @@ function GlobalNavBar({ resumeURL }: GlobalNavBarProps) {
 				) : (
 					<div className="flex flex-row items-center justify-center">
 						<Link
-							href="#aboutMe"
+							href="/#aboutMe"
 							className="m-[10px] no-underline text-white transition-all duration-[0.2s] ease-in-out"
 						>
 							<p>About Me</p>
 						</Link>
 						<Link
-							href="#projects"
+							href="/contactMe"
+							className="m-[10px] no-underline text-white transition-all duration-[0.2s] ease-in-out"
+						>
+							<p>Contact Me</p>
+						</Link>
+						<Link
+							href="/#projects"
 							className="m-[10px] no-underline text-white transition-all duration-[0.2s] ease-in-out"
 						>
 							<p>Projects</p>
 						</Link>
 						<Link
-							href="#certificates"
+							href="/#certificates"
 							className="m-[10px] no-underline text-white transition-all duration-[0.2s] ease-in-out"
 						>
 							<p>Certificates</p>
