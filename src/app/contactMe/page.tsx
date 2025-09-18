@@ -80,7 +80,9 @@ function Index() {
 								strokeLinejoin="round"
 							/>
 						</svg>
-						<p className="ml-2.5 text-white">+61 I do not have a phone.</p>
+						<p className="ml-2.5 text-white">
+							+61 I do not have a phone. (Awsome phone number I know!)
+						</p>
 					</div>
 				</div>
 			</div>
