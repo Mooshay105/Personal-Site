@@ -6,10 +6,11 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 interface GlobalNavBarProps {
-	resumeURL: string;
+	resumeURLMD: string;
+	resumeURLDOCX: string;
 }
 
-function GlobalNavBar({ resumeURL }: GlobalNavBarProps) {
+function GlobalNavBar({ resumeURLMD, resumeURLDOCX }: GlobalNavBarProps) {
 	const [isMobile, setIsMobile] = useState(false);
 	const [isOpen, setIsOpen] = useState(false);
 
@@ -102,9 +103,16 @@ function GlobalNavBar({ resumeURL }: GlobalNavBarProps) {
 									<p>Certificates</p>
 								</Link>
 								<Button
-									text="Resume"
+									text="Resume (.docx)"
 									isCallToAction={true}
-									link={resumeURL}
+									link={resumeURLDOCX}
+									externalLink={true}
+									extraClass="w-[96%] font-bold text-xl"
+								/>
+								<Button
+									text="Resume (.md)"
+									isCallToAction={true}
+									link={resumeURLMD}
 									externalLink={true}
 									extraClass="w-[96%] font-bold text-xl"
 								/>
@@ -117,31 +125,39 @@ function GlobalNavBar({ resumeURL }: GlobalNavBarProps) {
 							href="/#aboutMe"
 							className="m-[10px] no-underline text-white transition-all duration-[0.2s] ease-in-out"
 						>
-							<p>About Me</p>
+							<p className="whitespace-nowrap">About Me</p>
 						</Link>
 						<Link
 							href="/contactMe"
 							className="m-[10px] no-underline text-white transition-all duration-[0.2s] ease-in-out"
 						>
-							<p>Contact Me</p>
+							<p className="whitespace-nowrap">Contact Me</p>
 						</Link>
 						<Link
 							href="/#projects"
 							className="m-[10px] no-underline text-white transition-all duration-[0.2s] ease-in-out"
 						>
-							<p>Projects</p>
+							<p className="whitespace-nowrap">Projects</p>
 						</Link>
 						<Link
 							href="/#certificates"
 							className="m-[10px] no-underline text-white transition-all duration-[0.2s] ease-in-out"
 						>
-							<p>Certificates</p>
+							<p className="whitespace-nowrap">Certificates</p>
 						</Link>
 						<Button
-							text="Resume"
+							text="Resume (.docx)"
 							isCallToAction={true}
-							link={resumeURL}
+							link={resumeURLDOCX}
 							externalLink={true}
+							extraClass="w-[96%] text-l whitespace-nowrap"
+						/>
+						<Button
+							text="Resume (.md)"
+							isCallToAction={true}
+							link={resumeURLMD}
+							externalLink={true}
+							extraClass="w-[96%] text-l whitespace-nowrap"
 						/>
 					</div>
 				)}

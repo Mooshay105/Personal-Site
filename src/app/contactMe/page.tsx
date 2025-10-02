@@ -6,7 +6,10 @@ import information from "../../../public/display.json";
 function Index() {
 	return (
 		<div>
-			<GlobalNavbar resumeURL={information.resumeURL} />
+			<GlobalNavbar
+				resumeURLMD={information.resumeURLMD}
+				resumeURLDOCX={information.resumeURLDOCX}
+			/>
 			<div className="mt-[50px] flex flex-col items-center text-center">
 				<h1 className="m-[0px] w-full text-5xl font-bold text-white">Malcolm Hauser</h1>
 				<h2 className="m-[0px] w-full text-3xl text-(--primary-color)">
