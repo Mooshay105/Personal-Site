@@ -10,9 +10,9 @@ function Index() {
 				resumeURLMD={information.resumeURLMD}
 				resumeURLDOCX={information.resumeURLDOCX}
 			/>
-			<div className="mt-[50px] flex flex-col items-center text-center">
-				<h1 className="m-[0px] w-full text-5xl font-bold text-white">Malcolm Hauser</h1>
-				<h2 className="m-[0px] w-full text-3xl text-(--primary-color)">
+			<div className="mt-12.5 flex flex-col items-center text-center">
+				<h1 className="m-0 w-full text-5xl font-bold text-white">Malcolm Hauser</h1>
+				<h2 className="m-0 w-full text-3xl text-(--primary-color)">
 					Contact your (
 					<span
 						onClick={() => alert("I don't know where you live, I'm not a creep!")}

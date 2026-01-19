@@ -12,12 +12,12 @@ function Index() {
 				resumeURLMD={information.resumeURLMD}
 				resumeURLDOCX={information.resumeURLDOCX}
 			/>
-			<div className="mt-[50px] flex flex-col items-center text-center">
-				<h1 className="m-[0px] w-full text-5xl font-bold text-white">Malcolm Hauser</h1>
-				<h2 className="m-[0px] w-full text-3xl text-(--primary-color)">
+			<div className="mt-12.5 flex flex-col items-center text-center">
+				<h1 className="m-0 w-full text-5xl font-bold text-white">Malcolm Hauser</h1>
+				<h2 className="m-0 w-full text-3xl text-(--primary-color)">
 					Spaghetti Coding Since ¯\_(ツ)_/¯.
 				</h2>
-				<p className="mx-[20px] mt-[10px] max-w-[80ch] text-center text-[large] text-white">
+				<p className="mx-5 mt-2.5 max-w-[80ch] text-center text-[large] text-white">
 					I am a 14 year-old living in Australia! I build my projects with
 					<span className="text-(--react-color)"> React</span> and{" "}
 					<span className="text-(--vite-color)"> Vite</span> But I am trying-out{" "}
@@ -37,7 +37,7 @@ function Index() {
 				</div>
 			</div>
 			<div className="flex w-full flex-col items-center justify-center" id="aboutMe">
-				<h2 className="mt-[20px] mb-[0] text-center text-3xl">
+				<h2 className="mt-5 mb-0 text-center text-3xl">
 					About <span className="text-(--primary-color)">Me.</span>
 				</h2>
 				<p className="max-w-[80ch] text-center text-[large] text-white">
@@ -55,7 +55,7 @@ function Index() {
 				</p>
 			</div>
 			<div className="flex w-full flex-col items-center justify-center" id="projects">
-				<h2 className="mt-[20px] mb-[0] text-center text-3xl">
+				<h2 className="mt-5 mb-0 text-center text-3xl">
 					My <span className="text-(--primary-color)">Projects.</span>
 				</h2>
 				{information.projects.map((project: any) => (
@@ -72,7 +72,7 @@ function Index() {
 				))}
 			</div>
 			<div className="flex w-full flex-col items-center justify-center" id="certificates">
-				<h2 className="mt-[20px] mb-[0] text-center text-3xl">
+				<h2 className="mt-5 mb-0 text-center text-3xl">
 					My <span className="text-(--primary-color)">Certificates.</span>
 				</h2>
 				{/** eslint-disable-next-line @typescript-eslint/no-explicit-any */}
