@@ -67,6 +67,7 @@ function Index() {
 						githubLink={project.githubURL}
 						image={project.imageURL}
 						shouldHaveGithubLink={true}
+						isCertificate={false}
 						shouldHaveDate={false}
 					/>
 				))}
@@ -76,7 +77,7 @@ function Index() {
 					My <span className="text-(--primary-color)">Certificates.</span>
 				</h2>
 				{/** eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-				{information.certificates.map((project: any) => (
+				{information.certificates.reverse().map((project: any) => (
 					<DisplayItem
 						key={project.id}
 						title={project.title}
@@ -86,6 +87,7 @@ function Index() {
 						image={project.imageURL}
 						shouldHaveGithubLink={false}
 						shouldHaveDate={true}
+						isCertificate={true}
 						date={project.date}
 					/>
 				))}

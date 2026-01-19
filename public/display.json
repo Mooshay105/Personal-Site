@@ -32,7 +32,7 @@
 			"id": 1,
 			"title": "Google Cybersecurity Certificate",
 			"linkURL": "https://coursera.org/share/600da5e80384c31316c03531b6800b9b",
-			"imageURL": "https://github.com/Mooshay105/cdn/blob/main/googleCybersecurityCert.png?raw=true",
+			"imageURL": "https://github.com/Mooshay105/cdn/blob/main/Coursera.png?raw=true",
 			"description": "Those who earn the Google Cybersecurity Certificate have completed eight courses, developed by Google, that include hands-on, practice-based assessments and are designed to prepare them for entry-level roles in cybersecurity. They are competent in beginner-level Python, Linux, SQL, Security Information and Event Management (SIEM) tools, and Intrusion Detection Systems (IDS). They know how to identify common cybersecurity risks, threats, and vulnerabilities, as well as the techniques to mitigate.",
 			"date": "2023"
 		},
@@ -40,9 +40,17 @@
 			"id": 2,
 			"title": "Google UX Design Certificate",
 			"linkURL": "https://www.coursera.org/professional-certificates/google-ux-design",
-			"imageURL": "https://github.com/Mooshay105/cdn/blob/main/googleUXDesignCert.png?raw=true",
+			"imageURL": "https://github.com/Mooshay105/cdn/blob/main/Coursera.png?raw=true",
 			"description": "Those who earn the Google UX Design Professional Certificate have completed seven courses, developed by Google, that include hands-on, practice-based assessments and are designed to prepare them for introductory-level roles in UX design. They can complete the design process from beginning to end: empathizing with users, defining their pain points, coming up with ideas for design solutions, creating wireframes and prototypes, and testing designs to get feedback.",
 			"date": "2024 - 2025"
+		},
+		{
+			"id": 3,
+			"title": "Certificate III in Information Technology",
+			"linkURL": "https://tafeqld.edu.au/course/17/17940/certificate-iii-in-information-technology",
+			"imageURL": "https://github.com/Mooshay105/cdn/blob/main/TafeQLD.png?raw=true",
+			"description": "This certification from TAFE Queensland equips individuals with foundational skills in information technology. It covers a broad range of entry-level IT competencies, preparing learners for various roles within the industry. The program focuses on practical application and essential knowledge for supporting IT systems and users.",
+			"date": "2026 - Present"
 		}
 	]
 }

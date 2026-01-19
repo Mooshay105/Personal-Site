@@ -9,6 +9,7 @@ interface DisplayItemProps {
 	image: string;
 	shouldHaveGithubLink: boolean;
 	shouldHaveDate: boolean;
+	isCertificate: boolean;
 	date?: string;
 }
 
@@ -20,17 +21,28 @@ function DisplayItem({
 	image,
 	shouldHaveGithubLink,
 	shouldHaveDate,
+	isCertificate,
 	date,
 }: DisplayItemProps) {
 	return (
 		<div className="flex items-center justify-center mb-1.25 w-[calc(100%-40px)] [@media(max-width:990px)]:flex-col flex-row">
-			<Image
-				src={image}
-				alt={title}
-				width={300}
-				height={200}
-				className="m-5 rounded-[15px] object-cover"
-			/>
+			{isCertificate ? (
+				<Image
+					src={image}
+					alt={title}
+					width={100}
+					height={100}
+					className="m-5 rounded-[15px] object-cover"
+				/>
+			) : (
+				<Image
+					src={image}
+					alt={title}
+					width={300}
+					height={200}
+					className="m-5 rounded-[15px] object-cover"
+				/>
+			)}
 			<div className="flex flex-col justify-center mx-auto w-[90%]">
 				<div className="flex flex-row">
 					<h2 className="text-3xl text-white mb-0">{title}</h2>
@@ -38,7 +50,7 @@ function DisplayItem({
 						<p className="ml-2.5 mt-1.75 text-[large] text-white mb-0">{date}</p>
 					) : null}
 				</div>
-				<p className="text-[large] text-white mb-0">{description}</p>
+				<p className="text-[large] text-zinc-400 mb-0">{description}</p>
 			</div>
 			<div className="flex flex-col items-center justify-center [@media(max-width:990px)]:w-full">
 				<Button
