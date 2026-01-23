@@ -5,11 +5,13 @@ interface DisplayItemProps {
 	title: string;
 	description: string;
 	link: string;
+	shouldHaveGithubLink: boolean;
 	githubLink: string;
 	image: string;
-	shouldHaveGithubLink: boolean;
-	shouldHaveDate: boolean;
 	isCertificate: boolean;
+	shouldHaveDate: boolean;
+	shouldHaveCertURL: boolean;
+	certURL?: string;
 	date?: string;
 }
 
@@ -22,6 +24,8 @@ function DisplayItem({
 	shouldHaveGithubLink,
 	shouldHaveDate,
 	isCertificate,
+	certURL,
+	shouldHaveCertURL,
 	date,
 }: DisplayItemProps) {
 	return (
@@ -64,6 +68,15 @@ function DisplayItem({
 					<Button
 						text="GitHub"
 						link={githubLink}
+						externalLink={true}
+						isCallToAction={false}
+						extraClass="w-[100px] text-center [@media(max-width:990px)]:w-[85%] [@media(max-width:990px)]:mt-[10px] [@media(max-width:990px)]:text-3xl"
+					/>
+				) : null}
+				{shouldHaveCertURL ? (
+					<Button
+						text="Certificate"
+						link={certURL || ""}
 						externalLink={true}
 						isCallToAction={false}
 						extraClass="w-[100px] text-center [@media(max-width:990px)]:w-[85%] [@media(max-width:990px)]:mt-[10px] [@media(max-width:990px)]:text-3xl"

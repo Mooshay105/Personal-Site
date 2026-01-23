@@ -6,6 +6,7 @@ interface ButtonProps {
 	link: string;
 	externalLink?: boolean;
 	extraClass?: string;
+	isCertificate?: boolean;
 }
 
 function Button({
@@ -17,9 +18,10 @@ function Button({
 }: ButtonProps) {
 	const css =
 		(isCallToAction
-			? "bg-[radial-gradient(circle_at_0_0,_var(--primary-color),_var(--black)_42%)] m-[10px] p-[10px_20px] rounded-[10px] shadow-[var(--box-shadow-primary-rest)] border-[1px] border-solid border-[var(--primary-color)] transition-all duration-200 ease-in-out hover:shadow-[var(--box-shadow-primary-hover)] hover:translate-x-[1px] hover:translate-y-[1px] active:shadow-none active:translate-x-[3px] active:translate-y-[3px] "
-			: "m-[10px] p-[10px_20px] rounded-[10px] shadow-[var(--box-shadow-secondary-rest)] border-[1px] border-solid border-[var(--secondary-color)] transition-all duration-200 ease-in-out hover:shadow-[var(--box-shadow-secondary-hover)] hover:translate-x-[1px] hover:translate-y-[1px] active:shadow-none active:translate-x-[3px] active:translate-y-[3px] ") +
-		extraClass;
+			? "shadow-[var(--box-shadow-primary-rest)] border-[var(--primary-color)] hover:shadow-[var(--box-shadow-primary-hover)] bg-[radial-gradient(circle_at_0_0,_var(--primary-color),_var(--black)_42%)] "
+			: "shadow-[var(--box-shadow-secondary-rest)] border-[var(--secondary-color)] hover:shadow-[var(--box-shadow-secondary-hover)] ") +
+		extraClass +
+		" m-[10px] rounded-[10px] pt-[10px] pb-[10px] px-[auto] border-[1px] border-solid transition-all duration-200 ease-in-out hover:translate-x-[1px] hover:translate-y-[1px] active:shadow-none active:translate-x-[3px] active:translate-y-[3px]";
 
 	if (externalLink) {
 		return (

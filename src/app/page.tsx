@@ -27,12 +27,18 @@ function Index() {
 					<span className="text-(--swift-color)"> Swift</span>
 				</p>
 				<div className="flex flex-row">
-					<Button text="Projects" isCallToAction={true} link="#projects" />
+					<Button
+						text="Projects"
+						isCallToAction={true}
+						link="#projects"
+						extraClass="w-[100px]"
+					/>
 					<Button
 						text="GitHub"
 						isCallToAction={false}
 						link="https://github.com/Mooshay105"
 						externalLink={true}
+						extraClass="w-[100px]"
 					/>
 				</div>
 			</div>
@@ -69,6 +75,7 @@ function Index() {
 						shouldHaveGithubLink={true}
 						isCertificate={false}
 						shouldHaveDate={false}
+						shouldHaveCertURL={false}
 					/>
 				))}
 			</div>
@@ -89,6 +96,8 @@ function Index() {
 						shouldHaveDate={true}
 						isCertificate={true}
 						date={project.date}
+						certURL={project.certURL}
+						shouldHaveCertURL={true}
 					/>
 				))}
 			</div>

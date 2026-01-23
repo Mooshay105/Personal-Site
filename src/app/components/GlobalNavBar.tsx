@@ -105,14 +105,14 @@ function GlobalNavBar({ resumeURLMD, resumeURLDOCX }: GlobalNavBarProps) {
 							isCallToAction={true}
 							link={resumeURLDOCX}
 							externalLink={true}
-							extraClass="w-[96%] text-l whitespace-nowrap"
+							extraClass="w-[150px] text-center whitespace-nowrap"
 						/>
 						<Button
 							text="Resume (.md)"
 							isCallToAction={true}
 							link={resumeURLMD}
 							externalLink={true}
-							extraClass="w-[96%] text-l whitespace-nowrap"
+							extraClass="w-[150px] text-center whitespace-nowrap"
 						/>
 					</div>
 				)}
