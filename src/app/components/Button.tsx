@@ -6,7 +6,8 @@ interface ButtonProps {
 	link: string;
 	externalLink?: boolean;
 	extraClass?: string;
-	isCertificate?: boolean;
+	runJSOnClick?: boolean;
+	jsToRun?: () => void;
 }
 
 function Button({
@@ -15,6 +16,8 @@ function Button({
 	link,
 	externalLink = false,
 	extraClass = "",
+	runJSOnClick = false,
+	jsToRun,
 }: ButtonProps) {
 	const css =
 		(isCallToAction
@@ -28,6 +31,13 @@ function Button({
 			<Link className={css} href={link} target="_blank">
 				{text}
 			</Link>
+		);
+	}
+	if (runJSOnClick) {
+		return (
+			<button className={css} onClick={jsToRun}>
+				{text}
+			</button>
 		);
 	}
 	return (

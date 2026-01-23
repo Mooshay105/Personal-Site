@@ -14,6 +14,7 @@ interface GlobalNavBarProps {
 function GlobalNavBar({ resumeURLMD, resumeURLDOCX }: GlobalNavBarProps) {
 	const [isMobile, setIsMobile] = useState(false);
 	const [isOpen, setIsOpen] = useState(false);
+	const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
 	useEffect(() => {
 		const handleResize = () => {
@@ -72,26 +73,44 @@ function GlobalNavBar({ resumeURLMD, resumeURLDOCX }: GlobalNavBarProps) {
 							/>
 						</svg>
 						{isOpen ? (
-							<div className="fixed top-21.75 -left-7.5 -right-7.5 flex flex-col mx-[30] h-fit rounded-[15px] p-0 pr-2.5 border-[#7a7a7a] border border-solid bg-[#1a1a1a8e] backdrop-blur-md backdrop-saturate-180">
-								<NavItem link="/#aboutMe" text="About Me" isMobile={isMobile} />
-								<NavItem link="/contactMe" text="Contact Me" isMobile={isMobile} />
-								<NavItem link="/#projects" text="Projects" isMobile={isMobile} />
-								<NavItem link="/#certificates" text="Certificates" isMobile={isMobile} />
-								<Button
-									text="Resume (.docx)"
-									isCallToAction={true}
-									link={resumeURLDOCX}
-									externalLink={true}
-									extraClass="w-[96%] font-bold text-xl"
-								/>
-								<Button
-									text="Resume (.md)"
-									isCallToAction={true}
-									link={resumeURLMD}
-									externalLink={true}
-									extraClass="w-[96%] font-bold text-xl"
-								/>
-							</div>
+							<>
+								<div className="fixed top-21.75 -left-7.5 -right-7.5 flex flex-col mx-[30] h-fit rounded-[15px] p-0 pr-2.5 border-[#7a7a7a] border border-solid bg-[#1a1a1a8e] backdrop-blur-md backdrop-saturate-180">
+									<NavItem link="/#aboutMe" text="About Me" isMobile={isMobile} />
+									<NavItem link="/contactMe" text="Contact Me" isMobile={isMobile} />
+									<NavItem link="/#projects" text="Projects" isMobile={isMobile} />
+									<NavItem
+										link="/#certificates"
+										text="Certificates"
+										isMobile={isMobile}
+									/>
+									<Button
+										text="Resume"
+										isCallToAction={true}
+										link=""
+										jsToRun={() => setIsDropdownOpen(!isDropdownOpen)}
+										runJSOnClick={true}
+										extraClass="w-[98%] text-center whitespace-nowrap"
+									/>{" "}
+									{isDropdownOpen ? (
+										<>
+											<Button
+												text="Word Document (.docx)"
+												isCallToAction={true}
+												link={resumeURLDOCX}
+												externalLink={true}
+												extraClass="w-[98%] text-center whitespace-nowrap"
+											/>
+											<Button
+												text="Markdown (.md)"
+												isCallToAction={true}
+												link={resumeURLMD}
+												externalLink={true}
+												extraClass="w-[98%] text-center whitespace-nowrap"
+											/>
+										</>
+									) : null}
+								</div>
+							</>
 						) : null}
 					</>
 				) : (
@@ -101,19 +120,31 @@ function GlobalNavBar({ resumeURLMD, resumeURLDOCX }: GlobalNavBarProps) {
 						<NavItem link="/#projects" text="Projects" isMobile={isMobile} />
 						<NavItem link="/#certificates" text="Certificates" isMobile={isMobile} />
 						<Button
-							text="Resume (.docx)"
+							text="Resume"
 							isCallToAction={true}
-							link={resumeURLDOCX}
-							externalLink={true}
+							link=""
+							jsToRun={() => setIsDropdownOpen(!isDropdownOpen)}
+							runJSOnClick={true}
 							extraClass="w-[150px] text-center whitespace-nowrap"
 						/>
-						<Button
-							text="Resume (.md)"
-							isCallToAction={true}
-							link={resumeURLMD}
-							externalLink={true}
-							extraClass="w-[150px] text-center whitespace-nowrap"
-						/>
+						{isDropdownOpen ? (
+							<div className="fixed top-21.75 -right-7.5 flex flex-col mx-[30] h-fit rounded-[15px] p-0 pr-4.5 border-[#7a7a7a] border border-solid bg-[#1a1a1a8e] backdrop-blur-md backdrop-saturate-180">
+								<Button
+									text="Word Document (.docx)"
+									isCallToAction={true}
+									link={resumeURLDOCX}
+									externalLink={true}
+									extraClass="w-[98%] text-center whitespace-nowrap"
+								/>
+								<Button
+									text="Markdown (.md)"
+									isCallToAction={true}
+									link={resumeURLMD}
+									externalLink={true}
+									extraClass="w-[98%] text-center whitespace-nowrap"
+								/>
+							</div>
+						) : null}
 					</div>
 				)}
 			</nav>
