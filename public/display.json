@@ -5,24 +5,30 @@
 		{
 			"id": 1,
 			"title": "Hexagon TV",
-			"linkURL": "https://hexagon.kiwi-micro.com/",
-			"githubURL": "https://github.com/Mooshay105/hexagon-tv",
+			"isPrimaryLinkActive": false,
+			"isSecondaryLinkActive": true,
+			"primaryLinkURL": "https://hexagon.kiwi-micro.com/",
+			"secondaryLinkURL": "https://github.com/Mooshay105/hexagon-tv",
 			"imageURL": "https://github.com/Mooshay105/cdn/blob/main/hexagonTV.png?raw=true",
 			"description": "Hexagon TV is a streaming service that I made from scratch it uses TypeScript for the backend and React frontend, and Turso for the SQL database."
 		},
 		{
 			"id": 2,
 			"title": "Airport Database",
-			"linkURL": "https://airportdatabase.malcolmjh.com/",
-			"githubURL": "https://github.com/Mooshay105/Airport-Database",
+			"isPrimaryLinkActive": true,
+			"isSecondaryLinkActive": true,
+			"primaryLinkURL": "https://airportdatabase.malcolmjh.com/",
+			"secondaryLinkURL": "https://github.com/Mooshay105/Airport-Database",
 			"imageURL": "https://github.com/Mooshay105/cdn/blob/main/airportDatabase.png?raw=true",
 			"description": "Airport Database is a website that uses React to dynamicly display all (IATA) airports and their information, all from a JSON file."
 		},
 		{
 			"id": 3,
 			"title": "Linux Clone",
-			"linkURL": "https://linux.malcolmjh.com/",
-			"githubURL": "https://github.com/Mooshay105/Linux-Clone",
+			"isPrimaryLinkActive": true,
+			"isSecondaryLinkActive": true,
+			"primaryLinkURL": "https://linux.malcolmjh.com/",
+			"secondaryLinkURL": "https://github.com/Mooshay105/Linux-Clone",
 			"imageURL": "https://github.com/Mooshay105/cdn/blob/main/linuxClone.png?raw=true",
 			"description": "Linux Clone is a dynamic website designed to replicate (to the best of my ability at the time) the look and feel of Ubuntu."
 		}
@@ -31,28 +37,37 @@
 		{
 			"id": 1,
 			"title": "Google Cybersecurity Certificate",
-			"linkURL": "https://coursera.org/share/600da5e80384c31316c03531b6800b9b",
+			"isPrimaryLinkActive": true,
+			"isSecondaryLinkActive": true,
+			"primaryLinkURL": "https://www.coursera.org/professional-certificates/google-cybersecurity",
+			"secondaryLinkURL": "https://www.coursera.org/share/3d7eb85ea356a12056e6651702ea5e6e",
 			"imageURL": "https://github.com/Mooshay105/cdn/blob/main/Coursera.png?raw=true",
 			"description": "Those who earn the Google Cybersecurity Certificate have completed eight courses, developed by Google, that include hands-on, practice-based assessments and are designed to prepare them for entry-level roles in cybersecurity. They are competent in beginner-level Python, Linux, SQL, Security Information and Event Management (SIEM) tools, and Intrusion Detection Systems (IDS). They know how to identify common cybersecurity risks, threats, and vulnerabilities, as well as the techniques to mitigate.",
-			"certURL": "https://coursera.org/share/3d7eb85ea356a12056e6651702ea5e6e",
+			"hasCert": true,
 			"date": "2023"
 		},
 		{
 			"id": 2,
 			"title": "Google UX Design Certificate",
-			"linkURL": "https://www.coursera.org/professional-certificates/google-ux-design",
+			"isPrimaryLinkActive": true,
+			"isSecondaryLinkActive": false,
+			"primaryLinkURL": "https://www.coursera.org/professional-certificates/google-ux-design",
+			"secondaryLinkURL": "",
 			"imageURL": "https://github.com/Mooshay105/cdn/blob/main/Coursera.png?raw=true",
 			"description": "Those who earn the Google UX Design Professional Certificate have completed seven courses, developed by Google, that include hands-on, practice-based assessments and are designed to prepare them for introductory-level roles in UX design. They can complete the design process from beginning to end: empathizing with users, defining their pain points, coming up with ideas for design solutions, creating wireframes and prototypes, and testing designs to get feedback.",
-			"certURL": "",
+			"hasCert": false,
 			"date": "2024 - 2025"
 		},
 		{
 			"id": 3,
 			"title": "Certificate III in Information Technology",
-			"linkURL": "https://tafeqld.edu.au/course/17/17940/certificate-iii-in-information-technology",
+			"isPrimaryLinkActive": true,
+			"isSecondaryLinkActive": false,
+			"primaryLinkURL": "https://tafeqld.edu.au/course/17/17940/certificate-iii-in-information-technology",
+			"secondaryLinkURL": "",
 			"imageURL": "https://github.com/Mooshay105/cdn/blob/main/TafeQLD.png?raw=true",
 			"description": "This certification from TAFE Queensland equips individuals with foundational skills in information technology. It covers a broad range of entry-level IT competencies, preparing learners for various roles within the industry. The program focuses on practical application and essential knowledge for supporting IT systems and users.",
-			"certURL": "",
+			"hasCert": false,
 			"date": "2026 - Present"
 		}
 	]

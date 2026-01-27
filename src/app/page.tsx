@@ -4,6 +4,7 @@ import Button from "./components/Button";
 import GlobalNavbar from "./components/GlobalNavBar";
 import DisplayItem from "./components/DisplayItem";
 import information from "../../public/display.json";
+import type { Certificate, Project } from "@/utills/types";
 
 function Index() {
 	return (
@@ -65,18 +66,7 @@ function Index() {
 					My <span className="text-(--primary-color)">Projects.</span>
 				</h2>
 				{information.projects.map((project: any) => (
-					<DisplayItem
-						key={project.id}
-						title={project.title}
-						description={project.description}
-						link={project.linkURL}
-						githubLink={project.githubURL}
-						image={project.imageURL}
-						shouldHaveGithubLink={true}
-						isCertificate={false}
-						shouldHaveDate={false}
-						shouldHaveCertURL={false}
-					/>
+					<DisplayItem key={project.id} type="project" data={project as Project} />
 				))}
 			</div>
 			<div className="flex w-full flex-col items-center justify-center" id="certificates">
@@ -87,17 +77,8 @@ function Index() {
 				{information.certificates.reverse().map((project: any) => (
 					<DisplayItem
 						key={project.id}
-						title={project.title}
-						description={project.description}
-						link={project.linkURL}
-						githubLink={project.githubURL}
-						image={project.imageURL}
-						shouldHaveGithubLink={false}
-						shouldHaveDate={true}
-						isCertificate={true}
-						date={project.date}
-						certURL={project.certURL}
-						shouldHaveCertURL={true}
+						type="certificate"
+						data={project as Certificate}
 					/>
 				))}
 			</div>

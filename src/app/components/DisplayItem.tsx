@@ -1,82 +1,47 @@
 import Image from "next/image";
 import Button from "./Button";
+import type { Certificate, Project } from "@/utills/types";
 
 interface DisplayItemProps {
-	title: string;
-	description: string;
-	link: string;
-	shouldHaveGithubLink: boolean;
-	githubLink: string;
-	image: string;
-	isCertificate: boolean;
-	shouldHaveDate: boolean;
-	shouldHaveCertURL: boolean;
-	certURL?: string;
-	date?: string;
+	type: "certificate" | "project";
+	data: Certificate | Project;
 }
 
-function DisplayItem({
-	title,
-	description,
-	link,
-	githubLink,
-	image,
-	shouldHaveGithubLink,
-	shouldHaveDate,
-	isCertificate,
-	certURL,
-	shouldHaveCertURL,
-	date,
-}: DisplayItemProps) {
+function DisplayItem({ type, data }: DisplayItemProps) {
 	return (
 		<div className="flex items-center justify-center mb-1.25 w-[calc(100%-40px)] [@media(max-width:990px)]:flex-col flex-row">
-			{isCertificate ? (
-				<Image
-					src={image}
-					alt={title}
-					width={100}
-					height={100}
-					className="m-5 rounded-[15px] object-cover"
-				/>
-			) : (
-				<Image
-					src={image}
-					alt={title}
-					width={300}
-					height={200}
-					className="m-5 rounded-[15px] object-cover"
-				/>
-			)}
+			<Image
+				src={data.imageURL}
+				alt={data.title}
+				width={type === "certificate" ? 100 : 300}
+				height={type === "certificate" ? 100 : 200}
+				className="m-5 rounded-[15px] object-cover"
+			/>
 			<div className="flex flex-col justify-center mx-auto w-[90%]">
 				<div className="flex flex-row">
-					<h2 className="text-3xl text-white mb-0">{title}</h2>
-					{shouldHaveDate ? (
-						<p className="ml-2.5 mt-1.75 text-[large] text-white mb-0">{date}</p>
+					<h2 className="text-3xl text-white mb-0">{data.title}</h2>
+					{type === "certificate" ? (
+						<p className="ml-2.5 mt-1.75 text-[large] text-white mb-0">
+							{(data as Certificate).date}
+						</p>
 					) : null}
 				</div>
-				<p className="text-[large] text-zinc-400 mb-0">{description}</p>
+				<p className="text-[large] text-zinc-400 mb-0">{data.description}</p>
 			</div>
 			<div className="flex flex-col items-center justify-center [@media(max-width:990px)]:w-full">
-				<Button
-					text="View"
-					link={link}
-					externalLink={true}
-					isCallToAction={true}
-					extraClass="w-[100px] text-center [@media(max-width:990px)]:w-[85%] [@media(max-width:990px)]:mt-[10px] [@media(max-width:990px)]:text-3xl"
-				/>
-				{shouldHaveGithubLink ? (
+				{data.isPrimaryLinkActive ? (
 					<Button
-						text="GitHub"
-						link={githubLink}
+						text="View"
+						link={data.primaryLinkURL}
 						externalLink={true}
-						isCallToAction={false}
+						isCallToAction={true}
 						extraClass="w-[100px] text-center [@media(max-width:990px)]:w-[85%] [@media(max-width:990px)]:mt-[10px] [@media(max-width:990px)]:text-3xl"
 					/>
 				) : null}
-				{shouldHaveCertURL ? (
+				{data.isSecondaryLinkActive ? (
 					<Button
-						text="Certificate"
-						link={certURL || ""}
+						text={type === "certificate" ? "Certificate" : "GitHub"}
+						link={data.secondaryLinkURL}
 						externalLink={true}
 						isCallToAction={false}
 						extraClass="w-[100px] text-center [@media(max-width:990px)]:w-[85%] [@media(max-width:990px)]:mt-[10px] [@media(max-width:990px)]:text-3xl"
