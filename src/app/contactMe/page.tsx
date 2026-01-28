@@ -11,80 +11,28 @@ function Index() {
 				resumeURLDOCX={information.resumeURLDOCX}
 			/>
 			<div className="mt-12.5 flex flex-col items-center text-center">
-				<h1 className="m-0 w-full text-5xl font-bold text-white">Malcolm Hauser</h1>
-				<h2 className="m-0 w-full text-3xl text-(--primary-color)">
-					Contact your (
-					<span
-						onClick={() => alert("I don't know where you live, I'm not a creep!")}
-						className="underline"
-					>
-						non?
-					</span>
-					)local Spaghetti Coder.
-				</h2>
-				<p>If for some reason you want to contact me (why, I have no idea):</p>
-				<div className="flex flex-col items-start space-2 mt-2.5">
-					<div className="flex items-center">
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 49.4 512 399.42"
-							width="20"
-							aria-hidden="true"
-						>
-							<g fill="none" fillRule="evenodd">
-								<g fillRule="nonzero">
-									<path
-										fill="#4285f4"
-										d="M34.91 448.818h81.454V251L0 163.727V413.91c0 19.287 15.622 34.91 34.91 34.91z"
-									/>
-									<path
-										fill="#34a853"
-										d="M395.636 448.818h81.455c19.287 0 34.909-15.622 34.909-34.909V163.727L395.636 251z"
-									/>
-									<path
-										fill="#fbbc04"
-										d="M395.636 99.727V251L512 163.727v-46.545c0-43.142-49.25-67.782-83.782-41.891z"
-									/>
-								</g>
-								<path
-									fill="#ea4335"
-									d="M116.364 251V99.727L256 204.455 395.636 99.727V251L256 355.727z"
-								/>
-								<path
-									fill="#c5221f"
-									fillRule="nonzero"
-									d="M0 117.182v46.545L116.364 251V99.727L83.782 75.291C49.25 49.4 0 74.04 0 117.18z"
-								/>
-							</g>
-						</svg>
-						<p className="ml-2.5 text-white">malcolm@malcolmjh.com (NO SOLICITING!)</p>
-					</div>
-					<div className="flex items-center">
-						<svg
-							width="20"
-							height="24"
-							viewBox="0 0 24 24"
-							fill="none"
-							xmlns="http://www.w3.org/2000/svg"
-							aria-hidden="true"
-						>
-							<path
-								d="M7 2H17C18.1046 2 19 2.89543 19 4V20C19 21.1046 18.1046 22 17 22H7C5.89543 22 5 21.1046 5 20V4C5 2.89543 5.89543 2 7 2Z"
-								stroke="white"
-								strokeWidth="2"
-								strokeLinecap="round"
-								strokeLinejoin="round"
-							/>
-							<path
-								d="M12 18H12.01"
-								stroke="white"
-								strokeWidth="2"
-								strokeLinecap="round"
-								strokeLinejoin="round"
-							/>
-						</svg>
+				<h1 className="m-0 w-full text-5xl font-bold text-white">Contact Me</h1>
+				<div className="flex flex-col items-center space-2 mt-7">
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248293.83693445247!2d152.5926155672102!3d-25.31771508983309!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6beb7dc5418850fd%3A0x400eef17f20f5a0!2sHervey%20Bay%20QLD%204655!5e1!3m2!1sen!2sau!4v1769557640086!5m2!1sen!2sau"
+						className="border-0 rounded-[20px] w-[80vw] h-125 max-w-387.5"
+						allowFullScreen={false}
+						loading="lazy"
+						referrerPolicy="no-referrer-when-downgrade"
+					></iframe>
+					<div className="mt-2.5">
 						<p className="ml-2.5 text-white">
-							+61 I do not have a phone. (Awsome phone number I know!)
+							Email:{" "}
+							<a
+								href="mailto:malcolm@malcolmjh.com"
+								className="text-(--primary-color) underline"
+							>
+								malcolm@malcolmjh.com
+							</a>
+						</p>
+						<p className="ml-2.5 text-white">
+							Based in:{" "}
+							<span className="text-(--primary-color)">Hervey Bay, QLD Australia</span>
 						</p>
 					</div>
 				</div>
