@@ -19,7 +19,7 @@ function Index() {
 					Spaghetti Coding Since ¯\_(ツ)_/¯.
 				</h2>
 				<p className="mx-5 mt-2.5 max-w-[80ch] text-center text-[large] text-white">
-					I am a 14 year-old living in Australia! I build my projects with
+					I am a 15 year-old living in Australia! I build my projects with
 					<span className="text-(--react-color)"> React</span> and{" "}
 					<span className="text-(--vite-color)"> Vite</span> But I am trying-out{" "}
 					<span className="text-(--nextjs-color)"> Next.JS</span>. I mainly program in
@@ -48,7 +48,7 @@ function Index() {
 					About <span className="text-(--primary-color)">Me.</span>
 				</h2>
 				<p className="max-w-[80ch] text-center text-[large] text-white">
-					Hi, I’m a 14-year-old tech enthusiast from Australia! I love programming and
+					Hi, I’m a 15-year-old tech enthusiast from Australia! I love programming and
 					have experience with
 					<span className="text-(--react-color)"> React</span>,
 					<span className="text-(--typescript-color)"> TypeScript</span>, and a bit of
