@@ -8,7 +8,7 @@
 			"isPrimaryLinkActive": false,
 			"isSecondaryLinkActive": true,
 			"primaryLinkURL": "https://hexagon.kiwi-micro.com/",
-			"secondaryLinkURL": "https://github.com/Mooshay105/hexagon-tv",
+			"secondaryLinkURL": "https://github.com/Mooshay105/Hexagon-TV-API",
 			"imageURL": "https://github.com/Mooshay105/cdn/blob/main/hexagonTV.png?raw=true",
 			"description": "Hexagon TV is a streaming service that I made from scratch it uses TypeScript for the backend and React frontend, and Turso for the SQL database."
 		},
