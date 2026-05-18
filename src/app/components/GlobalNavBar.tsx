@@ -76,7 +76,7 @@ function GlobalNavBar({ resumeURLMD, resumeURLDOCX }: GlobalNavBarProps) {
 							<>
 								<div className="fixed top-21.75 -left-7.5 -right-7.5 flex flex-col mx-[30] h-fit rounded-[15px] p-0 pr-2.5 border-[#7a7a7a] border border-solid bg-[#1a1a1a8e] backdrop-blur-md backdrop-saturate-180">
 									<NavItem link="/#aboutMe" text="About Me" isMobile={isMobile} />
-									<NavItem link="/contactMe" text="Contact Me" isMobile={isMobile} />
+									<NavItem link="/contact" text="Contact Me" isMobile={isMobile} />
 									<NavItem link="/#projects" text="Projects" isMobile={isMobile} />
 									<NavItem
 										link="/#certificates"
@@ -116,7 +116,7 @@ function GlobalNavBar({ resumeURLMD, resumeURLDOCX }: GlobalNavBarProps) {
 				) : (
 					<div className="flex flex-row items-center justify-center">
 						<NavItem link="/#aboutMe" text="About Me" isMobile={isMobile} />
-						<NavItem link="/contactMe" text="Contact Me" isMobile={isMobile} />
+						<NavItem link="/contact" text="Contact Me" isMobile={isMobile} />
 						<NavItem link="/#projects" text="Projects" isMobile={isMobile} />
 						<NavItem link="/#certificates" text="Certificates" isMobile={isMobile} />
 						<Button

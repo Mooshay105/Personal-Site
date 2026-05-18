@@ -53,12 +53,13 @@ function Index() {
 					<span className="text-(--react-color)"> React</span>,
 					<span className="text-(--typescript-color)"> TypeScript</span>, and a bit of
 					<span className="text-(--swift-color)"> Swift</span>. I’m especially fascinated
-					by Networking and enjoy experimenting with my homelab, which is mostly powered
-					by a collection of
-					<span className="text-(--raspberry-pi-color)"> Raspberry Pi&apos;s</span>. I am
-					always looking for exciting projects that push my limits, challenge me, and
-					teach me something new. When I’m not programming or tinkering, I’m likely
-					brainstorming my next big idea.
+					by Networking and enjoy experimenting with my
+					<span className="text-(--raspberry-pi-color)"> Raspberry Pi 5</span>. I have
+					recently got in to RC Planes and Drones I have a
+					<span className="text-(--djineo-color)"> DJI Neo</span> and am making a RC
+					Glider. I am always looking for exciting projects that push my limits, challenge
+					me, and teach me something new. When I’m not programming or tinkering, I’m
+					likely Flying or Playing Chess.
 				</p>
 			</div>
 			<div className="flex w-full flex-col items-center justify-center" id="projects">

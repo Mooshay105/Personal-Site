@@ -57,18 +57,6 @@
 			"description": "Those who earn the Google UX Design Professional Certificate have completed seven courses, developed by Google, that include hands-on, practice-based assessments and are designed to prepare them for introductory-level roles in UX design. They can complete the design process from beginning to end: empathizing with users, defining their pain points, coming up with ideas for design solutions, creating wireframes and prototypes, and testing designs to get feedback.",
 			"hasCert": false,
 			"date": "2024 - 2025"
-		},
-		{
-			"id": 3,
-			"title": "Certificate III in Information Technology",
-			"isPrimaryLinkActive": true,
-			"isSecondaryLinkActive": false,
-			"primaryLinkURL": "https://tafeqld.edu.au/course/17/17940/certificate-iii-in-information-technology",
-			"secondaryLinkURL": "",
-			"imageURL": "https://github.com/Mooshay105/cdn/blob/main/TafeQLD.png?raw=true",
-			"description": "This certification from TAFE Queensland equips individuals with foundational skills in information technology. It covers a broad range of entry-level IT competencies, preparing learners for various roles within the industry. The program focuses on practical application and essential knowledge for supporting IT systems and users.",
-			"hasCert": false,
-			"date": "2026"
 		}
 	]
 }

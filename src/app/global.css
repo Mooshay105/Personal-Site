@@ -22,6 +22,7 @@ html {
 	--typescript-color: #0a88d3;
 	--swift-color: #fa7343;
 	--raspberry-pi-color: #d02b5a;
+	--djineo-color: #818181;
 	--bio-highlight-color: #f05138;
 	/* Box Shadows */
 	--box-shadow-primary-rest: 3px 3px 0 -1px var(--black), 3px 3px var(--primary-color);
