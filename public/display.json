@@ -4,16 +4,26 @@
 	"projects": [
 		{
 			"id": 1,
+			"title": "Protein Fold Predictor",
+			"isPrimaryLinkActive": true,
+			"isSecondaryLinkActive": true,
+			"primaryLinkURL": "https://genetic-fold-predictor.malcolmjh.com",
+			"secondaryLinkURL": "https://github.com/Mooshay105/genetic-fold-predictor",
+			"imageURL": "https://github.com/Mooshay105/cdn/blob/main/proteinFoldPredictor.png?raw=true",
+			"description": "This site started as a school project for my 56DIGI class at Ao Tawhiti as a simple \"Pick The AI Image\" site, but I was told that it needed to be useful in the real world, so I pivoted to this: a website that predicts how proteins fold. Then I got so proud of what I had made, I wanted to publish it."
+		},
+		{
+			"id": 2,
 			"title": "Hexagon TV",
 			"isPrimaryLinkActive": false,
 			"isSecondaryLinkActive": true,
-			"primaryLinkURL": "https://hexagon.kiwi-micro.com/",
+			"primaryLinkURL": "",
 			"secondaryLinkURL": "https://github.com/Mooshay105/Hexagon-TV-API",
 			"imageURL": "https://github.com/Mooshay105/cdn/blob/main/hexagonTV.png?raw=true",
 			"description": "Hexagon TV is a streaming service that I made from scratch it uses TypeScript for the backend and React frontend, and Turso for the SQL database."
 		},
 		{
-			"id": 2,
+			"id": 3,
 			"title": "Airport Database",
 			"isPrimaryLinkActive": true,
 			"isSecondaryLinkActive": true,
@@ -23,7 +33,7 @@
 			"description": "Airport Database is a website that uses React to dynamicly display all (IATA) airports and their information, all from a JSON file."
 		},
 		{
-			"id": 3,
+			"id": 4,
 			"title": "Linux Clone",
 			"isPrimaryLinkActive": true,
 			"isSecondaryLinkActive": true,
