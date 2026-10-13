@@ -3,15 +3,10 @@
 import Button from "./Button";
 import Link from "next/link";
 import Image from "next/image";
-import { Fragment, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { NavItem } from "./NavItem";
 
-interface GlobalNavBarProps {
-	resumeURLMD: string;
-	resumeURLDOCX: string;
-}
-
-function GlobalNavBar({ resumeURLMD, resumeURLDOCX }: GlobalNavBarProps) {
+function GlobalNavBar() {
 	const [isMobile, setIsMobile] = useState(false);
 	const [isOpen, setIsOpen] = useState(false);
 
@@ -107,14 +102,14 @@ function GlobalNavBar({ resumeURLMD, resumeURLDOCX }: GlobalNavBarProps) {
 							<Button
 								text="Word Document (.docx)"
 								isCallToAction={true}
-								link={resumeURLDOCX}
+								link="https://github.com/Mooshay105/Mooshay105/blob/main/resume.md"
 								externalLink={true}
 								extraClass="w-[calc(100%-10px)] text-center whitespace-nowrap ml-[15px]"
 							/>
 							<Button
 								text="Markdown (.md)"
 								isCallToAction={true}
-								link={resumeURLMD}
+								link="https://github.com/Mooshay105/Mooshay105/blob/main/resume.docx"
 								externalLink={true}
 								extraClass="w-[calc(100%-10px)] text-center whitespace-nowrap ml-[15px]"
 							/>

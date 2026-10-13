@@ -1,6 +1,4 @@
 import GlobalNavBar from "./components/GlobalNavBar";
-import information from "../../public/display.json";
-// @ts-ignore
 import "./global.css";
 
 export default function RootLayout({
@@ -19,10 +17,7 @@ export default function RootLayout({
 				/>
 			</head>
 			<body>
-				<GlobalNavBar
-					resumeURLMD={information.resumeURLMD}
-					resumeURLDOCX={information.resumeURLDOCX}
-				/>
+				<GlobalNavBar />
 				{children}
 			</body>
 		</html>
