@@ -5,7 +5,7 @@ export default async function robots(): Promise<MetadataRoute.Robots> {
 		rules: {
 			userAgent: "*",
 			allow: "/",
-			disallow: [],
+			disallow: ["/not-found"],
 		},
 		sitemap: "https://www.malcolmjh.com/sitemap.xml",
 	};

@@ -1,56 +1,44 @@
 {
-	"resumeURLMD": "https://github.com/Mooshay105/Mooshay105/blob/main/resume.md",
-	"resumeURLDOCX": "https://github.com/Mooshay105/Mooshay105/blob/main/resume.docx",
 	"projects": [
 		{
 			"id": 1,
 			"title": "Protein Fold Predictor",
-			"isPrimaryLinkActive": true,
-			"isSecondaryLinkActive": true,
-			"primaryLinkURL": "https://genetic-fold-predictor.malcolmjh.com",
-			"secondaryLinkURL": "https://github.com/Mooshay105/genetic-fold-predictor",
+			"primaryLink": "https://genetic-fold-predictor.malcolmjh.com",
+			"secondaryLink": "https://github.com/Mooshay105/genetic-fold-predictor",
 			"imageURL": "https://github.com/Mooshay105/cdn/blob/main/proteinFoldPredictor.png?raw=true",
 			"description": "This site started as a school project for my 56DIGI class at Ao Tawhiti as a simple \"Pick The AI Image\" site, but I was told that it needed to be useful in the real world, so I pivoted to this: a website that predicts how proteins fold. Then I got so proud of what I had made, I wanted to publish it."
 		},
 		{
 			"id": 2,
 			"title": "Hexagon TV",
-			"isPrimaryLinkActive": false,
-			"isSecondaryLinkActive": true,
-			"primaryLinkURL": "",
-			"secondaryLinkURL": "https://github.com/Mooshay105/Hexagon-TV-API",
+			"primaryLink": "",
+			"secondaryLink": "https://github.com/Mooshay105/Hexagon-TV-API",
 			"imageURL": "https://github.com/Mooshay105/cdn/blob/main/hexagonTV.png?raw=true",
 			"description": "Hexagon TV is a streaming service that I made from scratch it uses TypeScript for the backend and React frontend, and Turso for the SQL database."
 		},
 		{
 			"id": 3,
 			"title": "Airport Database",
-			"isPrimaryLinkActive": true,
-			"isSecondaryLinkActive": true,
-			"primaryLinkURL": "https://airportdatabase.malcolmjh.com/",
-			"secondaryLinkURL": "https://github.com/Mooshay105/Airport-Database",
+			"primaryLink": "https://airportdatabase.malcolmjh.com/",
+			"secondaryLink": "https://github.com/Mooshay105/Airport-Database",
 			"imageURL": "https://github.com/Mooshay105/cdn/blob/main/airportDatabase.png?raw=true",
 			"description": "Airport Database is a website that uses React to dynamicly display all (IATA) airports and their information, all from a JSON file."
 		},
 		{
 			"id": 4,
 			"title": "Linux Clone",
-			"isPrimaryLinkActive": true,
-			"isSecondaryLinkActive": true,
-			"primaryLinkURL": "https://linux.malcolmjh.com/",
-			"secondaryLinkURL": "https://github.com/Mooshay105/Linux-Clone",
+			"primaryLink": "https://linux.malcolmjh.com/",
+			"secondaryLink": "https://github.com/Mooshay105/Linux-Clone",
 			"imageURL": "https://github.com/Mooshay105/cdn/blob/main/linuxClone.png?raw=true",
 			"description": "Linux Clone is a dynamic website designed to replicate (to the best of my ability at the time) the look and feel of Ubuntu."
 		}
 	],
-	"certificates": [
+	"education": [
 		{
 			"id": 1,
 			"title": "Google Cybersecurity Certificate",
-			"isPrimaryLinkActive": true,
-			"isSecondaryLinkActive": true,
-			"primaryLinkURL": "https://www.coursera.org/professional-certificates/google-cybersecurity",
-			"secondaryLinkURL": "https://www.coursera.org/share/3d7eb85ea356a12056e6651702ea5e6e",
+			"primaryLink": "https://www.coursera.org/professional-certificates/google-cybersecurity",
+			"secondaryLink": "https://www.coursera.org/share/3d7eb85ea356a12056e6651702ea5e6e",
 			"imageURL": "https://github.com/Mooshay105/cdn/blob/main/Coursera.png?raw=true",
 			"description": "Those who earn the Google Cybersecurity Certificate have completed eight courses, developed by Google, that include hands-on, practice-based assessments and are designed to prepare them for entry-level roles in cybersecurity. They are competent in beginner-level Python, Linux, SQL, Security Information and Event Management (SIEM) tools, and Intrusion Detection Systems (IDS). They know how to identify common cybersecurity risks, threats, and vulnerabilities, as well as the techniques to mitigate.",
 			"hasCert": true,
@@ -59,13 +47,11 @@
 		{
 			"id": 2,
 			"title": "Google UX Design Certificate",
-			"isPrimaryLinkActive": true,
-			"isSecondaryLinkActive": false,
-			"primaryLinkURL": "https://www.coursera.org/professional-certificates/google-ux-design",
-			"secondaryLinkURL": "",
+			"primaryLink": "https://www.coursera.org/professional-certificates/google-ux-design",
+			"secondaryLink": "https://coursera.org/share/3beff1e4cc18f1d8497824e91a90cbfd",
 			"imageURL": "https://github.com/Mooshay105/cdn/blob/main/Coursera.png?raw=true",
 			"description": "Those who earn the Google UX Design Professional Certificate have completed seven courses, developed by Google, that include hands-on, practice-based assessments and are designed to prepare them for introductory-level roles in UX design. They can complete the design process from beginning to end: empathizing with users, defining their pain points, coming up with ideas for design solutions, creating wireframes and prototypes, and testing designs to get feedback.",
-			"hasCert": false,
+			"hasCert": true,
 			"date": "2024 - 2025"
 		}
 	]

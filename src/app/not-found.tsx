@@ -1,25 +1,21 @@
-"use client";
+import { Metadata } from "next";
 
-import GlobalNavbar from "./components/GlobalNavBar";
-import information from "../../public/display.json";
+export const metadata: Metadata = {
+	title: "Malcolm Hauser | 404 - Not Found",
+	icons: {
+		icon: "/logo.png",
+	},
+};
 
-function Index() {
+export default function NotFoundPage() {
 	return (
-		<div>
-			<GlobalNavbar
-				resumeURLMD={information.resumeURLMD}
-				resumeURLDOCX={information.resumeURLDOCX}
-			/>
-			<div className="mt-12.5 flex flex-col items-center text-center">
-				<h1 className="m-0 w-full text-5xl font-bold text-(--primary-color)">
-					404 - Not Found
-				</h1>
-				<p className="m-0 w-full text-2xl font-bold text-white">
-					The page you are looking for does not exist.
-				</p>
-			</div>
-		</div>
+		<main className="mt-12.5 flex flex-col items-center text-center">
+			<h1 className="m-0 w-full text-5xl font-bold text-(--primary-color)">
+				404 - Not Found
+			</h1>
+			<p className="m-0 w-full text-2xl font-bold text-white">
+				The page you are looking for does not exist.
+			</p>
+		</main>
 	);
 }
-
-export default Index;

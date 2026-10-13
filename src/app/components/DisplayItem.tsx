@@ -29,19 +29,19 @@ function DisplayItem({ type, data }: DisplayItemProps) {
 				<p className="text-[large] text-zinc-400 mb-0">{data.description}</p>
 			</div>
 			<div className="flex flex-col items-center justify-center [@media(max-width:990px)]:w-full">
-				{data.isPrimaryLinkActive ? (
+				{data.primaryLink !== "" ? (
 					<Button
 						text="View"
-						link={data.primaryLinkURL}
+						link={data.primaryLink}
 						externalLink={true}
 						isCallToAction={true}
 						extraClass="w-[100px] text-center [@media(max-width:990px)]:w-[85%] [@media(max-width:990px)]:mt-[10px] [@media(max-width:990px)]:text-3xl"
 					/>
 				) : null}
-				{data.isSecondaryLinkActive ? (
+				{data.secondaryLink !== "" ? (
 					<Button
 						text={type === "certificate" ? "Certificate" : "GitHub"}
-						link={data.secondaryLinkURL}
+						link={data.secondaryLink}
 						externalLink={true}
 						isCallToAction={false}
 						extraClass="w-[100px] text-center [@media(max-width:990px)]:w-[85%] [@media(max-width:990px)]:mt-[10px] [@media(max-width:990px)]:text-3xl"

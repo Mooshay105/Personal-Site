@@ -1,18 +1,21 @@
-"use client";
-
 import Button from "./components/Button";
-import GlobalNavbar from "./components/GlobalNavBar";
 import DisplayItem from "./components/DisplayItem";
 import information from "../../public/display.json";
 import type { Certificate, Project } from "@/utills/types";
+import { Metadata } from "next";
 
-function Index() {
+export const metadata: Metadata = {
+	title: "Malcolm Hauser | Home",
+	description:
+		"I am a 14 year-old living in New Zealand! I like to program in HTML, CSS, TypeScript, and a bit of Swift",
+	icons: {
+		icon: "/logo.png",
+	},
+};
+
+export default function Page() {
 	return (
-		<div>
-			<GlobalNavbar
-				resumeURLMD={information.resumeURLMD}
-				resumeURLDOCX={information.resumeURLDOCX}
-			/>
+		<main>
 			<div className="mt-12.5 flex flex-col items-center text-center">
 				<h1 className="m-0 w-full text-5xl font-bold text-white">Malcolm Hauser</h1>
 				<h2 className="m-0 w-full text-3xl text-(--primary-color)">
@@ -66,25 +69,18 @@ function Index() {
 				<h2 className="mt-5 mb-0 text-center text-3xl">
 					My <span className="text-(--primary-color)">Projects.</span>
 				</h2>
-				{information.projects.map((project: any) => (
-					<DisplayItem key={project.id} type="project" data={project as Project} />
+				{information.projects.map((project: Project) => (
+					<DisplayItem key={project.id} type="project" data={project} />
 				))}
 			</div>
-			<div className="flex w-full flex-col items-center justify-center" id="certificates">
+			<div className="flex w-full flex-col items-center justify-center" id="education">
 				<h2 className="mt-5 mb-0 text-center text-3xl">
-					My <span className="text-(--primary-color)">Certificates.</span>
+					My <span className="text-(--primary-color)">Education.</span>
 				</h2>
-				{/** eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-				{information.certificates.reverse().map((project: any) => (
-					<DisplayItem
-						key={project.id}
-						type="certificate"
-						data={project as Certificate}
-					/>
+				{information.education.map((project: Certificate) => (
+					<DisplayItem key={project.id} type="certificate" data={project} />
 				))}
 			</div>
-		</div>
+		</main>
 	);
 }
-
-export default Index;

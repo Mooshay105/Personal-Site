@@ -1,14 +1,7 @@
-import type { Metadata } from "next";
+import GlobalNavBar from "./components/GlobalNavBar";
+import information from "../../public/display.json";
+// @ts-ignore
 import "./global.css";
-
-export const metadata: Metadata = {
-	title: "Malcolm Hauser",
-	description:
-		"I am a 14 year-old living in New Zealand! I like to program in HTML, CSS, TypeScript, and a bit of Swift",
-	icons: {
-		icon: "/logo.png",
-	},
-};
 
 export default function RootLayout({
 	children,
@@ -25,7 +18,13 @@ export default function RootLayout({
 					rel="stylesheet"
 				/>
 			</head>
-			<body>{children}</body>
+			<body>
+				<GlobalNavBar
+					resumeURLMD={information.resumeURLMD}
+					resumeURLDOCX={information.resumeURLDOCX}
+				/>
+				{children}
+			</body>
 		</html>
 	);
 }
