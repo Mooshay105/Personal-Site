@@ -28,7 +28,7 @@ function GlobalNavBar() {
 		<div className="sticky top-2.5 z-1000">
 			<nav className="flex items-center mx-[30] h-fit rounded-[15px] p-0 pr-2.5 border-[#7a7a7a] border border-solid bg-[#1a1a1a8e] backdrop-blur-md backdrop-saturate-180">
 				<Link
-					className="flex justify-center items-center flex-row mt-1.25 mb-1.25 mr-auto font-[bold] m-2.5 no-underline text-white transition-all duration-200 ease-in-out"
+					className="flex justify-center items-center flex-row mt-1.25 mb-1.25 mr-auto font-[bold] m-2.5 no-underline text-white transition-all duration-200 ease-in-out rounded-full"
 					href="/"
 				>
 					<Image src="/logo.png" alt="Logo" width={60} height={60} className="mr-2.5" />
