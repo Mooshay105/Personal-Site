@@ -84,7 +84,7 @@ function GlobalNavBar() {
 						<Button
 							text="Markdown (.md)"
 							isCallToAction={true}
-							link="https://github.com/Mooshay105/Mooshay105/blob/main/resume.md"
+							link="https://raw.githubusercontent.com/Mooshay105/Mooshay105/refs/heads/main/resume.md"
 							externalLink={true}
 							extraClass="w-[98%] text-center whitespace-nowrap px-4"
 						/>
@@ -102,14 +102,14 @@ function GlobalNavBar() {
 							<Button
 								text="Word Document (.docx)"
 								isCallToAction={true}
-								link="https://github.com/Mooshay105/Mooshay105/blob/main/resume.md"
+								link="https://github.com/Mooshay105/Mooshay105/blob/main/resume.docx"
 								externalLink={true}
 								extraClass="w-[calc(100%-10px)] text-center whitespace-nowrap ml-[15px]"
 							/>
 							<Button
 								text="Markdown (.md)"
 								isCallToAction={true}
-								link="https://github.com/Mooshay105/Mooshay105/blob/main/resume.docx"
+								link="https://raw.githubusercontent.com/Mooshay105/Mooshay105/refs/heads/main/resume.md"
 								externalLink={true}
 								extraClass="w-[calc(100%-10px)] text-center whitespace-nowrap ml-[15px]"
 							/>
