@@ -10,14 +10,46 @@
 		},
 		{
 			"id": 2,
+			"title": "DHPainting",
+			"primaryLink": "https://www.dhpainting.com.au/",
+			"secondaryLink": "",
+			"imageURL": "https://github.com/Mooshay105/cdn/blob/main/dhpaintingSite.png?raw=true",
+			"description": "DHPainting is a painting company in Townsville, Brisbane and Melbourne, and I migrated its site from WordPress to Next.js for speed and easier editing, then maintain it and add new features like a contact form and a quote form that autofills the custom quote program. It uses Next.js, Tailwind, Vercel, Turso, Resend, Turnstile, Uploadthing, PostHog and Google Analytics."
+		},
+		{
+			"id": 3,
+			"title": "Gabba Sporting Products",
+			"primaryLink": "https://www.gabba.com.au/",
+			"secondaryLink": "",
+			"imageURL": "https://github.com/Mooshay105/cdn/blob/main/gabbaSite.png?raw=true",
+			"description": "Gabba makes sports facilities in Australia, the UAE and the USA, and I migrated its site from WordPress to Next.js for speed and easier editing, then maintain it and add new features like a contact form and a quote form that autofills the custom quote program. It uses Next.js, Tailwind, Vercel, Turso, Resend, Turnstile, Uploadthing, PostHog and Google Analytics."
+		},
+		{
+			"id": 4,
+			"title": "JRHauser Trust",
+			"primaryLink": "https://www.jhauser.com.au/",
+			"secondaryLink": "",
+			"imageURL": "https://github.com/Mooshay105/cdn/blob/main/jrhauserSite.png?raw=true",
+			"description": "This is the home page for the contracting company that I work for, I built this from scratch. It also serves as the analytics dashboard for the companies clients."
+		},
+		{
+			"id": 5,
+			"title": "Custom Quote Program",
+			"primaryLink": "",
+			"secondaryLink": "",
+			"imageURL": "https://github.com/Mooshay105/cdn/blob/main/gabbaQuoteSite.png?raw=true",
+			"description": "A custom quote program that I built, which the Gabba quote form autofills to generate quotes. It uses Next.js, Tailwind, Vercel, Turso."
+		},
+		{
+			"id": 6,
 			"title": "Map Line Point Date Thingy",
 			"primaryLink": "https://maplinepointdatethingy.malcolmjh.com/",
 			"secondaryLink": "https://github.com/Mooshay105/maplinepointdatethingy",
 			"imageURL": "https://github.com/Mooshay105/cdn/blob/main/MapLinePointDateThingy.png?raw=true",
-			"description": "One of my teachers requested this, so I made it, and it is free for all. FOR EVER. Looking at you, you know who you are!"
+			"description": "One of my teachers requested this, so I made it. It is free for all, FOR EVER..."
 		},
 		{
-			"id": 3,
+			"id": 7,
 			"title": "Hexagon TV",
 			"primaryLink": "",
 			"secondaryLink": "https://github.com/Mooshay105/Hexagon-TV-API",
@@ -25,7 +57,7 @@
 			"description": "Hexagon TV is a streaming service that I made from scratch it uses TypeScript for the backend and React frontend, and Turso for the SQL database."
 		},
 		{
-			"id": 4,
+			"id": 8,
 			"title": "Airport Database",
 			"primaryLink": "https://airportdatabase.malcolmjh.com/",
 			"secondaryLink": "https://github.com/Mooshay105/Airport-Database",
@@ -33,7 +65,7 @@
 			"description": "Airport Database is a website that uses React to dynamicly display all (IATA) airports and their information, all from a JSON file."
 		},
 		{
-			"id": 4,
+			"id": 9,
 			"title": "Linux Clone",
 			"primaryLink": "https://linux.malcolmjh.com/",
 			"secondaryLink": "https://github.com/Mooshay105/Linux-Clone",
