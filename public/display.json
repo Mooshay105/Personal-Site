@@ -22,7 +22,7 @@
 			"primaryLink": "https://www.gabba.com.au/",
 			"secondaryLink": "",
 			"imageURL": "https://github.com/Mooshay105/cdn/blob/main/gabbaSite.png?raw=true",
-			"description": "Gabba makes sports facilities in Australia, the UAE and the USA, and I migrated its site from WordPress to Next.js for speed and easier editing, then maintain it and add new features like a contact form and a quote form that autofills the custom quote program. It uses Next.js, Tailwind, Vercel, Turso, Resend, Turnstile, Uploadthing, PostHog and Google Analytics."
+			"description": "Clann is a reference site for Scottish clans. I built it to collect what public sources say about 361 clans in one place: their mottoes, seats, chiefs, septs, allies, rivals and notable people. It has a search that matches a surname to the clans it belongs to, and each clan's tartan is drawn from its threadcount as woven twill. A build script pulls the data from Wikipedia, Wikidata and the tartan-database project, then applies a short list of hand corrections. It uses Next.js, Tailwind, TypeScript, Bun, Wikipedia, Wikidata and tartan-database."
 		},
 		{
 			"id": 4,
@@ -70,6 +70,14 @@
 			"primaryLink": "https://linux.malcolmjh.com/",
 			"secondaryLink": "https://github.com/Mooshay105/Linux-Clone",
 			"imageURL": "https://github.com/Mooshay105/cdn/blob/main/linuxClone.png?raw=true",
+			"description": "Linux Clone is a dynamic website designed to replicate (to the best of my ability at the time) the look and feel of Ubuntu."
+		},
+		{
+			"id": 10,
+			"title": "clann",
+			"primaryLink": "https://clann.malcolmjh.com/",
+			"secondaryLink": "",
+			"imageURL": "https://github.com/Mooshay105/cdn/blob/main/clann.png?raw=true",
 			"description": "Linux Clone is a dynamic website designed to replicate (to the best of my ability at the time) the look and feel of Ubuntu."
 		}
 	],
