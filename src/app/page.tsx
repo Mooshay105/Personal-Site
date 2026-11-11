@@ -3,35 +3,37 @@ import DisplayItem from "./components/DisplayItem";
 import information from "../../public/display.json";
 import type { Certificate, Project } from "@/utills/types";
 import { Metadata } from "next";
+import { getAge } from "@/utills/age";
 
 export const metadata: Metadata = {
 	title: "Malcolm Hauser | Home",
-	description:
-		"I am a 14 year-old living in New Zealand! I like to program in HTML, CSS, TypeScript, and a bit of Swift",
+	description: `I am a ${getAge()}-year-old living in New Zealand! I like to program in HTML, CSS, TypeScript, and a bit of Swift`,
 	icons: {
 		icon: "/logo.png",
 	},
 };
 
 export default function Page() {
-	const age = Math.floor(
-		(Date.now() - new Date("2010-10-28").getTime()) / (1000 * 60 * 60 * 24 * 365.25),
-	);
+	const age = getAge();
 	return (
 		<main className="px-5 pb-24">
 			<section className="mt-16 mb-4 flex flex-col items-center text-center">
-				<h1 className="m-0 w-full text-5xl font-bold text-white">Malcolm Hauser</h1>
-				<p className="m-0 mt-1 w-full text-3xl text-(--primary-color)">
+				<h1 className="m-0 w-full text-5xl font-bold text-white max-[480px]:text-4xl">
+					Malcolm Hauser
+				</h1>
+				<p className="m-0 mt-1 w-full text-3xl text-(--primary-color) max-[480px]:text-2xl">
 					Spaghetti Coding Since ¯\_(ツ)_/¯
 				</p>
-				<p className="mt-4 max-w-[70ch] text-center text-lg leading-relaxed text-white">
-					I am a {age}-year-old living in New Zealand! I build my projects with
-					<span className="text-(--react-color)"> React</span> and
-					<span className="text-(--vite-color)"> Vite</span>, but I am trying out
-					<span className="text-(--nextjs-color)"> Next.js</span>. I mainly program in
-					<span className="text-(--typescript-color)"> TypeScript</span>, but I do program
-					in a bit of
-					<span className="text-(--swift-color)"> Swift</span>.
+				<p className="mt-4 max-w-[70ch] text-center text-lg leading-relaxed text-pretty text-white">
+					I am a {age}-year-old living in New Zealand! I build my projects with{" "}
+					<span className="whitespace-nowrap text-(--react-color)">React</span> and{" "}
+					<span className="whitespace-nowrap text-(--vite-color)">Vite</span>, but I am
+					trying out{" "}
+					<span className="whitespace-nowrap text-(--nextjs-color)">Next.js</span>. I
+					mainly program in{" "}
+					<span className="whitespace-nowrap text-(--typescript-color)">TypeScript</span>,
+					but I do program in a bit of{" "}
+					<span className="whitespace-nowrap text-(--swift-color)">Swift</span>.
 				</p>
 				<div className="mt-4 flex flex-row">
 					<Button
@@ -53,19 +55,22 @@ export default function Page() {
 				<h2 className="m-0 text-center text-4xl font-bold">
 					About <span className="text-(--primary-color)">Me</span>
 				</h2>
-				<p className="mt-5 max-w-[70ch] text-center text-lg leading-relaxed text-white">
+				<p className="mt-5 max-w-[70ch] text-center text-lg leading-relaxed text-pretty text-white">
 					Hi, I’m a {age}-year-old tech enthusiast from New Zealand! I love programming
-					and have experience with
-					<span className="text-(--react-color)"> React</span>,
-					<span className="text-(--typescript-color)"> TypeScript</span>, and a bit of
-					<span className="text-(--swift-color)"> Swift</span>. I’m especially fascinated
-					by Networking and enjoy experimenting with my
-					<span className="text-(--raspberry-pi-color)"> Raspberry Pi 5</span>. I have
-					recently got into RC Planes and Drones. I have a
-					<span className="text-(--djineo-color)"> DJI Neo</span> and am making an RC
-					Glider. I am always looking for exciting projects that push my limits, challenge
-					me, and teach me something new. When I’m not programming or tinkering, I’m
-					likely Flying or Playing Chess.
+					and have experience with{" "}
+					<span className="whitespace-nowrap text-(--react-color)">React</span>,{" "}
+					<span className="whitespace-nowrap text-(--typescript-color)">TypeScript</span>,
+					and a bit of{" "}
+					<span className="whitespace-nowrap text-(--swift-color)">Swift</span>. I’m
+					especially fascinated by Networking and enjoy experimenting with my{" "}
+					<span className="whitespace-nowrap text-(--raspberry-pi-color)">
+						Raspberry Pi 5
+					</span>
+					. I have recently got into RC Planes and Drones. I have a{" "}
+					<span className="whitespace-nowrap text-(--djineo-color)">DJI Neo</span> and am
+					making an RC Glider. I am always looking for exciting projects that push my
+					limits, challenge me, and teach me something new. When I’m not programming or
+					tinkering, I’m likely Flying or Playing Chess.
 				</p>
 			</section>
 			<section className="mt-20 flex scroll-mt-28 flex-col items-center" id="projects">

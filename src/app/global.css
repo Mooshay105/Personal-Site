@@ -3,6 +3,7 @@
 /* Main Styles */
 
 html {
+	color-scheme: dark;
 	font-family: var(--font-sans);
 	background-color: var(--black);
 	color: var(--white);
@@ -13,6 +14,7 @@ html {
 	--white: #ffffff;
 	--primary-color: #f05138;
 	--secondary-color: #737373;
+	--border-subtle: #2e2e2e;
 	--border: var(--secondary-color) 1px solid;
 	/* Bio Colors */
 	--react-color: #61dbfb;

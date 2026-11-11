@@ -12,14 +12,14 @@ function DisplayItem({ type, data }: DisplayItemProps) {
 	const buttonClass = "w-[110px] text-center max-[990px]:flex-1 max-[990px]:mx-1.5";
 
 	return (
-		<article className="flex w-full flex-row items-center gap-6 rounded-[15px] border border-solid border-[#2e2e2e] p-5 transition-colors duration-200 ease-in-out hover:border-[#7a7a7a] max-[990px]:flex-col max-[990px]:items-stretch max-[990px]:gap-4">
+		<article className="flex w-full flex-row items-center gap-6 rounded-[15px] border border-solid border-(--border-subtle) p-5 max-[990px]:flex-col max-[990px]:items-stretch max-[990px]:gap-4">
 			<Image
 				src={data.imageURL}
 				alt={`${data.title} preview`}
 				width={isCertificate ? 100 : 300}
 				height={isCertificate ? 100 : 200}
 				className={
-					"shrink-0 rounded-[10px] object-cover " +
+					"shrink-0 rounded-[10px] border border-solid border-(--border-subtle) object-cover " +
 					(isCertificate
 						? "h-25 w-25 max-[990px]:self-center"
 						: "aspect-3/2 h-auto w-75 max-[990px]:w-full")
@@ -34,11 +34,11 @@ function DisplayItem({ type, data }: DisplayItemProps) {
 						</p>
 					) : null}
 				</div>
-				<p className="mt-2 mb-0 text-lg leading-relaxed text-zinc-400">
+				<p className="mt-2 mb-0 max-w-[80ch] text-lg leading-relaxed text-zinc-400 max-[990px]:text-base">
 					{data.description}
 				</p>
 			</div>
-			<div className="flex w-[130px] shrink-0 flex-col items-center justify-center max-[990px]:w-full max-[990px]:flex-row">
+			<div className="flex w-[130px] shrink-0 flex-col items-center justify-center max-[990px]:w-full max-[990px]:flex-row min-[991px]:-mr-2.5">
 				{data.primaryLink !== "" ? (
 					<Button
 						text="View"

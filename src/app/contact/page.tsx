@@ -15,11 +15,11 @@ export default function ContactPage() {
 			<h1 className="m-0 w-full text-5xl font-bold text-white">
 				Contact <span className="text-(--primary-color)">Me</span>
 			</h1>
-			<div className="mt-6 flex flex-col items-center text-lg">
-				<p className="m-0 text-white">
+			<div className="mt-6 flex flex-col items-center">
+				<p className="m-0 text-lg text-white">
 					Email: <span className="text-(--primary-color)">malcolm@malcolmjh.com</span>
 				</p>
-				<p className="m-0 mt-1 text-white">
+				<p className="m-0 mt-1 text-lg text-white">
 					Based in:{" "}
 					<span className="text-(--primary-color)">Christchurch, New Zealand</span>
 				</p>
@@ -28,21 +28,21 @@ export default function ContactPage() {
 						text="Email Me"
 						isCallToAction={true}
 						link="mailto:malcolm@malcolmjh.com"
-						extraClass="w-[130px] text-center"
+						extraClass="w-[110px] text-center"
 					/>
 					<Button
 						text="GitHub"
 						isCallToAction={false}
 						link="https://github.com/Mooshay105"
 						externalLink={true}
-						extraClass="w-[130px] text-center"
+						extraClass="w-[110px] text-center"
 					/>
 				</div>
 			</div>
 			<iframe
 				title="Map of Christchurch, New Zealand"
 				src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d185084.880052872!2d172.61584018027798!3d-43.522868133895685!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d322f4863c5ed01%3A0x500ef8684799945!2sChristchurch!5e1!3m2!1sen!2snz!4v1786753013225!5m2!1sen!2snz"
-				className="mt-8 h-80 w-full max-w-387.5 rounded-[15px] border border-solid border-[#7a7a7a] md:h-125"
+				className="mt-8 h-80 w-full max-w-387.5 rounded-[15px] border border-solid border-(--secondary-color) md:h-125"
 				allowFullScreen={false}
 				loading="lazy"
 				referrerPolicy="no-referrer-when-downgrade"
