@@ -86,16 +86,22 @@ function GlobalNavBar() {
 								isCurrent={pathname === item.link}
 							/>
 						))}
-						{RESUME_LINKS.map((item) => (
-							<Button
-								key={item.link}
-								text={item.text}
-								isCallToAction={item.isCallToAction}
-								link={item.link}
-								externalLink={true}
-								extraClass="ml-1 text-center whitespace-nowrap px-4"
-							/>
-						))}
+						{[...RESUME_LINKS]
+							.reverse()
+							.map((item) =>
+								item.isCallToAction ? (
+									<Button
+										key={item.link}
+										text={item.text}
+										isCallToAction={true}
+										link={item.link}
+										externalLink={true}
+										extraClass="ml-1 text-center whitespace-nowrap px-4"
+									/>
+								) : (
+									<NavItem key={item.link} link={item.link} text={item.text} external />
+								),
+							)}
 					</div>
 					<button
 						ref={toggleRef}
@@ -139,7 +145,7 @@ function GlobalNavBar() {
 				{isOpen ? (
 					<nav
 						id="mobile-menu"
-						aria-label="Mobile"
+						aria-label="Main menu"
 						className="absolute top-full right-0 left-0 mt-1.5 flex h-fit flex-col items-stretch gap-2 rounded-[15px] border border-solid border-(--secondary-color) bg-(--surface-glass-strong) p-2.5 backdrop-blur-xl backdrop-saturate-180 min-[1080px]:hidden"
 					>
 						{NAV_LINKS.map((item) => (

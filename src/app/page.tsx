@@ -18,13 +18,13 @@ export default function Page() {
 	return (
 		<main id="main" className="px-5 pb-24">
 			<section className="mt-16 mb-4 flex flex-col items-center text-center">
-				<h1 className="m-0 w-full text-6xl font-bold tracking-tight text-white max-[640px]:text-5xl max-[480px]:text-4xl">
+				<h1 className="m-0 w-full text-[clamp(2.25rem,11vw,3.75rem)] font-bold tracking-tight text-white">
 					Malcolm Hauser
 				</h1>
 				<p className="m-0 mt-2 w-full text-2xl text-(--primary-color) max-[480px]:text-xl">
 					Spaghetti Coding Since <span className="whitespace-nowrap">¯\_(ツ)_/¯</span>
 				</p>
-				<p className="mt-4 max-w-[70ch] text-center text-lg leading-relaxed text-pretty text-white">
+				<p className="mt-4 max-w-[70ch] text-center text-lg leading-relaxed text-pretty text-zinc-300 max-[480px]:text-base">
 					I am a {age}-year-old living in New Zealand! I build my projects with{" "}
 					<span className="whitespace-nowrap text-(--react-color)">React</span> and{" "}
 					<span className="whitespace-nowrap text-(--vite-color)">Vite</span>, but I am
@@ -53,7 +53,10 @@ export default function Page() {
 					/>
 				</div>
 			</section>
-			<section className="mt-20 flex scroll-mt-28 flex-col items-center" id="aboutMe">
+			<section
+				className="mt-20 flex scroll-mt-28 flex-col items-center max-[640px]:mt-16"
+				id="aboutMe"
+			>
 				<h2 className="m-0 mb-6 text-center text-4xl font-bold tracking-tight max-[480px]:text-3xl">
 					About <span className="text-(--primary-color)">Me</span>
 				</h2>
@@ -77,7 +80,10 @@ export default function Page() {
 					tinkering, I’m likely Flying or Playing Chess.
 				</p>
 			</section>
-			<section className="mt-20 flex scroll-mt-28 flex-col items-center" id="projects">
+			<section
+				className="mt-20 flex scroll-mt-28 flex-col items-center max-[640px]:mt-16"
+				id="projects"
+			>
 				<h2 className="m-0 mb-6 text-center text-4xl font-bold tracking-tight max-[480px]:text-3xl">
 					My <span className="text-(--primary-color)">Projects</span>
 				</h2>
@@ -92,7 +98,10 @@ export default function Page() {
 					))}
 				</ul>
 			</section>
-			<section className="mt-20 flex scroll-mt-28 flex-col items-center" id="education">
+			<section
+				className="mt-20 flex scroll-mt-28 flex-col items-center max-[640px]:mt-16"
+				id="education"
+			>
 				<h2 className="m-0 mb-6 text-center text-4xl font-bold tracking-tight max-[480px]:text-3xl">
 					My <span className="text-(--primary-color)">Education</span>
 				</h2>
