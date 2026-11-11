@@ -13,7 +13,7 @@ html {
 	--primary-color: #f05138;
 	--secondary-color: #737373;
 	--border-subtle: #383838;
-	--surface-glass: #1a1a1a8e;
+	--surface-glass: #1a1a1acc;
 	--surface-glass-strong: #1a1a1ae6;
 	--hover-tint: #ffffff14;
 	--react-color: #61dbfb;
@@ -22,7 +22,7 @@ html {
 	--typescript-color: #0a88d3;
 	--swift-color: #fa7343;
 	--raspberry-pi-color: #e8527c;
-	--djineo-color: #b4b4b4;
+	--djineo-color: #e4e4e7;
 	--box-shadow-primary-rest: 3px 3px 0 -1px var(--black), 3px 3px var(--primary-color);
 	--box-shadow-primary-hover: 2px 2px 0 -1px var(--black), 2px 2px var(--primary-color);
 	--box-shadow-secondary-rest:
@@ -40,4 +40,7 @@ html {
 body {
 	margin: auto;
 	max-width: 1610px;
+	display: flex;
+	flex-direction: column;
+	min-height: 100dvh;
 }

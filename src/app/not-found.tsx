@@ -12,9 +12,9 @@ export default function NotFoundPage() {
 	return (
 		<main
 			id="main"
-			className="flex min-h-[60vh] flex-col items-center justify-center px-5 pb-24 text-center"
+			className="flex flex-1 flex-col items-center justify-center px-5 pb-24 text-center"
 		>
-			<h1 className="m-0 w-full text-5xl font-bold text-white max-[480px]:text-4xl">
+			<h1 className="m-0 w-full text-5xl font-bold tracking-tight text-white max-[480px]:text-4xl">
 				<span className="text-(--primary-color)">404</span> – Not Found
 			</h1>
 			<p className="m-0 mt-3 w-full text-lg text-zinc-400">

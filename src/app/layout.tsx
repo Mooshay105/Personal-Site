@@ -26,7 +26,7 @@ export default function RootLayout({
 				</a>
 				<GlobalNavBar />
 				{children}
-				<footer className="mx-auto mb-8 flex w-[calc(100%-40px)] max-w-6xl flex-row flex-wrap items-center justify-between gap-2 border-t border-solid border-(--border-subtle) pt-6 text-zinc-400 max-[600px]:flex-col">
+				<footer className="mx-auto mt-auto mb-8 flex w-[calc(100%-40px)] max-w-6xl flex-row flex-wrap items-center justify-between gap-2 border-t border-solid border-(--border-subtle) pt-6 text-zinc-400 max-[600px]:flex-col">
 					<p className="m-0">© {new Date().getFullYear()} Malcolm Hauser</p>
 					<div className="flex flex-row gap-1">
 						<Link

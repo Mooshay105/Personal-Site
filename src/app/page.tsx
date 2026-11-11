@@ -18,7 +18,7 @@ export default function Page() {
 	return (
 		<main id="main" className="px-5 pb-24">
 			<section className="mt-16 mb-4 flex flex-col items-center text-center">
-				<h1 className="m-0 w-full text-6xl font-bold text-white max-[640px]:text-5xl max-[480px]:text-4xl">
+				<h1 className="m-0 w-full text-6xl font-bold tracking-tight text-white max-[640px]:text-5xl max-[480px]:text-4xl">
 					Malcolm Hauser
 				</h1>
 				<p className="m-0 mt-2 w-full text-2xl text-(--primary-color) max-[480px]:text-xl">
@@ -54,7 +54,7 @@ export default function Page() {
 				</div>
 			</section>
 			<section className="mt-20 flex scroll-mt-28 flex-col items-center" id="aboutMe">
-				<h2 className="m-0 mb-6 text-center text-4xl font-bold max-[480px]:text-3xl">
+				<h2 className="m-0 mb-6 text-center text-4xl font-bold tracking-tight max-[480px]:text-3xl">
 					About <span className="text-(--primary-color)">Me</span>
 				</h2>
 				<p className="m-0 max-w-[70ch] text-left text-lg leading-relaxed text-pretty text-white">
@@ -69,19 +69,21 @@ export default function Page() {
 						Raspberry Pi 5
 					</span>
 					. I have recently got into RC Planes and Drones. I have a{" "}
-					<span className="whitespace-nowrap text-(--djineo-color)">DJI Neo</span> and am
-					making an RC Glider. I am always looking for exciting projects that push my
-					limits, challenge me, and teach me something new. When I’m not programming or
+					<span className="font-semibold whitespace-nowrap text-(--djineo-color)">
+						DJI Neo
+					</span>{" "}
+					and am making an RC Glider. I am always looking for exciting projects that push
+					my limits, challenge me, and teach me something new. When I’m not programming or
 					tinkering, I’m likely Flying or Playing Chess.
 				</p>
 			</section>
 			<section className="mt-20 flex scroll-mt-28 flex-col items-center" id="projects">
-				<h2 className="m-0 mb-6 text-center text-4xl font-bold max-[480px]:text-3xl">
+				<h2 className="m-0 mb-6 text-center text-4xl font-bold tracking-tight max-[480px]:text-3xl">
 					My <span className="text-(--primary-color)">Projects</span>
 				</h2>
 				<ul
 					role="list"
-					className="m-0 mx-auto flex w-full max-w-6xl list-none flex-col gap-5 p-0"
+					className="m-0 mx-auto flex w-full max-w-6xl list-none flex-col gap-8 p-0"
 				>
 					{information.projects.map((project: Project) => (
 						<li key={project.id}>
@@ -91,12 +93,12 @@ export default function Page() {
 				</ul>
 			</section>
 			<section className="mt-20 flex scroll-mt-28 flex-col items-center" id="education">
-				<h2 className="m-0 mb-6 text-center text-4xl font-bold max-[480px]:text-3xl">
+				<h2 className="m-0 mb-6 text-center text-4xl font-bold tracking-tight max-[480px]:text-3xl">
 					My <span className="text-(--primary-color)">Education</span>
 				</h2>
 				<ul
 					role="list"
-					className="m-0 mx-auto flex w-full max-w-6xl list-none flex-col gap-5 p-0"
+					className="m-0 mx-auto flex w-full max-w-6xl list-none flex-col gap-8 p-0"
 				>
 					{information.education.map((certificate: Certificate) => (
 						<li key={certificate.id}>

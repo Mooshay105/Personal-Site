@@ -34,11 +34,14 @@ function GlobalNavBar() {
 	const close = () => setIsOpen(false);
 	const pathname = usePathname();
 	const wrapperRef = useRef<HTMLDivElement>(null);
+	const toggleRef = useRef<HTMLButtonElement>(null);
 
 	useEffect(() => {
 		if (!isOpen) return;
 		const handleKey = (event: KeyboardEvent) => {
-			if (event.key === "Escape") setIsOpen(false);
+			if (event.key !== "Escape") return;
+			setIsOpen(false);
+			toggleRef.current?.focus();
 		};
 		const handlePointer = (event: PointerEvent) => {
 			if (!wrapperRef.current?.contains(event.target as Node)) setIsOpen(false);
@@ -56,7 +59,7 @@ function GlobalNavBar() {
 			<div ref={wrapperRef} className="relative mx-auto max-w-6xl">
 				<nav
 					aria-label="Main"
-					className="flex h-fit items-center rounded-[15px] border border-solid border-(--secondary-color) bg-(--surface-glass) p-0 pr-2.5 backdrop-blur-md backdrop-saturate-180"
+					className="flex h-fit items-center rounded-[15px] border border-solid border-(--secondary-color) bg-(--surface-glass) p-0 pr-2.5 backdrop-blur-xl backdrop-saturate-180"
 				>
 					<Link
 						className="m-2.5 mr-auto flex min-w-0 flex-row items-center justify-center rounded-[10px] text-white no-underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--primary-color)"
@@ -95,6 +98,7 @@ function GlobalNavBar() {
 						))}
 					</div>
 					<button
+						ref={toggleRef}
 						type="button"
 						aria-label={isOpen ? "Close menu" : "Open menu"}
 						aria-expanded={isOpen}
@@ -136,7 +140,7 @@ function GlobalNavBar() {
 					<nav
 						id="mobile-menu"
 						aria-label="Mobile"
-						className="absolute top-full right-0 left-0 mt-1.5 flex h-fit flex-col items-stretch gap-2 rounded-[15px] border border-solid border-(--secondary-color) bg-(--surface-glass-strong) p-2.5 backdrop-blur-md backdrop-saturate-180 min-[1080px]:hidden"
+						className="absolute top-full right-0 left-0 mt-1.5 flex h-fit flex-col items-stretch gap-2 rounded-[15px] border border-solid border-(--secondary-color) bg-(--surface-glass-strong) p-2.5 backdrop-blur-xl backdrop-saturate-180 min-[1080px]:hidden"
 					>
 						{NAV_LINKS.map((item) => (
 							<NavItem
@@ -148,16 +152,18 @@ function GlobalNavBar() {
 								extraClass="py-2.5 text-center"
 							/>
 						))}
-						{RESUME_LINKS.map((item) => (
-							<Button
-								key={item.link}
-								text={item.text}
-								isCallToAction={item.isCallToAction}
-								link={item.link}
-								externalLink={true}
-								extraClass="text-center whitespace-nowrap"
-							/>
-						))}
+						<div className="flex flex-col gap-2 border-t border-solid border-(--border-subtle) pt-3">
+							{RESUME_LINKS.map((item) => (
+								<Button
+									key={item.link}
+									text={item.text}
+									isCallToAction={item.isCallToAction}
+									link={item.link}
+									externalLink={true}
+									extraClass="text-center whitespace-nowrap"
+								/>
+							))}
+						</div>
 					</nav>
 				) : null}
 			</div>
