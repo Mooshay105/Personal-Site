@@ -5,14 +5,22 @@ interface NavItemProps {
 	text: string;
 	onClick?: () => void;
 	extraClass?: string;
+	isCurrent?: boolean;
 }
 
-export function NavItem({ link, text, onClick, extraClass = "" }: NavItemProps) {
+export function NavItem({
+	link,
+	text,
+	onClick,
+	extraClass = "",
+	isCurrent = false,
+}: NavItemProps) {
 	return (
 		<Link
 			href={link}
 			onClick={onClick}
-			className={`m-1 rounded-[10px] px-2.5 py-2 whitespace-nowrap text-white no-underline transition-all duration-200 ease-in-out hover:bg-[#ffffff14] hover:text-(--primary-color) focus-visible:outline-2 focus-visible:outline-(--primary-color) ${extraClass}`}
+			aria-current={isCurrent ? "page" : undefined}
+			className={`rounded-[10px] px-2.5 py-2 whitespace-nowrap text-white no-underline transition-all duration-200 ease-in-out hover:bg-[#ffffff14] hover:text-(--primary-color) focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--primary-color) aria-[current=page]:text-(--primary-color) ${extraClass}`}
 		>
 			{text}
 		</Link>

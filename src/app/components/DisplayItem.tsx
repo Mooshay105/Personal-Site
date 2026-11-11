@@ -9,7 +9,7 @@ interface DisplayItemProps {
 
 function DisplayItem({ type, data }: DisplayItemProps) {
 	const isCertificate = type === "certificate";
-	const buttonClass = "w-[110px] text-center max-[990px]:flex-1 max-[990px]:mx-1.5";
+	const buttonClass = "w-[110px] text-center max-[990px]:flex-1";
 
 	return (
 		<article className="flex w-full flex-row items-center gap-6 rounded-[15px] border border-solid border-(--border-subtle) p-5 max-[990px]:flex-col max-[990px]:items-stretch max-[990px]:gap-4">
@@ -18,11 +18,12 @@ function DisplayItem({ type, data }: DisplayItemProps) {
 				alt={`${data.title} preview`}
 				width={isCertificate ? 100 : 300}
 				height={isCertificate ? 100 : 200}
+				sizes={isCertificate ? "100px" : "(max-width: 990px) 560px, 300px"}
 				className={
 					"shrink-0 rounded-[10px] border border-solid border-(--border-subtle) object-cover " +
 					(isCertificate
 						? "h-25 w-25 max-[990px]:self-center"
-						: "aspect-3/2 h-auto w-75 max-[990px]:w-full")
+						: "aspect-3/2 h-auto w-75 max-[990px]:w-full max-[990px]:max-w-140 max-[990px]:self-center")
 				}
 			/>
 			<div className="flex min-w-0 flex-1 flex-col justify-center">
@@ -38,7 +39,7 @@ function DisplayItem({ type, data }: DisplayItemProps) {
 					{data.description}
 				</p>
 			</div>
-			<div className="flex w-[130px] shrink-0 flex-col items-center justify-center max-[990px]:w-full max-[990px]:flex-row min-[991px]:-mr-2.5">
+			<div className="flex w-[110px] shrink-0 flex-col items-center justify-center gap-4 max-[990px]:w-full max-[990px]:flex-row max-[990px]:gap-3">
 				{data.primaryLink !== "" ? (
 					<Button
 						text="View"

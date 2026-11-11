@@ -11,10 +11,10 @@ export const metadata: Metadata = {
 export default function NotFoundPage() {
 	return (
 		<main className="flex min-h-[60vh] flex-col items-center justify-center px-5 pb-24 text-center">
-			<h1 className="m-0 w-full text-5xl font-bold text-(--primary-color)">
-				404 - Not Found
+			<h1 className="m-0 w-full text-5xl font-bold text-white">
+				<span className="text-(--primary-color)">404</span> - Not Found
 			</h1>
-			<p className="m-0 mt-2 w-full text-2xl text-white">
+			<p className="m-0 mt-3 w-full text-lg text-zinc-400">
 				The page you are looking for does not exist.
 			</p>
 			<div className="mt-6">
@@ -22,7 +22,7 @@ export default function NotFoundPage() {
 					text="Go Home"
 					isCallToAction={true}
 					link="/"
-					extraClass="block w-[130px] text-center"
+					extraClass="block w-[110px] text-center"
 				/>
 			</div>
 		</main>

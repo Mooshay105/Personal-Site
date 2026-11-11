@@ -1,7 +1,5 @@
 @import "tailwindcss";
 
-/* Main Styles */
-
 html {
 	color-scheme: dark;
 	font-family: var(--font-sans);
@@ -14,9 +12,7 @@ html {
 	--white: #ffffff;
 	--primary-color: #f05138;
 	--secondary-color: #737373;
-	--border-subtle: #2e2e2e;
-	--border: var(--secondary-color) 1px solid;
-	/* Bio Colors */
+	--border-subtle: #383838;
 	--react-color: #61dbfb;
 	--vite-color: #b45cf0;
 	--nextjs-color: #3b8eff;
@@ -24,8 +20,6 @@ html {
 	--swift-color: #fa7343;
 	--raspberry-pi-color: #e8527c;
 	--djineo-color: #818181;
-	--bio-highlight-color: #f05138;
-	/* Box Shadows */
 	--box-shadow-primary-rest: 3px 3px 0 -1px var(--black), 3px 3px var(--primary-color);
 	--box-shadow-primary-hover: 2px 2px 0 -1px var(--black), 2px 2px var(--primary-color);
 	--box-shadow-secondary-rest:
