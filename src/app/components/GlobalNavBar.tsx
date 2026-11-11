@@ -3,7 +3,7 @@
 import Button from "./Button";
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { NavItem } from "./NavItem";
 
 /** The in-page and route links shown in the nav bar. */
@@ -19,19 +19,38 @@ const RESUME_LINKS = [
 	{
 		link: "https://github.com/Mooshay105/Mooshay105/blob/main/resume.docx",
 		text: "Resume (.docx)",
+		isCallToAction: true,
 	},
 	{
 		link: "https://raw.githubusercontent.com/Mooshay105/Mooshay105/refs/heads/main/resume.md",
 		text: "Resume (.md)",
+		isCallToAction: false,
 	},
 ];
 
 function GlobalNavBar() {
 	const [isOpen, setIsOpen] = useState(false);
 	const close = () => setIsOpen(false);
+	const wrapperRef = useRef<HTMLDivElement>(null);
+
+	useEffect(() => {
+		if (!isOpen) return;
+		const handleKey = (event: KeyboardEvent) => {
+			if (event.key === "Escape") setIsOpen(false);
+		};
+		const handlePointer = (event: PointerEvent) => {
+			if (!wrapperRef.current?.contains(event.target as Node)) setIsOpen(false);
+		};
+		document.addEventListener("keydown", handleKey);
+		document.addEventListener("pointerdown", handlePointer);
+		return () => {
+			document.removeEventListener("keydown", handleKey);
+			document.removeEventListener("pointerdown", handlePointer);
+		};
+	}, [isOpen]);
 
 	return (
-		<div className="sticky top-2.5 z-1000">
+		<div ref={wrapperRef} className="sticky top-2.5 z-1000">
 			<nav className="mx-7.5 flex h-fit items-center rounded-[15px] border border-solid border-[#7a7a7a] bg-[#1a1a1a8e] p-0 pr-2.5 backdrop-blur-md backdrop-saturate-180">
 				<Link
 					className="m-2.5 mr-auto flex flex-row items-center justify-center rounded-[10px] text-white no-underline transition-all duration-200 ease-in-out"
@@ -43,7 +62,7 @@ function GlobalNavBar() {
 						alt=""
 						width={60}
 						height={60}
-						className="mr-2.5 rounded-full"
+						className="mr-2.5 h-15 w-15 rounded-full"
 					/>
 					<span className="font-sans text-xl font-bold">Malcolm Hauser</span>
 				</Link>
@@ -55,7 +74,7 @@ function GlobalNavBar() {
 						<Button
 							key={item.link}
 							text={item.text}
-							isCallToAction={true}
+							isCallToAction={item.isCallToAction}
 							link={item.link}
 							externalLink={true}
 							extraClass="text-center whitespace-nowrap px-4"
@@ -97,7 +116,7 @@ function GlobalNavBar() {
 			{isOpen ? (
 				<div
 					id="mobile-menu"
-					className="absolute top-full right-7.5 left-7.5 mt-2 flex h-fit flex-col items-stretch rounded-[15px] border border-solid border-[#7a7a7a] bg-[#1a1a1ae6] p-2.5 backdrop-blur-md backdrop-saturate-180 min-[1080px]:hidden"
+					className="absolute top-full right-7.5 left-7.5 mt-1.5 flex h-fit flex-col items-stretch rounded-[15px] border border-solid border-[#7a7a7a] bg-[#1a1a1ae6] p-2.5 backdrop-blur-md backdrop-saturate-180 min-[1080px]:hidden"
 				>
 					{NAV_LINKS.map((item) => (
 						<NavItem key={item.link} link={item.link} text={item.text} onClick={close} />
@@ -106,7 +125,7 @@ function GlobalNavBar() {
 						<Button
 							key={item.link}
 							text={item.text}
-							isCallToAction={true}
+							isCallToAction={item.isCallToAction}
 							link={item.link}
 							externalLink={true}
 							extraClass="text-center whitespace-nowrap"

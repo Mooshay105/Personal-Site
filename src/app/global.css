@@ -6,7 +6,6 @@ html {
 	font-family: var(--font-sans);
 	background-color: var(--black);
 	color: var(--white);
-	scroll-behavior: smooth;
 	--font-sans: "Ubuntu Sans", "Roboto", sans-serif;
 	--font-serif: serif;
 	--font-mono: "Ubuntu Mono", monospace;
@@ -17,11 +16,11 @@ html {
 	--border: var(--secondary-color) 1px solid;
 	/* Bio Colors */
 	--react-color: #61dbfb;
-	--vite-color: #8e14ca;
-	--nextjs-color: #0070f3;
+	--vite-color: #b45cf0;
+	--nextjs-color: #3b8eff;
 	--typescript-color: #0a88d3;
 	--swift-color: #fa7343;
-	--raspberry-pi-color: #d02b5a;
+	--raspberry-pi-color: #e8527c;
 	--djineo-color: #818181;
 	--bio-highlight-color: #f05138;
 	/* Box Shadows */
@@ -31,6 +30,12 @@ html {
 		3px 3px 0 -1px var(--black), 3px 3px var(--secondary-color);
 	--box-shadow-secondary-hover:
 		2px 2px 0 -1px var(--black), 2px 2px var(--secondary-color);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	html {
+		scroll-behavior: smooth;
+	}
 }
 
 body {

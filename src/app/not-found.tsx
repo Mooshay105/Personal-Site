@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Button from "./components/Button";
 
 export const metadata: Metadata = {
 	title: "Malcolm Hauser | 404 - Not Found",
@@ -9,13 +10,21 @@ export const metadata: Metadata = {
 
 export default function NotFoundPage() {
 	return (
-		<main className="mt-12.5 flex flex-col items-center text-center">
+		<main className="mt-16 flex flex-col items-center px-5 pb-24 text-center">
 			<h1 className="m-0 w-full text-5xl font-bold text-(--primary-color)">
 				404 - Not Found
 			</h1>
-			<p className="m-0 w-full text-2xl font-bold text-white">
+			<p className="m-0 mt-2 w-full text-2xl text-white">
 				The page you are looking for does not exist.
 			</p>
+			<div className="mt-6">
+				<Button
+					text="Go Home"
+					isCallToAction={true}
+					link="/"
+					extraClass="block w-[130px] text-center"
+				/>
+			</div>
 		</main>
 	);
 }

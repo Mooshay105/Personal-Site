@@ -30,7 +30,7 @@
 			"primaryLink": "https://www.jhauser.com.au/",
 			"secondaryLink": "",
 			"imageURL": "https://github.com/Mooshay105/cdn/blob/main/jrhauserSite.png?raw=true",
-			"description": "This is the home page for the contracting company that I work for, I built this from scratch. It also serves as the analytics dashboard for the companies clients."
+			"description": "This is the home page for the contracting company that I work for, I built this from scratch. It also serves as the analytics dashboard for the company's clients."
 		},
 		{
 			"id": 5,
@@ -54,7 +54,7 @@
 			"primaryLink": "",
 			"secondaryLink": "https://github.com/Mooshay105/Hexagon-TV-API",
 			"imageURL": "https://github.com/Mooshay105/cdn/blob/main/hexagonTV.png?raw=true",
-			"description": "Hexagon TV is a streaming service that I made from scratch it uses TypeScript for the backend and React frontend, and Turso for the SQL database."
+			"description": "Hexagon TV is a streaming service that I made from scratch; it uses TypeScript for the backend and React frontend, and Turso for the SQL database."
 		},
 		{
 			"id": 8,
@@ -62,7 +62,7 @@
 			"primaryLink": "https://airportdatabase.malcolmjh.com/",
 			"secondaryLink": "https://github.com/Mooshay105/Airport-Database",
 			"imageURL": "https://github.com/Mooshay105/cdn/blob/main/airportDatabase.png?raw=true",
-			"description": "Airport Database is a website that uses React to dynamicly display all (IATA) airports and their information, all from a JSON file."
+			"description": "Airport Database is a website that uses React to dynamically display all (IATA) airports and their information, all from a JSON file."
 		},
 		{
 			"id": 9,
