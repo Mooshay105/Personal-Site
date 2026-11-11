@@ -26,7 +26,7 @@ function Button({
 			? "shadow-[var(--box-shadow-primary-rest)] border-[var(--primary-color)] hover:shadow-[var(--box-shadow-primary-hover)] bg-[radial-gradient(circle_at_0_0,_var(--primary-color),_var(--black)_42%)] "
 			: "shadow-[var(--box-shadow-secondary-rest)] border-[var(--secondary-color)] hover:shadow-[var(--box-shadow-secondary-hover)] ") +
 		extraClass +
-		" rounded-[10px] py-[10px] border-[1px] border-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--primary-color) transition-all duration-200 ease-in-out hover:translate-x-[1px] hover:translate-y-[1px] active:shadow-none active:translate-x-[3px] active:translate-y-[3px]" +
+		" rounded-[10px] py-[10px] border-[1px] border-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--primary-color) transition-all duration-200 ease-in-out hover:translate-x-[1px] hover:translate-y-[1px] active:shadow-none active:translate-x-[3px] active:translate-y-[3px] motion-reduce:transition-none motion-reduce:hover:translate-0 motion-reduce:active:translate-0" +
 		(isActive ? " bg-[var(--black)] text-[var(--white)]" : "");
 
 	if (externalLink) {

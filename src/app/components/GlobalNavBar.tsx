@@ -68,9 +68,11 @@ function GlobalNavBar() {
 							alt=""
 							width={60}
 							height={60}
-							className="mr-2.5 h-15 w-15 shrink-0 rounded-full"
+							className="mr-2.5 h-11 w-11 shrink-0 rounded-full min-[1080px]:h-15 min-[1080px]:w-15"
 						/>
-						<span className="font-sans text-xl font-bold">Malcolm Hauser</span>
+						<span className="font-sans text-xl font-bold whitespace-nowrap max-[360px]:text-lg">
+							Malcolm Hauser
+						</span>
 					</Link>
 					<div className="hidden flex-row items-center justify-center gap-2 min-[1080px]:flex">
 						{NAV_LINKS.map((item) => (

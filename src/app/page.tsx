@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 export default function Page() {
 	const age = getAge();
 	return (
-		<main className="px-5 pb-24">
+		<main id="main" className="px-5 pb-24">
 			<section className="mt-16 mb-4 flex flex-col items-center text-center">
 				<h1 className="m-0 w-full text-6xl font-bold text-white max-[640px]:text-5xl max-[480px]:text-4xl">
 					Malcolm Hauser
@@ -52,10 +52,10 @@ export default function Page() {
 				</div>
 			</section>
 			<section className="mt-20 flex scroll-mt-28 flex-col items-center" id="aboutMe">
-				<h2 className="m-0 text-center text-4xl font-bold">
+				<h2 className="m-0 mb-6 text-center text-4xl font-bold">
 					About <span className="text-(--primary-color)">Me</span>
 				</h2>
-				<p className="mt-5 max-w-[70ch] text-center text-lg leading-relaxed text-pretty text-white max-[640px]:text-left">
+				<p className="m-0 max-w-[70ch] text-left text-lg leading-relaxed text-pretty text-white">
 					Hi, I’m a {age}-year-old tech enthusiast from New Zealand! I love programming
 					and have experience with{" "}
 					<span className="whitespace-nowrap text-(--react-color)">React</span>,{" "}

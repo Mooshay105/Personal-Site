@@ -20,7 +20,7 @@ export function NavItem({
 			href={link}
 			onClick={onClick}
 			aria-current={isCurrent ? "page" : undefined}
-			className={`rounded-[10px] px-2.5 py-2 whitespace-nowrap text-white no-underline transition-all duration-200 ease-in-out hover:bg-[#ffffff14] hover:text-(--primary-color) focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--primary-color) aria-[current=page]:text-(--primary-color) ${extraClass}`}
+			className={`rounded-[10px] px-2.5 py-2 whitespace-nowrap text-white no-underline transition-all duration-200 ease-in-out hover:bg-[#ffffff14] hover:text-(--primary-color) focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--primary-color) aria-[current=page]:text-(--primary-color) motion-reduce:transition-none ${extraClass}`}
 		>
 			{text}
 		</Link>

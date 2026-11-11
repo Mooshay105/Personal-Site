@@ -18,6 +18,12 @@ export default function RootLayout({
 				/>
 			</head>
 			<body>
+				<a
+					href="#main"
+					className="sr-only rounded-[10px] border border-solid border-(--secondary-color) bg-(--black) px-4 py-2.5 text-white shadow-(--box-shadow-secondary-rest) focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-1001 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--primary-color)"
+				>
+					Skip to content
+				</a>
 				<GlobalNavBar />
 				{children}
 				<footer className="mx-auto mb-8 flex w-[calc(100%-40px)] max-w-6xl flex-row flex-wrap items-center justify-between gap-2 border-t border-solid border-(--border-subtle) pt-6 text-zinc-400 max-[600px]:flex-col">
