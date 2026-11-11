@@ -3,124 +3,115 @@
 import Button from "./Button";
 import Link from "next/link";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { NavItem } from "./NavItem";
 
-function GlobalNavBar() {
-	const [isMobile, setIsMobile] = useState(false);
-	const [isOpen, setIsOpen] = useState(false);
+/** The in-page and route links shown in the nav bar. */
+const NAV_LINKS = [
+	{ link: "/#aboutMe", text: "About Me" },
+	{ link: "/#projects", text: "Projects" },
+	{ link: "/#education", text: "Education" },
+	{ link: "/contact", text: "Contact Me" },
+];
 
-	useEffect(() => {
-		const handleResize = () => {
-			if (window.innerWidth < 1080) {
-				setIsMobile(true);
-			} else {
-				setIsMobile(false);
-				setIsOpen(false);
-			}
-		};
-		window.addEventListener("resize", handleResize);
-		handleResize();
-		return () => window.removeEventListener("resize", handleResize);
-	}, []);
+/** The downloadable resume formats shown in the nav bar. */
+const RESUME_LINKS = [
+	{
+		link: "https://github.com/Mooshay105/Mooshay105/blob/main/resume.docx",
+		text: "Resume (.docx)",
+	},
+	{
+		link: "https://raw.githubusercontent.com/Mooshay105/Mooshay105/refs/heads/main/resume.md",
+		text: "Resume (.md)",
+	},
+];
+
+function GlobalNavBar() {
+	const [isOpen, setIsOpen] = useState(false);
+	const close = () => setIsOpen(false);
 
 	return (
 		<div className="sticky top-2.5 z-1000">
-			<nav className="flex items-center mx-[30] h-fit rounded-[15px] p-0 pr-2.5 border-[#7a7a7a] border border-solid bg-[#1a1a1a8e] backdrop-blur-md backdrop-saturate-180">
+			<nav className="mx-7.5 flex h-fit items-center rounded-[15px] border border-solid border-[#7a7a7a] bg-[#1a1a1a8e] p-0 pr-2.5 backdrop-blur-md backdrop-saturate-180">
 				<Link
-					className="flex justify-center items-center flex-row mt-1.25 mb-1.25 mr-auto font-[bold] m-2.5 no-underline text-white transition-all duration-200 ease-in-out"
+					className="m-2.5 mr-auto flex flex-row items-center justify-center rounded-[10px] text-white no-underline transition-all duration-200 ease-in-out"
 					href="/"
+					onClick={close}
 				>
 					<Image
 						src="/logo.png"
-						alt="Logo"
+						alt=""
 						width={60}
 						height={60}
 						className="mr-2.5 rounded-full"
 					/>
-					<p className="font-sans font-bold text-xl">Malcolm Hauser</p>
+					<span className="font-sans text-xl font-bold">Malcolm Hauser</span>
 				</Link>
-				{isMobile ? (
-					<>
-						<svg
-							width="24"
-							height="24"
-							viewBox="0 0 24 24"
-							fill="none"
-							xmlns="http://www.w3.org/2000/svg"
-							onClick={() => setIsOpen(!isOpen)}
-						>
+				<div className="hidden flex-row items-center justify-center min-[1080px]:flex">
+					{NAV_LINKS.map((item) => (
+						<NavItem key={item.link} link={item.link} text={item.text} />
+					))}
+					{RESUME_LINKS.map((item) => (
+						<Button
+							key={item.link}
+							text={item.text}
+							isCallToAction={true}
+							link={item.link}
+							externalLink={true}
+							extraClass="text-center whitespace-nowrap px-4"
+						/>
+					))}
+				</div>
+				<button
+					type="button"
+					aria-label={isOpen ? "Close menu" : "Open menu"}
+					aria-expanded={isOpen}
+					aria-controls="mobile-menu"
+					onClick={() => setIsOpen(!isOpen)}
+					className="m-1 flex h-11 w-11 cursor-pointer items-center justify-center rounded-[10px] transition-all duration-200 ease-in-out hover:bg-[#ffffff14] focus-visible:outline-2 focus-visible:outline-(--primary-color) min-[1080px]:hidden"
+				>
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+						<path
+							d={isOpen ? "M5 5L19 19" : "M3 6H21"}
+							stroke="var(--primary-color)"
+							strokeWidth="3"
+							strokeLinecap="round"
+						/>
+						{isOpen ? null : (
 							<path
 								d="M3 12H21"
 								stroke="var(--primary-color)"
 								strokeWidth="3"
 								strokeLinecap="round"
-								strokeLinejoin="round"
 							/>
-							<path
-								d="M3 6H21"
-								stroke="var(--primary-color)"
-								strokeWidth="3"
-								strokeLinecap="round"
-								strokeLinejoin="round"
-							/>
-							<path
-								d="M3 18H21"
-								stroke="var(--primary-color)"
-								strokeWidth="3"
-								strokeLinecap="round"
-								strokeLinejoin="round"
-							/>
-						</svg>
-					</>
-				) : (
-					<div className="flex flex-row items-center justify-center">
-						<NavItem link="/#aboutMe" text="About Me" isMobile={isMobile} />
-						<NavItem link="/contact" text="Contact Me" isMobile={isMobile} />
-						<NavItem link="/#projects" text="Projects" isMobile={isMobile} />
-						<NavItem link="/#education" text="Education" isMobile={isMobile} />
-
-						<Button
-							text="Word Document (.docx)"
-							isCallToAction={true}
-							link="https://github.com/Mooshay105/Mooshay105/blob/main/resume.docx"
-							externalLink={true}
-							extraClass="w-[98%] text-center whitespace-nowrap px-4"
+						)}
+						<path
+							d={isOpen ? "M19 5L5 19" : "M3 18H21"}
+							stroke="var(--primary-color)"
+							strokeWidth="3"
+							strokeLinecap="round"
 						/>
-						<Button
-							text="Markdown (.md)"
-							isCallToAction={true}
-							link="https://raw.githubusercontent.com/Mooshay105/Mooshay105/refs/heads/main/resume.md"
-							externalLink={true}
-							extraClass="w-[98%] text-center whitespace-nowrap px-4"
-						/>
-					</div>
-				)}
+					</svg>
+				</button>
 			</nav>
-			{isMobile ? (
-				<div className="fixed top-21.75 left-7.5 right-7.5 mt-2">
-					{isOpen ? (
-						<div className="flex items-center flex-col h-fit rounded-[15px] p-0 pr-2.5 border-[#7a7a7a] border border-solid bg-[#1a1a1a8e] backdrop-blur-md backdrop-saturate-180">
-							<NavItem link="/#aboutMe" text="About Me" isMobile={isMobile} />
-							<NavItem link="/contact" text="Contact Me" isMobile={isMobile} />
-							<NavItem link="/#projects" text="Projects" isMobile={isMobile} />
-							<NavItem link="/#education" text="Education" isMobile={isMobile} />
-							<Button
-								text="Word Document (.docx)"
-								isCallToAction={true}
-								link="https://github.com/Mooshay105/Mooshay105/blob/main/resume.docx"
-								externalLink={true}
-								extraClass="w-[calc(100%-10px)] text-center whitespace-nowrap ml-[15px]"
-							/>
-							<Button
-								text="Markdown (.md)"
-								isCallToAction={true}
-								link="https://raw.githubusercontent.com/Mooshay105/Mooshay105/refs/heads/main/resume.md"
-								externalLink={true}
-								extraClass="w-[calc(100%-10px)] text-center whitespace-nowrap ml-[15px]"
-							/>
-						</div>
-					) : null}
+			{isOpen ? (
+				<div
+					id="mobile-menu"
+					className="absolute top-full right-7.5 left-7.5 mt-2 flex h-fit flex-col items-stretch rounded-[15px] border border-solid border-[#7a7a7a] bg-[#1a1a1ae6] p-2.5 backdrop-blur-md backdrop-saturate-180 min-[1080px]:hidden"
+				>
+					{NAV_LINKS.map((item) => (
+						<NavItem key={item.link} link={item.link} text={item.text} onClick={close} />
+					))}
+					{RESUME_LINKS.map((item) => (
+						<Button
+							key={item.link}
+							text={item.text}
+							isCallToAction={true}
+							link={item.link}
+							externalLink={true}
+							extraClass="text-center whitespace-nowrap"
+						/>
+					))}
 				</div>
 			) : null}
 		</div>

@@ -3,16 +3,17 @@ import Link from "next/link";
 interface NavItemProps {
 	link: string;
 	text: string;
-	isMobile: boolean;
+	onClick?: () => void;
 }
 
-export function NavItem({ link, text, isMobile }: NavItemProps) {
+export function NavItem({ link, text, onClick }: NavItemProps) {
 	return (
 		<Link
 			href={link}
-			className="m-2.5 no-underline text-white transition-all duration-200 ease-in-out"
+			onClick={onClick}
+			className="m-1 rounded-[10px] px-2.5 py-2 whitespace-nowrap text-white no-underline transition-all duration-200 ease-in-out hover:bg-[#ffffff14] hover:text-(--primary-color) focus-visible:outline-2 focus-visible:outline-(--primary-color)"
 		>
-			<p className={isMobile ? "" : "whitespace-nowrap"}>{text}</p>
+			{text}
 		</Link>
 	);
 }

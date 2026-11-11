@@ -14,6 +14,9 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
+	const age = Math.floor(
+		(Date.now() - new Date("2010-10-28").getTime()) / (1000 * 60 * 60 * 24 * 365.25),
+	);
 	return (
 		<main>
 			<div className="mt-12.5 flex flex-col items-center text-center">
@@ -23,14 +26,7 @@ export default function Page() {
 				</h2>
 				<p className="mx-5 mt-2.5 max-w-[80ch] text-center text-[large] text-white">
 					I am a{" "}
-					{Math.floor(
-						(new Date().getTime() - new Date("10-28-2010").getTime()) /
-							1000 /
-							60 /
-							60 /
-							24 /
-							365.25,
-					)}{" "}
+					{age}{" "}
 					year-old living in New Zealand! I build my projects with
 					<span className="text-(--react-color)"> React</span> and{" "}
 					<span className="text-(--vite-color)"> Vite</span> But I am trying-out{" "}
@@ -61,14 +57,7 @@ export default function Page() {
 				</h2>
 				<p className="max-w-[80ch] text-center text-[large] text-white">
 					Hi, I’m a{" "}
-					{Math.floor(
-						(new Date().getTime() - new Date("10-28-2010").getTime()) /
-							1000 /
-							60 /
-							60 /
-							24 /
-							365.25,
-					)}
+					{age}
 					-year-old tech enthusiast from New Zealand! I love programming and have
 					experience with
 					<span className="text-(--react-color)"> React</span>,
