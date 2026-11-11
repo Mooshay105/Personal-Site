@@ -33,7 +33,7 @@ function GlobalNavBar() {
 	const [isOpen, setIsOpen] = useState(false);
 	const close = () => setIsOpen(false);
 	const pathname = usePathname();
-	const wrapperRef = useRef<HTMLDivElement>(null);
+	const wrapperRef = useRef<HTMLElement>(null);
 	const toggleRef = useRef<HTMLButtonElement>(null);
 
 	useEffect(() => {
@@ -55,12 +55,9 @@ function GlobalNavBar() {
 	}, [isOpen]);
 
 	return (
-		<div className="sticky top-2.5 z-1000 px-5">
-			<div ref={wrapperRef} className="relative mx-auto max-w-6xl">
-				<nav
-					aria-label="Main"
-					className="flex h-fit items-center rounded-[15px] border border-solid border-(--secondary-color) bg-(--surface-glass) p-0 pr-2.5 backdrop-blur-xl backdrop-saturate-180"
-				>
+		<div className="sticky top-0 z-1000 px-5 pt-2.5 before:absolute before:inset-x-0 before:top-0 before:h-2.5 before:bg-(--black)">
+			<nav ref={wrapperRef} aria-label="Main" className="relative mx-auto max-w-6xl">
+				<div className="flex h-fit items-center rounded-[15px] border border-solid border-(--secondary-color) bg-(--surface-glass) p-0 pr-2.5 backdrop-blur-xl backdrop-saturate-180">
 					<Link
 						className="m-2.5 mr-auto flex min-w-0 flex-row items-center justify-center rounded-[10px] text-white no-underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--primary-color)"
 						href="/"
@@ -141,12 +138,11 @@ function GlobalNavBar() {
 							/>
 						</svg>
 					</button>
-				</nav>
+				</div>
 				{isOpen ? (
-					<nav
+					<div
 						id="mobile-menu"
-						aria-label="Main menu"
-						className="absolute top-full right-0 left-0 mt-1.5 flex h-fit flex-col items-stretch gap-2 rounded-[15px] border border-solid border-(--secondary-color) bg-(--surface-glass-strong) p-2.5 backdrop-blur-xl backdrop-saturate-180 min-[1080px]:hidden"
+						className="absolute top-full right-0 left-0 mt-1.5 flex h-fit flex-col items-stretch gap-2 rounded-[15px] border border-solid border-(--secondary-color) bg-(--surface-glass-strong) p-2.5 backdrop-blur-xl backdrop-saturate-180 min-[640px]:left-auto min-[640px]:w-72 min-[1080px]:hidden"
 					>
 						{NAV_LINKS.map((item) => (
 							<NavItem
@@ -170,9 +166,9 @@ function GlobalNavBar() {
 								/>
 							))}
 						</div>
-					</nav>
+					</div>
 				) : null}
-			</div>
+			</nav>
 		</div>
 	);
 }

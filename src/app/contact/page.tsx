@@ -16,7 +16,7 @@ export default function ContactPage() {
 				Contact <span className="text-(--primary-color)">Me</span>
 			</h1>
 			<div className="mt-6 flex flex-col items-center">
-				<p className="m-0 text-lg text-white">
+				<p className="m-0 text-lg text-(--text-muted)">
 					Email:{" "}
 					<a
 						href="mailto:malcolm@malcolmjh.com"
@@ -25,30 +25,29 @@ export default function ContactPage() {
 						malcolm@malcolmjh.com
 					</a>
 				</p>
-				<p className="m-0 mt-1 text-lg text-white">
-					Based in: <span className="whitespace-nowrap text-zinc-300">Christchurch,</span>{" "}
-					<span className="whitespace-nowrap text-zinc-300">New Zealand</span>
+				<p className="m-0 mt-1 text-lg text-(--text-muted)">
+					Based in:{" "}
+					<span className="whitespace-nowrap text-(--text-body)">Christchurch,</span>{" "}
+					<span className="whitespace-nowrap text-(--text-body)">New Zealand</span>
 				</p>
 				<div className="mt-6 flex flex-row gap-5">
 					<Button
 						text="Email Me"
 						isCallToAction={true}
 						link="mailto:malcolm@malcolmjh.com"
-						extraClass="w-[110px] text-center"
 					/>
 					<Button
 						text="GitHub"
 						isCallToAction={false}
 						link="https://github.com/Mooshay105"
 						externalLink={true}
-						extraClass="w-[110px] text-center"
 					/>
 				</div>
 			</div>
 			<iframe
 				title="Map of Christchurch, New Zealand"
 				src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d185084.880052872!2d172.61584018027798!3d-43.522868133895685!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d322f4863c5ed01%3A0x500ef8684799945!2sChristchurch!5e0!3m2!1sen!2snz!4v1786753013225!5m2!1sen!2snz"
-				className="mt-8 h-80 w-full max-w-6xl rounded-[15px] border border-solid border-(--border-subtle) bg-[#1a1a1a] shadow-(--box-shadow-secondary-rest) brightness-90 saturate-75 transition-[filter] duration-200 focus-within:brightness-100 focus-within:saturate-100 hover:brightness-100 hover:saturate-100 md:h-96"
+				className="mt-8 h-80 w-full max-w-6xl rounded-[15px] border border-solid border-(--border-subtle) bg-[#1a1a1a] shadow-(--box-shadow-secondary-rest) hue-rotate-180 invert-[.9] transition-[filter] duration-300 focus-within:hue-rotate-0 focus-within:invert-0 hover:hue-rotate-0 hover:invert-0 md:h-96"
 				allowFullScreen={false}
 				loading="lazy"
 				referrerPolicy="no-referrer-when-downgrade"

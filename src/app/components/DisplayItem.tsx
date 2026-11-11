@@ -10,12 +10,16 @@ interface DisplayItemProps {
 function DisplayItem({ type, data }: DisplayItemProps) {
 	const isCertificate = type === "certificate";
 	const hasLinks = data.primaryLink !== "" || data.secondaryLink !== "";
-	const buttonClass =
-		"w-[110px] text-center max-[480px]:max-w-[calc(50%-6px)] max-[480px]:flex-1";
+	const buttonClass = "max-[480px]:max-w-[calc(50%-6px)] max-[480px]:flex-1";
 
 	return (
 		<article className="flex w-full flex-row items-center gap-6 rounded-[15px] border border-solid border-(--border-subtle) bg-(--surface-card) p-5 max-[990px]:flex-col max-[990px]:items-stretch max-[990px]:gap-4 max-[480px]:p-4">
-			<div className="flex w-75 shrink-0 justify-center max-[990px]:w-full max-[990px]:justify-start">
+			<div
+				className={
+					"flex shrink-0 justify-center max-[990px]:w-full max-[990px]:justify-start " +
+					(isCertificate ? "w-40" : "w-75 max-[1200px]:w-60")
+				}
+			>
 				<Image
 					src={data.imageURL}
 					alt={isCertificate ? "" : `${data.title} preview`}
@@ -23,10 +27,10 @@ function DisplayItem({ type, data }: DisplayItemProps) {
 					height={isCertificate ? 160 : 200}
 					sizes={isCertificate ? "160px" : "(max-width: 990px) 560px, 300px"}
 					className={
-						"shrink-0 rounded-[10px] border border-solid border-(--border-subtle) object-cover shadow-(--box-shadow-secondary-rest) " +
+						"shrink-0 rounded-[10px] border border-solid border-(--border-subtle) shadow-(--box-shadow-secondary-rest) " +
 						(isCertificate
-							? "h-40 w-40"
-							: "aspect-3/2 h-auto w-75 max-[990px]:w-full max-[990px]:max-w-140")
+							? "h-40 w-40 bg-(--black) object-contain p-4"
+							: "aspect-3/2 h-auto w-75 object-cover max-[1200px]:w-60 max-[990px]:w-full max-[990px]:max-w-140")
 					}
 				/>
 			</div>
@@ -39,7 +43,7 @@ function DisplayItem({ type, data }: DisplayItemProps) {
 						</span>
 					) : null}
 				</div>
-				<p className="mt-2 mb-0 max-w-[80ch] text-lg leading-relaxed text-zinc-400 max-[990px]:text-base">
+				<p className="mt-2 mb-0 max-w-[80ch] text-lg leading-relaxed text-(--text-muted) max-[990px]:text-base">
 					{data.description}
 				</p>
 			</div>

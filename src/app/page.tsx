@@ -17,14 +17,14 @@ export default function Page() {
 	const age = getAge();
 	return (
 		<main id="main" className="px-5 pb-24">
-			<section className="mt-16 mb-4 flex flex-col items-center text-center">
+			<section className="mt-16 mb-4 flex flex-col items-center text-center min-[1080px]:mt-24">
 				<h1 className="m-0 w-full text-[clamp(2.25rem,11vw,3.75rem)] font-bold tracking-tight text-white">
 					Malcolm Hauser
 				</h1>
 				<p className="m-0 mt-2 w-full text-2xl text-(--primary-color) max-[480px]:text-xl">
 					Spaghetti Coding Since <span className="whitespace-nowrap">¯\_(ツ)_/¯</span>
 				</p>
-				<p className="mt-4 max-w-[70ch] text-center text-lg leading-relaxed text-pretty text-zinc-300 max-[480px]:text-base">
+				<p className="mt-4 max-w-[70ch] text-center text-lg leading-relaxed text-pretty text-(--text-body) max-[480px]:text-base">
 					I am a {age}-year-old living in New Zealand! I build my projects with{" "}
 					<span className="whitespace-nowrap text-(--react-color)">React</span> and{" "}
 					<span className="whitespace-nowrap text-(--vite-color)">Vite</span>, but I am
@@ -38,29 +38,23 @@ export default function Page() {
 					<span className="whitespace-nowrap text-(--swift-color)">Swift</span>.
 				</p>
 				<div className="mt-6 flex flex-row gap-5">
-					<Button
-						text="Projects"
-						isCallToAction={true}
-						link="#projects"
-						extraClass="w-[110px] text-center"
-					/>
+					<Button text="Projects" isCallToAction={true} link="#projects" />
 					<Button
 						text="GitHub"
 						isCallToAction={false}
 						link="https://github.com/Mooshay105"
 						externalLink={true}
-						extraClass="w-[110px] text-center"
 					/>
 				</div>
 			</section>
 			<section
-				className="mt-20 flex scroll-mt-28 flex-col items-center max-[640px]:mt-16"
+				className="mt-20 flex scroll-mt-28 flex-col items-center max-[640px]:mt-16 min-[1080px]:mt-28"
 				id="aboutMe"
 			>
 				<h2 className="m-0 mb-6 text-center text-4xl font-bold tracking-tight max-[480px]:text-3xl">
 					About <span className="text-(--primary-color)">Me</span>
 				</h2>
-				<p className="m-0 max-w-[70ch] text-left text-lg leading-relaxed text-pretty text-white">
+				<p className="m-0 max-w-[70ch] text-left text-lg leading-relaxed text-pretty text-(--text-body)">
 					Hi, I’m a {age}-year-old tech enthusiast from New Zealand! I love programming
 					and have experience with{" "}
 					<span className="whitespace-nowrap text-(--react-color)">React</span>,{" "}

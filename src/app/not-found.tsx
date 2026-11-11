@@ -17,16 +17,11 @@ export default function NotFoundPage() {
 			<h1 className="m-0 w-full text-[clamp(2.25rem,10vw,3rem)] font-bold tracking-tight text-white">
 				<span className="text-(--primary-color)">404</span> – Not Found
 			</h1>
-			<p className="m-0 mt-3 w-full text-lg text-zinc-400">
+			<p className="m-0 mt-3 w-full text-lg text-(--text-muted)">
 				The page you are looking for does not exist.
 			</p>
 			<div className="mt-6">
-				<Button
-					text="Go Home"
-					isCallToAction={true}
-					link="/"
-					extraClass="block w-[110px] text-center"
-				/>
+				<Button text="Go Home" isCallToAction={true} link="/" />
 			</div>
 		</main>
 	);
