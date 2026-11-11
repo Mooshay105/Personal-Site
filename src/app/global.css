@@ -5,7 +5,7 @@ html {
 	font-family: var(--font-sans);
 	background-color: var(--black);
 	color: var(--white);
-	--font-sans: "Ubuntu Sans", "Roboto", sans-serif;
+	--font-sans: var(--font-ubuntu-sans), "Ubuntu Sans", sans-serif;
 	--font-serif: serif;
 	--font-mono: "Ubuntu Mono", monospace;
 	--black: #0c0c0c;
@@ -13,13 +13,16 @@ html {
 	--primary-color: #f05138;
 	--secondary-color: #737373;
 	--border-subtle: #383838;
+	--surface-glass: #1a1a1a8e;
+	--surface-glass-strong: #1a1a1ae6;
+	--hover-tint: #ffffff14;
 	--react-color: #61dbfb;
 	--vite-color: #b45cf0;
-	--nextjs-color: #3b8eff;
+	--nextjs-color: #e4e4e7;
 	--typescript-color: #0a88d3;
 	--swift-color: #fa7343;
 	--raspberry-pi-color: #e8527c;
-	--djineo-color: #818181;
+	--djineo-color: #b4b4b4;
 	--box-shadow-primary-rest: 3px 3px 0 -1px var(--black), 3px 3px var(--primary-color);
 	--box-shadow-primary-hover: 2px 2px 0 -1px var(--black), 2px 2px var(--primary-color);
 	--box-shadow-secondary-rest:

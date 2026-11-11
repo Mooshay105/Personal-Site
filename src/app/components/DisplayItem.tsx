@@ -9,7 +9,8 @@ interface DisplayItemProps {
 
 function DisplayItem({ type, data }: DisplayItemProps) {
 	const isCertificate = type === "certificate";
-	const buttonClass = "w-[110px] text-center max-[480px]:flex-1";
+	const buttonClass =
+		"w-[110px] text-center max-[480px]:max-w-[calc(50%-6px)] max-[480px]:flex-1";
 
 	return (
 		<article className="flex w-full flex-row items-center gap-6 rounded-[15px] border border-solid border-(--border-subtle) p-5 max-[990px]:flex-col max-[990px]:items-stretch max-[990px]:gap-4">
@@ -17,13 +18,13 @@ function DisplayItem({ type, data }: DisplayItemProps) {
 				<Image
 					src={data.imageURL}
 					alt={`${data.title} preview`}
-					width={isCertificate ? 100 : 300}
-					height={isCertificate ? 100 : 200}
-					sizes={isCertificate ? "100px" : "(max-width: 990px) 560px, 300px"}
+					width={isCertificate ? 160 : 300}
+					height={isCertificate ? 160 : 200}
+					sizes={isCertificate ? "160px" : "(max-width: 990px) 560px, 300px"}
 					className={
 						"shrink-0 rounded-[10px] border border-solid border-(--border-subtle) object-cover " +
 						(isCertificate
-							? "h-25 w-25"
+							? "h-40 w-40"
 							: "aspect-3/2 h-auto w-75 max-[990px]:w-full max-[990px]:max-w-140")
 					}
 				/>
@@ -32,9 +33,9 @@ function DisplayItem({ type, data }: DisplayItemProps) {
 				<div className="flex flex-row flex-wrap items-baseline gap-x-2.5">
 					<h3 className="m-0 text-2xl font-semibold text-white">{data.title}</h3>
 					{isCertificate ? (
-						<p className="m-0 text-lg whitespace-nowrap text-(--primary-color)">
+						<time className="text-lg whitespace-nowrap text-(--primary-color)">
 							{(data as Certificate).date}
-						</p>
+						</time>
 					) : null}
 				</div>
 				<p className="mt-2 mb-0 max-w-[80ch] text-lg leading-relaxed text-zinc-400 max-[990px]:text-base">
@@ -45,6 +46,7 @@ function DisplayItem({ type, data }: DisplayItemProps) {
 				{data.primaryLink !== "" ? (
 					<Button
 						text="View"
+						ariaLabel={`View ${data.title}`}
 						link={data.primaryLink}
 						externalLink={true}
 						isCallToAction={true}
@@ -54,6 +56,9 @@ function DisplayItem({ type, data }: DisplayItemProps) {
 				{data.secondaryLink !== "" ? (
 					<Button
 						text={isCertificate ? "Certificate" : "GitHub"}
+						ariaLabel={
+							isCertificate ? `${data.title} certificate` : `${data.title} on GitHub`
+						}
 						link={data.secondaryLink}
 						externalLink={true}
 						isCallToAction={false}

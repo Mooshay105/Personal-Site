@@ -1,6 +1,14 @@
 import GlobalNavBar from "./components/GlobalNavBar";
 import Link from "next/link";
+import { Ubuntu_Sans } from "next/font/google";
 import "./global.css";
+
+/** The site font, self-hosted by next/font and exposed as a CSS variable. */
+const ubuntuSans = Ubuntu_Sans({
+	subsets: ["latin"],
+	variable: "--font-ubuntu-sans",
+	display: "swap",
+});
 
 export default function RootLayout({
 	children,
@@ -8,15 +16,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en" data-scroll-behavior="smooth">
-			<head>
-				<link rel="preconnect" href="https://fonts.googleapis.com" />
-				<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-				<link
-					href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap"
-					rel="stylesheet"
-				/>
-			</head>
+		<html lang="en" data-scroll-behavior="smooth" className={ubuntuSans.variable}>
 			<body>
 				<a
 					href="#main"

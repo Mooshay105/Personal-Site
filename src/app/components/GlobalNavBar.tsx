@@ -56,7 +56,7 @@ function GlobalNavBar() {
 			<div ref={wrapperRef} className="relative mx-auto max-w-6xl">
 				<nav
 					aria-label="Main"
-					className="flex h-fit items-center rounded-[15px] border border-solid border-(--secondary-color) bg-[#1a1a1a8e] p-0 pr-2.5 backdrop-blur-md backdrop-saturate-180"
+					className="flex h-fit items-center rounded-[15px] border border-solid border-(--secondary-color) bg-(--surface-glass) p-0 pr-2.5 backdrop-blur-md backdrop-saturate-180"
 				>
 					<Link
 						className="m-2.5 mr-auto flex min-w-0 flex-row items-center justify-center rounded-[10px] text-white no-underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--primary-color)"
@@ -68,7 +68,7 @@ function GlobalNavBar() {
 							alt=""
 							width={60}
 							height={60}
-							className="mr-2.5 h-11 w-11 shrink-0 rounded-full min-[1080px]:h-15 min-[1080px]:w-15"
+							className="mr-2.5 h-11 w-11 shrink-0 rounded-full min-[1080px]:h-12 min-[1080px]:w-12"
 						/>
 						<span className="font-sans text-xl font-bold whitespace-nowrap max-[360px]:text-lg">
 							Malcolm Hauser
@@ -100,7 +100,7 @@ function GlobalNavBar() {
 						aria-expanded={isOpen}
 						aria-controls="mobile-menu"
 						onClick={() => setIsOpen(!isOpen)}
-						className="m-1 flex h-11 w-11 shrink-0 cursor-pointer items-center justify-center rounded-[10px] transition-all duration-200 ease-in-out hover:bg-[#ffffff14] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--primary-color) min-[1080px]:hidden"
+						className="m-1 flex h-11 w-11 shrink-0 cursor-pointer items-center justify-center rounded-[10px] transition-colors duration-200 ease-in-out hover:bg-(--hover-tint) focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--primary-color) motion-reduce:transition-none min-[1080px]:hidden"
 					>
 						<svg
 							width="24"
@@ -136,7 +136,7 @@ function GlobalNavBar() {
 					<nav
 						id="mobile-menu"
 						aria-label="Mobile"
-						className="absolute top-full right-0 left-0 mt-1.5 flex h-fit flex-col items-stretch gap-2 rounded-[15px] border border-solid border-(--secondary-color) bg-[#1a1a1ae6] p-2.5 backdrop-blur-md backdrop-saturate-180 min-[1080px]:hidden"
+						className="absolute top-full right-0 left-0 mt-1.5 flex h-fit flex-col items-stretch gap-2 rounded-[15px] border border-solid border-(--secondary-color) bg-(--surface-glass-strong) p-2.5 backdrop-blur-md backdrop-saturate-180 min-[1080px]:hidden"
 					>
 						{NAV_LINKS.map((item) => (
 							<NavItem

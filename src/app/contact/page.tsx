@@ -26,8 +26,8 @@ export default function ContactPage() {
 					</a>
 				</p>
 				<p className="m-0 mt-1 text-lg text-white">
-					Based in:{" "}
-					<span className="text-(--primary-color)">Christchurch, New Zealand</span>
+					Based in: <span className="whitespace-nowrap text-zinc-300">Christchurch,</span>{" "}
+					<span className="whitespace-nowrap text-zinc-300">New Zealand</span>
 				</p>
 				<div className="mt-6 flex flex-row gap-5">
 					<Button

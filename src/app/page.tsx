@@ -29,8 +29,10 @@ export default function Page() {
 					<span className="whitespace-nowrap text-(--react-color)">React</span> and{" "}
 					<span className="whitespace-nowrap text-(--vite-color)">Vite</span>, but I am
 					trying out{" "}
-					<span className="whitespace-nowrap text-(--nextjs-color)">Next.js</span>. I
-					mainly program in{" "}
+					<span className="font-semibold whitespace-nowrap text-(--nextjs-color)">
+						Next.js
+					</span>
+					. I mainly program in{" "}
 					<span className="whitespace-nowrap text-(--typescript-color)">TypeScript</span>,
 					but I do program in a bit of{" "}
 					<span className="whitespace-nowrap text-(--swift-color)">Swift</span>.
@@ -52,7 +54,7 @@ export default function Page() {
 				</div>
 			</section>
 			<section className="mt-20 flex scroll-mt-28 flex-col items-center" id="aboutMe">
-				<h2 className="m-0 mb-6 text-center text-4xl font-bold">
+				<h2 className="m-0 mb-6 text-center text-4xl font-bold max-[480px]:text-3xl">
 					About <span className="text-(--primary-color)">Me</span>
 				</h2>
 				<p className="m-0 max-w-[70ch] text-left text-lg leading-relaxed text-pretty text-white">
@@ -74,24 +76,34 @@ export default function Page() {
 				</p>
 			</section>
 			<section className="mt-20 flex scroll-mt-28 flex-col items-center" id="projects">
-				<h2 className="m-0 mb-6 text-center text-4xl font-bold">
+				<h2 className="m-0 mb-6 text-center text-4xl font-bold max-[480px]:text-3xl">
 					My <span className="text-(--primary-color)">Projects</span>
 				</h2>
-				<div className="mx-auto flex w-full max-w-6xl flex-col gap-5">
+				<ul
+					role="list"
+					className="m-0 mx-auto flex w-full max-w-6xl list-none flex-col gap-5 p-0"
+				>
 					{information.projects.map((project: Project) => (
-						<DisplayItem key={project.id} type="project" data={project} />
+						<li key={project.id}>
+							<DisplayItem type="project" data={project} />
+						</li>
 					))}
-				</div>
+				</ul>
 			</section>
 			<section className="mt-20 flex scroll-mt-28 flex-col items-center" id="education">
-				<h2 className="m-0 mb-6 text-center text-4xl font-bold">
+				<h2 className="m-0 mb-6 text-center text-4xl font-bold max-[480px]:text-3xl">
 					My <span className="text-(--primary-color)">Education</span>
 				</h2>
-				<div className="mx-auto flex w-full max-w-6xl flex-col gap-5">
+				<ul
+					role="list"
+					className="m-0 mx-auto flex w-full max-w-6xl list-none flex-col gap-5 p-0"
+				>
 					{information.education.map((certificate: Certificate) => (
-						<DisplayItem key={certificate.id} type="certificate" data={certificate} />
+						<li key={certificate.id}>
+							<DisplayItem type="certificate" data={certificate} />
+						</li>
 					))}
-				</div>
+				</ul>
 			</section>
 		</main>
 	);
