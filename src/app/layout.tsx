@@ -21,10 +21,7 @@ export default function RootLayout({
 				<GlobalNavBar />
 				{children}
 				<footer className="mx-5 mb-8 flex flex-row flex-wrap items-center justify-between gap-2 border-t border-solid border-(--border-subtle) pt-6 text-zinc-400 max-[600px]:flex-col">
-					<p className="m-0">
-						© {new Date().getFullYear()} Malcolm Hauser.{" "}
-						<span className="text-(--primary-color)">Spaghetti</span> served fresh.
-					</p>
+					<p className="m-0">© {new Date().getFullYear()} Malcolm Hauser</p>
 					<div className="flex flex-row gap-1">
 						<Link
 							href="mailto:malcolm@malcolmjh.com"
