@@ -83,22 +83,16 @@ function GlobalNavBar() {
 								isCurrent={pathname === item.link}
 							/>
 						))}
-						{[...RESUME_LINKS]
-							.reverse()
-							.map((item) =>
-								item.isCallToAction ? (
-									<Button
-										key={item.link}
-										text={item.text}
-										isCallToAction={true}
-										link={item.link}
-										externalLink={true}
-										extraClass="ml-1 text-center whitespace-nowrap px-4"
-									/>
-								) : (
-									<NavItem key={item.link} link={item.link} text={item.text} external />
-								),
-							)}
+						{[...RESUME_LINKS].map((item) => (
+							<Button
+								key={item.link}
+								text={item.text}
+								isCallToAction={item.isCallToAction}
+								link={item.link}
+								externalLink={true}
+								extraClass="ml-1 text-center whitespace-nowrap px-4"
+							/>
+						))}
 					</div>
 					<button
 						ref={toggleRef}
