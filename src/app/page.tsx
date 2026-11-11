@@ -3,102 +3,113 @@ import DisplayItem from "./components/DisplayItem";
 import information from "../../public/display.json";
 import type { Certificate, Project } from "@/utills/types";
 import { Metadata } from "next";
+import { getAge } from "@/utills/age";
 
 export const metadata: Metadata = {
 	title: "Malcolm Hauser | Home",
-	description:
-		"I am a 14 year-old living in New Zealand! I like to program in HTML, CSS, TypeScript, and a bit of Swift",
+	description: `I am a ${getAge()}-year-old living in New Zealand! I like to program in HTML, CSS, TypeScript, and a bit of Swift`,
 	icons: {
 		icon: "/logo.png",
 	},
 };
 
 export default function Page() {
+	const age = getAge();
 	return (
-		<main>
-			<div className="mt-12.5 flex flex-col items-center text-center">
-				<h1 className="m-0 w-full text-5xl font-bold text-white">Malcolm Hauser</h1>
-				<h2 className="m-0 w-full text-3xl text-(--primary-color)">
-					Spaghetti Coding Since ¯\_(ツ)_/¯
-				</h2>
-				<p className="mx-5 mt-2.5 max-w-[80ch] text-center text-[large] text-white">
-					I am a{" "}
-					{Math.floor(
-						(new Date().getTime() - new Date("10-28-2010").getTime()) /
-							1000 /
-							60 /
-							60 /
-							24 /
-							365.25,
-					)}{" "}
-					year-old living in New Zealand! I build my projects with
-					<span className="text-(--react-color)"> React</span> and{" "}
-					<span className="text-(--vite-color)"> Vite</span> But I am trying-out{" "}
-					<span className="text-(--nextjs-color)"> Next.JS</span>. I mainly program in
-					<span className="text-(--typescript-color)"> TypeScript</span> but I do program
-					in a bit of
-					<span className="text-(--swift-color)"> Swift</span>
+		<main id="main" className="px-5 pb-24">
+			<section className="mt-16 mb-4 flex flex-col items-center text-center min-[1080px]:mt-24">
+				<h1 className="m-0 w-full text-[clamp(2.25rem,11vw,3.75rem)] font-bold tracking-tight text-white">
+					Malcolm Hauser
+				</h1>
+				<p className="m-0 mt-2 w-full text-2xl text-(--primary-color) max-[480px]:text-xl">
+					Spaghetti Coding Since <span className="whitespace-nowrap">¯\_(ツ)_/¯</span>
 				</p>
-				<div className="flex flex-row">
-					<Button
-						text="Projects"
-						isCallToAction={true}
-						link="#projects"
-						extraClass="w-[100px]"
-					/>
+				<p className="mt-4 max-w-[70ch] text-center text-lg leading-relaxed text-pretty text-(--text-body) max-[480px]:text-base">
+					I am a {age}-year-old living in New Zealand! I build my projects with{" "}
+					<span className="whitespace-nowrap text-(--react-color)">React</span> and{" "}
+					<span className="whitespace-nowrap text-(--vite-color)">Vite</span>, but I am
+					trying out{" "}
+					<span className="font-semibold whitespace-nowrap text-(--nextjs-color)">
+						Next.js
+					</span>
+					. I mainly program in{" "}
+					<span className="whitespace-nowrap text-(--typescript-color)">TypeScript</span>,
+					but I do program in a bit of{" "}
+					<span className="whitespace-nowrap text-(--swift-color)">Swift</span>.
+				</p>
+				<div className="mt-6 flex flex-row gap-5">
+					<Button text="Projects" isCallToAction={true} link="#projects" />
 					<Button
 						text="GitHub"
 						isCallToAction={false}
 						link="https://github.com/Mooshay105"
 						externalLink={true}
-						extraClass="w-[100px]"
 					/>
 				</div>
-			</div>
-			<div className="flex w-full flex-col items-center justify-center" id="aboutMe">
-				<h2 className="mt-5 mb-0 text-center text-3xl">
+			</section>
+			<section
+				className="mt-20 flex scroll-mt-28 flex-col items-center max-[640px]:mt-16 min-[1080px]:mt-28"
+				id="aboutMe"
+			>
+				<h2 className="m-0 mb-6 text-center text-4xl font-bold tracking-tight max-[480px]:text-3xl">
 					About <span className="text-(--primary-color)">Me</span>
 				</h2>
-				<p className="max-w-[80ch] text-center text-[large] text-white">
-					Hi, I’m a{" "}
-					{Math.floor(
-						(new Date().getTime() - new Date("10-28-2010").getTime()) /
-							1000 /
-							60 /
-							60 /
-							24 /
-							365.25,
-					)}
-					-year-old tech enthusiast from New Zealand! I love programming and have
-					experience with
-					<span className="text-(--react-color)"> React</span>,
-					<span className="text-(--typescript-color)"> TypeScript</span>, and a bit of
-					<span className="text-(--swift-color)"> Swift</span>. I’m especially fascinated
-					by Networking and enjoy experimenting with my
-					<span className="text-(--raspberry-pi-color)"> Raspberry Pi 5</span>. I have
-					recently got in to RC Planes and Drones I have a
-					<span className="text-(--djineo-color)"> DJI Neo</span> and am making a RC
-					Glider. I am always looking for exciting projects that push my limits, challenge
-					me, and teach me something new. When I’m not programming or tinkering, I’m
-					likely Flying or Playing Chess.
+				<p className="m-0 max-w-[70ch] text-left text-lg leading-relaxed text-pretty text-(--text-body)">
+					Hi, I’m a {age}-year-old tech enthusiast from New Zealand! I love programming
+					and have experience with{" "}
+					<span className="whitespace-nowrap text-(--react-color)">React</span>,{" "}
+					<span className="whitespace-nowrap text-(--typescript-color)">TypeScript</span>,
+					and a bit of{" "}
+					<span className="whitespace-nowrap text-(--swift-color)">Swift</span>. I’m
+					especially fascinated by Networking and enjoy experimenting with my{" "}
+					<span className="whitespace-nowrap text-(--raspberry-pi-color)">
+						Raspberry Pi 5
+					</span>
+					. I have recently got into RC Planes and Drones. I have a{" "}
+					<span className="font-semibold whitespace-nowrap text-(--djineo-color)">
+						DJI Neo
+					</span>{" "}
+					and am making an RC Glider. I am always looking for exciting projects that push
+					my limits, challenge me, and teach me something new. When I’m not programming or
+					tinkering, I’m likely Flying or Playing Chess.
 				</p>
-			</div>
-			<div className="flex w-full flex-col items-center justify-center" id="projects">
-				<h2 className="mt-5 mb-0 text-center text-3xl">
+			</section>
+			<section
+				className="mt-20 flex scroll-mt-28 flex-col items-center max-[640px]:mt-16"
+				id="projects"
+			>
+				<h2 className="m-0 mb-6 text-center text-4xl font-bold tracking-tight max-[480px]:text-3xl">
 					My <span className="text-(--primary-color)">Projects</span>
 				</h2>
-				{information.projects.map((project: Project) => (
-					<DisplayItem key={project.id} type="project" data={project} />
-				))}
-			</div>
-			<div className="flex w-full flex-col items-center justify-center" id="education">
-				<h2 className="mt-5 mb-0 text-center text-3xl">
+				<ul
+					role="list"
+					className="m-0 mx-auto flex w-full max-w-6xl list-none flex-col gap-8 p-0"
+				>
+					{information.projects.map((project: Project) => (
+						<li key={project.id}>
+							<DisplayItem type="project" data={project} />
+						</li>
+					))}
+				</ul>
+			</section>
+			<section
+				className="mt-20 flex scroll-mt-28 flex-col items-center max-[640px]:mt-16"
+				id="education"
+			>
+				<h2 className="m-0 mb-6 text-center text-4xl font-bold tracking-tight max-[480px]:text-3xl">
 					My <span className="text-(--primary-color)">Education</span>
 				</h2>
-				{information.education.map((project: Certificate) => (
-					<DisplayItem key={project.id} type="certificate" data={project} />
-				))}
-			</div>
+				<ul
+					role="list"
+					className="m-0 mx-auto flex w-full max-w-6xl list-none flex-col gap-8 p-0"
+				>
+					{information.education.map((certificate: Certificate) => (
+						<li key={certificate.id}>
+							<DisplayItem type="certificate" data={certificate} />
+						</li>
+					))}
+				</ul>
+			</section>
 		</main>
 	);
 }

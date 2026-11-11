@@ -1,30 +1,31 @@
 @import "tailwindcss";
 
-/* Main Styles */
-
 html {
+	color-scheme: dark;
 	font-family: var(--font-sans);
 	background-color: var(--black);
 	color: var(--white);
-	scroll-behavior: smooth;
-	--font-sans: "Ubuntu Sans", "Roboto", sans-serif;
+	--font-sans: var(--font-ubuntu-sans), "Ubuntu Sans", sans-serif;
 	--font-serif: serif;
 	--font-mono: "Ubuntu Mono", monospace;
 	--black: #0c0c0c;
 	--white: #ffffff;
 	--primary-color: #f05138;
 	--secondary-color: #737373;
-	--border: var(--secondary-color) 1px solid;
-	/* Bio Colors */
+	--border-subtle: #383838;
+	--text-body: #d4d4d8;
+	--text-muted: #9f9fa9;
+	--surface-card: #111111;
+	--surface-glass: #1a1a1acc;
+	--surface-glass-strong: #1a1a1ae6;
+	--hover-tint: #ffffff14;
 	--react-color: #61dbfb;
-	--vite-color: #8e14ca;
-	--nextjs-color: #0070f3;
+	--vite-color: #b45cf0;
+	--nextjs-color: #e4e4e7;
 	--typescript-color: #0a88d3;
 	--swift-color: #fa7343;
-	--raspberry-pi-color: #d02b5a;
-	--djineo-color: #818181;
-	--bio-highlight-color: #f05138;
-	/* Box Shadows */
+	--raspberry-pi-color: #e8527c;
+	--djineo-color: #e4e4e7;
 	--box-shadow-primary-rest: 3px 3px 0 -1px var(--black), 3px 3px var(--primary-color);
 	--box-shadow-primary-hover: 2px 2px 0 -1px var(--black), 2px 2px var(--primary-color);
 	--box-shadow-secondary-rest:
@@ -33,7 +34,16 @@ html {
 		2px 2px 0 -1px var(--black), 2px 2px var(--secondary-color);
 }
 
+@media (prefers-reduced-motion: no-preference) {
+	html {
+		scroll-behavior: smooth;
+	}
+}
+
 body {
 	margin: auto;
 	max-width: 1610px;
+	display: flex;
+	flex-direction: column;
+	min-height: 100dvh;
 }
