@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Button from "./Button";
+import { getProjectPreviewSrc } from "@/utills/projectPreview";
 import type { Certificate, Project } from "@/utills/types";
 
 interface DisplayItemProps {
@@ -10,6 +11,7 @@ interface DisplayItemProps {
 function DisplayItem({ type, data }: DisplayItemProps) {
 	const isCertificate = type === "certificate";
 	const hasLinks = data.primaryLink !== "" || data.secondaryLink !== "";
+	const imageSrc = isCertificate ? data.imageURL : getProjectPreviewSrc(data as Project);
 	const buttonClass = "max-[480px]:max-w-[calc(50%-6px)] max-[480px]:flex-1";
 
 	return (
@@ -21,7 +23,7 @@ function DisplayItem({ type, data }: DisplayItemProps) {
 				}
 			>
 				<Image
-					src={data.imageURL}
+					src={imageSrc}
 					alt={isCertificate ? "" : `${data.title} preview`}
 					width={isCertificate ? 160 : 300}
 					height={isCertificate ? 160 : 200}
